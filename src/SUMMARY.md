@@ -69,7 +69,8 @@
 
   - [yyyymmdd_PHP基礎](./php/php01/README.md)
     - [PHP概要](./php/php01/about-php.md)
-    - [PHP基礎](./php/php01/get-started.md)
+    - [開発の手順](./php/php01/get-started.md)
+    - [PHP基礎](./php/php01/php-start.md)
     - [クライアント - サーバ間の通信](./php/php01/get-post.md)
     - [ファイル操作（書き込み）](./php/php01/write-file.md)
     - [ファイル操作（読み込み）](./php/php01/read-file.md)
