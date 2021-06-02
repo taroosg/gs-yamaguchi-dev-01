@@ -20,7 +20,7 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
 `GET`の方式でデータをやり取りする場合は下記の流れとなる．
 
 1. 【送信側の処理】`<form></form>`を用いてデータを送信する．必ず以下の3項目を設定する．
-    - データの送信宛先（`action="get_receive.php"`）．
+    - データの送信宛先（`action="todo_get_receive.php"`）．
     - データの送信方法（`method="GET"`）．
     - データの項目名（`name="hoge"`）．
 2. 【受信側の処理】
@@ -31,6 +31,8 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
 送信側のコード
 
 ```php
+// todo_get.php
+
 // formタグに`action`と`method`を記述
 // 個々の項目（inputタグ）に`name`を指定する
 <form action="todo_get_confirm.php" method="GET">
@@ -51,6 +53,8 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
 - `exit()`は以降の処理を中止する．
 
 ```php
+// todo_get_confirm.php
+
 <?php
 
 // 必ず最初にチェック！！内容を確認したらコメントアウトすること．
@@ -77,7 +81,7 @@ $deadline = $_GET['deadline'];
 `POST`の方式でデータをやり取りする場合は下記の流れとなる．ほとんど`GET`と同様である．
 
 1. 【送信側の処理】`<form></form>`を用いてデータを送信する．必ず以下の3項目を設定する．
-    - データの送信宛先（`action="post_receive.php"`）．
+    - データの送信宛先（`action="todo_post_confirm.php"`）．
     - データの送信方法（`method="POST"`）．
     - データの項目名（`name="hoge"`）．
 2. 【受信側の処理】
@@ -88,6 +92,8 @@ $deadline = $_GET['deadline'];
 送信側のコード
 
 ```php
+// todo_post.php
+
 // formタグに`action`と`method`を記述
 // 個々の項目（inputタグ）に`name`を指定する
 <form action="todo_post_confirm.php" method="POST">
@@ -106,6 +112,8 @@ $deadline = $_GET['deadline'];
 - 以降の流れは`GET`の場合と同様．
 
 ```php
+// todo_post_confirm.php
+
 <?php
 
 // POSTの場合も必ず最初にチェック！！

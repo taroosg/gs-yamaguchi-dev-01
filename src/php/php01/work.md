@@ -37,6 +37,7 @@ PHPのデータをJSに渡す例
 
 ```php
 <?php
+// これはPHPの配列
 $hoge_array = ['PHP', 'JS', 'Rust', 'COBOL'];
 ?>
 
@@ -49,8 +50,10 @@ $hoge_array = ['PHP', 'JS', 'Rust', 'COBOL'];
     <p>ここでJSONが活躍するのじゃ．．！</p>
 
     <script>
+      // JSではPHPの配列を扱えないため，サーバ上でJSON形式に変換する
       const hogeArray = <?=json_encode($hoge_array)?>;
       console.log(hogeArray);
+
       // あとはわかるな．．？？
     </script>
 

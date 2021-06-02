@@ -30,6 +30,8 @@
 3. inputタグにname属性を指定する．
 
 ```php
+// todo_txt_input.php
+
 // `action`, `method`, `name`の3つを指定する．
 <form action="todo_txt_create.php" method="POST">
   // ...
@@ -57,6 +59,10 @@
 7. 入力画面に移動
 
 ```php
+// todo_txt_create.php
+
+// まずは`var_dump($_POST);`で値を確認すること！！
+
 // データの受け取り
 $todo = $_POST["todo"];
 $deadline = $_POST["deadline"];
