@@ -6,7 +6,7 @@
   <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->
   <!-- - [時間をコミットせよ](./note/commit-time.md) -->
 
-- [HTML&CSS](./html_css/READMR.md)
+- [HTML&CSS](./html_css/README.md)
   <!-- - [HTML](./html_css/html.md)
   - [CSS/背景，文字の大きさ，色](./html_css/css.md)
   - [CSS/レイアウト](./html_css/flex.md)
@@ -68,6 +68,7 @@
 - [PHP](./php/README.md)
 
   - [yyyymmdd_PHP基礎](./php/php01/README.md)
+
     - [PHP概要](./php/php01/about-php.md)
     - [開発の手順](./php/php01/get-started.md)
     - [PHP基礎](./php/php01/php-start.md)
@@ -77,6 +78,13 @@
     - [課題](./php/php01/work.md)
 
   - [yyyymmdd_CRUD処理前半](./php/php02/README.md)
+
+    - [DBの基本](./php/php02/about-db.md)
+    - [DB / テーブルの作成](./php/php02/start-db.md)
+    - [SQLによるDB操作](./php/php02/db-sql.md)
+    - [PHPとDBの連携（データ作成処理）](./php/php02/sql-create.md)
+    - [PHPとDBの連携（データ参照処理）](./php/php02/sql-read.md)
+    - [課題](./php/php02/work.md)
 
   - [yyyymmdd_CRUD処理後半](./php/php03/README.md)
 
