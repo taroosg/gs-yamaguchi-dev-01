@@ -67,6 +67,8 @@
 
 - [PHP](./php/README.md)
 
+  - [PHP事前準備](./php/php_setup/README.md)
+
   - [yyyymmdd_PHP基礎](./php/php01/README.md)
 
     - [PHP概要](./php/php01/about-php.md)
