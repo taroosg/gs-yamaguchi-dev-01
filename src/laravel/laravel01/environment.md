@@ -1,11 +1,7 @@
 # Environment（仮想マシン）準備
 
-## 環境構築
 
-- クラウド開発環境である「aws cloud9」を使用して開発を進める．
-- ローカルの仮想サーバ（virtual box & vagrant）を用いて環境を準備する方法もあるが，やや手順が多くなるため今回はオンラインの環境を活用する．
-
-### environmentの準備
+## environmentの準備
 
 - environmentとはアプリケーションを動作させる環境．AWS上に仮想マシンが立ち上がる．
 - 1つのwebアプリケーションに対して，1つのenvironmentいう理解でOK．
