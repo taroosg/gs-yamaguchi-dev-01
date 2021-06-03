@@ -99,13 +99,31 @@
   - [yyyymmdd_Webサービス選手権](./js/web_contest/README.md)
 
 - [Laravel](./laravel/README.md)
-  - [yyyymmdd_環境構築とLaravel準備](./laravel/laravel01/README.md)
 
-  - [yyyymmdd_CRUD処理の実装](./laravel/laravel02/README.md)
+  - [環境構築とLaravel準備](./laravel/laravel01/README.md)
+    - [Environment（仮想マシン）準備](./laravel/laravel01/environment.md)
+    - [⚠️ 仮想マシンの容量追加（EC2操作）](./laravel/laravel01/add-volume.md)
+    - [⚠️ swapメモリ作成](./laravel/laravel01/add-memory.md)
+    - [Laravelインストール準備](./laravel/laravel01/laravel-install.md)
+    - [Laravelプロジェクト作成](./laravel/laravel01/create-project.md)
+    - [ライブラリ準備](./laravel/laravel01/add-laravel-breeze.md)
+    - [データベース準備](./laravel/laravel01/setup-db.md)
 
-  - [yyyymmdd_デプロイ](./laravel/deploy/README.md)
+  - [todoアプリケーションの実装](./laravel/laravel02/README.md)
+    - [マイグレーションによるテーブル設計](./laravel/laravel02/laravel-migration.md)
+    - [ルーティングとコントローラ](./laravel/laravel02/laravel-routes-controllers.md)
+    - [必要な画面の作成と動作確認](./laravel/laravel02/laravel-views.md)
+    - [データ作成処理の実装](./laravel/laravel02/laravel-create.md)
+    - [データ一覧画面の実装](./laravel/laravel02/laravel-read.md)
+    - [データ詳細画面の実装](./laravel/laravel02/laravel-show.md)
+    - [データ削除処理の実装](./laravel/laravel02/laravel-delete.md)
+    - [データ更新処理の実装](./laravel/laravel02/laravel-update.md)
+    - [ユーザ情報の利用](./laravel/laravel02/laravel-auth.md)
+    - [あとがき](./laravel/laravel02/summary.md)
 
-  - [yyyymmdd_チーム開発](./js/team_contest/README.md)
+  - [デプロイ](./laravel/deploy/README.md)
+
+  - [チーム開発](./js/team_contest/README.md)
 
 - [Git](./git/README.md)
 
