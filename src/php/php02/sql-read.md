@@ -67,7 +67,12 @@ if ($status == false) {
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   $output = "";
   foreach ($result as $record) {
-    $output .= "<tr><td>{$record["deadline"]}</td><td>{$record["todo"]}</td></tr>";
+    $output .= "
+      <tr>
+        <td>{$record["deadline"]}</td>
+        <td>{$record["todo"]}</td>
+      </tr>
+    ";
   }
 }
 
