@@ -84,11 +84,17 @@
     - [DBの基本](./php/php02/about-db.md)
     - [DB / テーブルの作成](./php/php02/start-db.md)
     - [SQLによるDB操作](./php/php02/db-sql.md)
-    - [PHPとDBの連携（データ作成処理）](./php/php02/sql-create.md)
-    - [PHPとDBの連携（データ参照処理）](./php/php02/sql-read.md)
+    - [PHPとDBの連携1（データ作成処理）](./php/php02/sql-create.md)
+    - [PHPとDBの連携2（データ参照処理）](./php/php02/sql-read.md)
     - [課題](./php/php02/work.md)
 
   - [yyyymmdd_CRUD処理後半](./php/php03/README.md)
+
+    - [DB接続関数の作成](./php/php03/function-db-connect.md)
+    - [PHPとDBの連携3（編集画面の作成）](./php/php03/sql-edit.md)
+    - [PHPとDBの連携4（データ更新処理の作成）](./php/php03/sql-update.md)
+    - [PHPとDBの連携5（データ削除処理）](./php/php03/sql-delete.md)
+    - [課題](./php/php03/work.md)
 
   - [yyyymmdd_セッション](./php/php04/README.md)
 
