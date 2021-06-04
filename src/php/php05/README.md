@@ -1,1 +1,1 @@
-# yyyymmdd_RDB
+# PHP_DB応用_RDB

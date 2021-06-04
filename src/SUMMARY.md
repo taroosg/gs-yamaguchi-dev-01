@@ -14,7 +14,7 @@
 
 - [JavaScript](./js/README.md)
     <!-- - [JavaScriptとは]() -->
-  - [yyyymmdd_おみくじ](./js/js01/README.md)
+  - [JS_おみくじ](./js/js01/README.md)
     <!-- - [JavaScriptを書く](./js/js01/code-javascript.md)
     - [変数と計算](./js/js01/variable.md)
     - [ランダムな数（乱数）をつくる](./components/random.md)
@@ -22,7 +22,7 @@
     - [演習（おみくじWebアプリの実装）](./js/js01/omikuji.md)
     - [課題](./js/js01/work.md) -->
 
-  - [yyyymmdd_メモパッド](./js/js02/README.md)
+  - [JS_メモパッド](./js/js02/README.md)
     <!-- - [配列](./components/array.md)
     - [繰り返し処理](./components/for.md)
     - [オブジェクト](./components/object.md)
@@ -31,7 +31,7 @@
     - [演習（メモ帳Webアプリの実装）](./js/js02/memopad02.md)
     - [課題](./js/js02/work.md) -->
 
-  - [yyyymmdd_配列と繰り返し](./js/js03/README.md)
+  - [JS_配列と繰り返し](./js/js03/README.md)
     <!-- - [配列](./components/array.md)
     - [繰り返し処理](./components/for.md)
     - [配列と繰り返しの練習](./js/js03/array-for.md)
@@ -39,7 +39,7 @@
     - [クイズアプリ中級](./js/js03/quiz02.md)
     - [課題](./js/js03/work.md) -->
 
-  - [yyyymmdd_Firebase](./js/js04/README.md)
+  - [JS_Firebase](./js/js04/README.md)
     <!-- - [関数](./components/function.md)
     - [リアルタイムチャットの実装](./js/js04/chat-app.md)
     - [Firebaseとは](./js/js04/firebase-about.md)
@@ -51,7 +51,7 @@
     - [Enterキーで送信](./js/js04/keycode.md)
     - [課題と提出時の注意点](./js/js04/work.md) -->
 
-  - [yyyymmdd_API](./js/js05/README.md)
+  - [JS_API](./js/js05/README.md)
     <!-- - [GoogleBooksAPI](./js/js05/booksapi.md)
     - [位置情報API](./js/js05/geolocation.md)
     - [BingMapsAPI/準備](./js/js05/bingmapsapi-setup.md)
@@ -60,16 +60,16 @@
     - [その他のAPI紹介](./js/js05/other-api.md)
     - [課題](./js/js05/work.md) -->
 
-  - [yyyymmdd_JS修練場](./js/js06/README.md)
+  - [JS_修練場](./js/js06/README.md)
     <!-- - [例題](./js/js06/example.md) -->
 
-  - [yyyymmdd_JS選手権](./js/js_contest/README.md)
+  - [JS選手権](./js/js_contest/README.md)
 
 - [PHP](./php/README.md)
 
   - [PHP事前準備](./php/php_setup/README.md)
 
-  - [yyyymmdd_PHP基礎](./php/php01/README.md)
+  - [PHP基礎](./php/php01/README.md)
 
     - [PHP概要](./php/php01/about-php.md)
     - [開発の手順](./php/php01/get-started.md)
@@ -79,7 +79,7 @@
     - [ファイル操作（読み込み）](./php/php01/read-file.md)
     - [課題](./php/php01/work.md)
 
-  - [yyyymmdd_CRUD処理前半](./php/php02/README.md)
+  - [PHP_DB連携_CRUD処理前半](./php/php02/README.md)
 
     - [DBの基本](./php/php02/about-db.md)
     - [DB / テーブルの作成](./php/php02/start-db.md)
@@ -88,7 +88,7 @@
     - [PHPとDBの連携2（データ参照処理）](./php/php02/sql-read.md)
     - [課題](./php/php02/work.md)
 
-  - [yyyymmdd_CRUD処理後半](./php/php03/README.md)
+  - [PHP_DB連携_CRUD処理後半](./php/php03/README.md)
 
     - [DB接続関数の作成](./php/php03/function-db-connect.md)
     - [PHPとDBの連携3（編集画面の作成）](./php/php03/sql-edit.md)
@@ -96,13 +96,13 @@
     - [PHPとDBの連携5（データ削除処理）](./php/php03/sql-delete.md)
     - [課題](./php/php03/work.md)
 
-  - [yyyymmdd_セッション](./php/php04/README.md)
+  - [PHP_セッション](./php/php04/README.md)
 
-  - [yyyymmdd_RDB](./php/php05/README.md)
+  - [PHP_DB応用_RDB](./php/php05/README.md)
 
-  - [yyyymmdd_ファイル操作とAjax](./php/php06/README.md)
+  - [PHP_ファイル操作とAjax](./php/php06/README.md)
 
-  - [yyyymmdd_Webサービス選手権](./js/web_contest/README.md)
+  - [Webサービス選手権](./php/web_contest/README.md)
 
 - [Laravel](./laravel/README.md)
 
@@ -129,7 +129,7 @@
 
   - [デプロイ](./laravel/deploy/README.md)
 
-  - [チーム開発](./js/team_contest/README.md)
+  - [チーム開発](./laravel/team_contest/README.md)
 
 - [Git](./git/README.md)
 

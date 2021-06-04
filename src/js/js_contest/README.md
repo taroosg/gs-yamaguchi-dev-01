@@ -1,1 +1,1 @@
-# yyyymmdd_JS選手権
+# JS選手権

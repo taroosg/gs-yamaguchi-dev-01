@@ -1,1 +1,1 @@
-# yyyymmdd_JS修練場
+# JS_修練場
