@@ -109,7 +109,7 @@ header("Location:todo_txt_input.php");
 3. 書き込み処理の結果を`todo.txt`で確認しよう！
     - エディタからtxtファイルを開いて書き込まれていればOK．
 
-## ⚠MacOSの場合は権限の設定が必要
+## ⚠️ MacOSの場合は権限の設定が必要
 
 （WindowsOSの場合は設定不要）
 
