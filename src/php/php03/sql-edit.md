@@ -3,16 +3,24 @@
 
 ## 処理の流れ
 
-更新処理の流れ（登録処理と似ています！）
-① 一覧画面に更新ページへのリンクを作成
-urlにidを追加： todo_edit.php?id=**
-② 更新ページの作成（todo_edit.php）
-③ 更新処理の作成（todo_update.php）
-④ 一覧画面に戻る
+データ更新の処理はデータ作成処理の流れと似ている！
 
-### 一覧画面にリンク追加
+まずは本項で1と2を実装する．
+
+1. 一覧画面に更新ページへのリンクを作成（urlにidを追加： todo_edit.php?id=**）
+2. 更新ページの作成（todo_edit.php）
+3. 更新処理の作成（todo_update.php）
+4. 一覧画面に戻る
+
+## 一覧画面にリンク追加
+
+`<a>`を用いて編集画面（と削除処理）へのリンクを作成する．
+
+GETメソッドが「データをURLに格納する」仕様を利用し，`<a>`のURLに各データの`id`を埋め込む．
 
 ```php
+// todo_read.php
+
 foreach ($result as $record) {
   $output .= "
     <tr>
@@ -30,25 +38,40 @@ foreach ($result as $record) {
 
 ```
 
-![一覧画面リンク表示](./img/php03_crud02_todo_read.png)
+下図のようにリンクが表示されればOK．
 
-### 編集画面の作成
+リンクにマウスカーソルを当てると，ブラウザ左下にリンク先のURLが表示される．`id=**`の形で数値が表示されれば正しく指定されている．
+
+![一覧画面リンク表示](./img/php_crud02_todo_read.png)
+
+## 編集画面の作成
+
+続いて，編集画面を実装する．
+
+本画面の役割は
+
+- 現在テーブルに保存されている`todo`と`deadline`を表示する．
+- ユーザが画面上でデータを編集する．
+- ユーザが編集したデータをテーブル更新用ファイル（`todo_update.php`）に送信する．
+
+コードのポイントは以下．
+
+- SELECT文を用いて`id`指定し，`fetch()`関数でデータを取得する．
+- 取得したデータを`<input>`の初期値として設定する．
+- 次の更新処理で`id`が必要になるため，`<input type="hidden">`を用いて`id`を送信する．
 
 ```php
-// 関数ファイル読み込み
 include("functions.php");
 
-// 送信されたidをgetで受け取る
 $id = $_GET['id'];
 
-// DB接続&id名でテーブルから検索
 $pdo = connect_to_db();
+
 $sql = 'SELECT * FROM todo_table WHERE id=:id';
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
-// fetch()で1レコード取得できる．
 if ($status == false) {
   $error = $stmt->errorInfo();
   echo json_encode(["error_msg" => "{$error[2]}"]);
@@ -80,11 +103,14 @@ if ($status == false) {
 
 ```
 
-![編集画面データ表示](./img/php03_crud02_todo_edit.png)
+下図のように現在のデータが画面に表示されればOK．
+
+![編集画面データ表示](./img/php_crud02_todo_edit.png)
 
 
 ## 練習
 
-以下の処理を実装！
-一覧画面にtodo_edit.phpへのリンクを追加！（todo_delete.phpも一緒に！）
-todo_edit.phpではデータをIDで検索し，該当するデータを表示！
+以下の処理を実装しよう！
+
+1. 一覧画面に`todo_edit.php`へのリンクを追加！（`todo_delete.php`へのリンクも一緒に！）
+2. `todo_edit.php`ではデータをIDで検索し，該当するデータを画面に表示！

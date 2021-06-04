@@ -14,7 +14,17 @@ UPDATE todo_table SET todo='PHP課題' WHERE id = 1;
 
 ## 更新の処理
 
+前項の編集画面からデータを受け取り，DBのデータを更新する．
+
+処理の流れは`todo_create.php`とよく似ている．
+
+### データチェックと受け取り
+
+まずは`todo`，`deadline`，`id`のデータが揃っていることを確認し，データを受け取る．
+
 ```php
+// todo_update.php
+
 if (
   !isset($_POST['todo']) || $_POST['todo'] == '' ||
   !isset($_POST['deadline']) || $_POST['deadline'] == '' ||
@@ -24,15 +34,25 @@ if (
   exit();
 }
 
-
 $todo = $_POST['todo'];
 $deadline = $_POST['deadline'];
 $id = $_POST['id'];
 
+```
+
+### DB接続とSQL実行
+
+続いてDB接続し，UPDATEのSQLを実行する．SQLが正常に実行された場合は一覧画面に移動する．
+
+必ずWHEREでidを指定すること！！！
+
+```php
+// todo_update.php
+
 include('functions.php');
 $pdo = connect_to_db();
 
-$sql = 'UPDATE todo_table SET todo=:todo, deadline=:deadline, updated_at=sysdate() WHERE id=:id';
+$sql = 'UPDATE todo_table SET todo=:todo, deadline=:deadline, updated_at=now() WHERE id=:id';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':todo', $todo, PDO::PARAM_STR);
@@ -53,8 +73,9 @@ if ($status == false) {
 
 ## 練習
 
-todo_update.phpでは入力したデータでUPDATE！
-完了したらtodo_read.phpへ戻る．
+`todo_update.php`でUPDATEの処理を実装しよう！
+
 更新処理実行後，一覧ページでデータが更新されていればOK！
+
 （phpmyadminでも確認しよう）
 
