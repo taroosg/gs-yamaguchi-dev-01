@@ -60,7 +60,7 @@
     - [その他のAPI紹介](./js/js05/other-api.md)
     - [課題](./js/js05/work.md) -->
 
-  - [JS_修練場](./js/js06/README.md)
+  - [JS修練場](./js/js06/README.md)
     <!-- - [例題](./js/js06/example.md) -->
 
   - [JS選手権](./js/js_contest/README.md)
