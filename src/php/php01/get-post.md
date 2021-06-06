@@ -48,9 +48,10 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
     deadline: <input type="date" name="deadline">
   </div>
 </form>
+
 ```
 
-### 信側のコード
+### 受信側のコード
 
 - GETで送信された情報は`$_GET`に入って送られる．
 - まず「情報が受け取れているかどうか」をチェックすることが大事！！
@@ -114,6 +115,7 @@ $deadline = $_GET['deadline'];
     deadline: <input type="date" name="deadline">
   </div>
 </form>
+
 ```
 
 ### 受信側のコード
@@ -166,6 +168,7 @@ $hoge = $_POST['hoge'];
     <p>ただの文字列として処理されます<?=htmlspecialchars($hoge, ENT_QUOTES);?></p>
   </body>
 </html>
+
 ```
 
 

@@ -21,7 +21,7 @@ PHPでDBを操作するときは，コード内でSQL文を実行する．
 ※SQL文は大文字で記載していますが，小文字でも動作する．他の言語（本講座ではPHP）と組み合わせる際に区別しやすいよう大文字で記載している．他の言語でも大文字で扱うことが多い．
 
 
-### INSERT（データの作成）
+## INSERT（データの作成）
 
 指定したテーブルに対して新規データの作成を行う．
 
@@ -41,11 +41,11 @@ INSERT INTO todo_table (id, todo, deadline, created_at, updated_at) VALUES(NULL,
 
 ```
 
-### SELECT（データの参照）
+## SELECT（データの参照）
 
 SELECT文はデータの参照に使用されるが，フィルタリングやソートなど多様なオプションが用意されている．
 
-#### SELECT文の基本
+### SELECT文の基本
 
 ```sql
 -- SELECT文の基本構造
@@ -64,7 +64,7 @@ SELECT todo, deadline FROM todo_table;
 
 ```
 
-#### フィルタリング
+### フィルタリング
 
 データの条件を設定してフィルタリングをおこなうことができる．フィルタリングには`WHERE`を使用する．
 
@@ -83,7 +83,7 @@ SELECT * FROM todo_table WHERE todo LIKE '%課題%';
 
 ```
 
-#### ソート
+### ソート
 
 並び替えには`ORDER BY`を使用する．
 
@@ -99,7 +99,7 @@ SELECT * FROM todo_table ORDER BY todo ASC;
 
 ```
 
-#### 取得するデータ件数の制限
+### 取得するデータ件数の制限
 
 `LIMIT`を用いてデータ件数の制限を行うことができる．最新10件，などの使い方がメジャー．
 
@@ -112,7 +112,7 @@ SELECT * FROM todo_table ORDER BY deadline DESC LIMIT 5;
 
 ```
 
-### UPDATE（データの更新）
+## UPDATE（データの更新）
 
 UPDATEは次回の講義で扱う．
 
@@ -126,7 +126,7 @@ UPDATE todo_table SET todo='PHP課題' WHERE id = 1;
 
 ```
 
-### DELETE（データの削除）
+## DELETE（データの削除）
 
 DELETEは次回の講義で扱う．
 

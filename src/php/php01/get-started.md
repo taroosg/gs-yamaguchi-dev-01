@@ -29,14 +29,16 @@ PC内では予め指定されたディレクトリ（`htdocs`）がサーバの�
 - windows : `C\xampp\htdocs\`
 - mac : `/Applications/xampp/xamppfiles/htdocs/`
 
-**【重要】開発の手順は以下の流れとなる．**
+### 💡 Key Point
 
-1. xamppを起動する
-2. phpファイルが入ったフォルダをhtdocsに配置
-3. vs codeでhtdocsの上記フォルダを開く
-4. phpのコードを書く
-5. ブラウザでlocalhostにアクセスして動作確認
-
-以降，3-5の繰り返し！
-
-※一通り終わったらxamppを終了させることを推奨（次回起動でコケる）
+>**【重要】開発の手順は以下の流れとなる．**
+>
+>1. xamppを起動する
+>2. phpファイルが入ったフォルダをhtdocsに配置
+>3. vs codeでhtdocsの上記フォルダを開く
+>4. phpのコードを書く
+>5. ブラウザでlocalhostにアクセスして動作確認
+>
+>以降，3-5の繰り返し！
+>
+>※一通り終わったらxamppを終了させることを推奨（次回起動でコケる）
