@@ -89,12 +89,12 @@ navigator.geolocation.getCurrentPosition(showPosition, showError, option);
 ```js
 // geolocation.html
 
-function showPosition(position) {
+function showPosition (position) {
   console.log(position);
   const lat = position.coords.latitude;
   const lng = position.coords.longitude;
   console.log(lat, lng);
-}
+};
 
 ```
 
@@ -107,7 +107,7 @@ function showPosition(position) {
 ```js
 // geolocation.html
 
-function showError(error) {
+function showError (error) {
   const errorMessages = [
     '位置情報が許可されてません',
     '現在位置を特定できません',

@@ -1,47 +1,88 @@
-# BingMapsAPI/機能追加
+# 【おまけ】BingMapsAPI/機能追加
 
-ピンの生成
-ピンを立てる関数を定義する．
-ピンの色などを指定する．
-マップ上に設置
-マップ表示後にピンを立てる関数を実行する．
+マップが表示されたら，マップ上にピンなどのオブジェクトを配置してみよう．
+
+## ピンの生成
+
+現在地をわかりやすくするピンを設定できる．
+
+### 処理の流れ
+
+1. 「ピンを立てる関数」を定義する．
+    - ピンの色などのオプションを指定する．
+    - 表示したいマップを指定する．
+2. 前項で実装したマップ表示後に「ピンを立てる関数」を実行する．
+
+### ピンを立てる関数の定義
+
+マップ表示と同様にMicrosoftが処理を用意しているため，ドキュメントに従って記述すればOK．
+
+本関数の中身は以下の流れ．
+
+- 「ピンを表示したい位置の緯度」「経度」「表示したいマップ」の3つを入力する．
+- 入力された緯度経度をMicrosoftのフォーマットに変換する．
+- ピンの位置と色・表示設定を指定する．
+- 入力されたマップ上にピンを配置する．
 
 ```js
-// 緯度，経度，表示したいマップを入力するとピンを立てる関数を定義．
-// ピンの色と表示するよう設定．
+// geo_and_map.html
 
 function pushPin(lat, lng, map) {
   const location = new Microsoft.Maps.Location(lat, lng)
   const pin = new Microsoft.Maps.Pushpin(location, {
-    color: 'navy',		// 色の設定
-    visible: true,		// これ書かないとピンが見えない
+    color: 'navy',
+    visible: true,
   });
   map.entities.push(pin);
 };
+
 ```
 
+### ピンを立てる関数の実行
+
+マップ表示後に関数を実行する．
+
 ```js
-// マップを表示する「mapsInit()」関数内でピンを設置する関数を実行．
+// geo_and_map.html
 
 function mapsInit(position) {
   const lat = position.coords.latitude;
   const lng = position.coords.longitude;
-  // マップ表示の処理（省略）
+  map = new Microsoft.Maps.Map('#map', {
+    center: {
+      latitude: lat, longitude: lng
+    },
+    zoom: 15,
+  });
   pushPin(lat, lng, map);
-}
-
+};
 
 ```
 
-infoboxの生成
-infoboxを生成する関数を定義する．
-表示内容を指定する．
-マップ上に設置
-マップ表示後にinfoboxを生成する関数を実行する．
+## infoboxの生成
+
+infobox（吹き出し）を生成する関数を定義する．吹き出し内には任意のテキストや画像を表示することができる．
+
+### 処理の流れ
+
+1. 「Infoboxを立てる関数」を定義する．
+    - Infoboxの表示内容などのオプションを指定する．
+    - 表示したいマップを指定する．
+2. 前項で実装したマップ表示後に「Infoboxを立てる関数」を実行する．
+
+### Infoboxを生成する関数の定義
+
+これまでと同様にMicrosoftが処理を用意しているため，ドキュメントに従って記述すればOK．
+
+本関数の中身は以下の流れ．
+
+- 「Infoboxを表示したい位置の緯度」「経度」「表示したいマップ」の3つを入力する．
+- 入力された緯度経度をMicrosoftのフォーマットに変換する．
+- Infoboxの位置と表示内容を指定する．
+- 入力されたマップ上にInfoboxを配置する．
 
 ```js
-// 緯度，経度，表示したいマップを入力するとinfoboxをつくる関数を定義．
-// 表示内容を設定する．
+// geo_and_map.html
 
 function generateInfobox(lat, lng, map) {
   const location = new Microsoft.Maps.Location(lat, lng)
@@ -50,27 +91,47 @@ function generateInfobox(lat, lng, map) {
     description: "JavaScript!!!"
   });
   infobox.setMap(map);
-}
+};
+
 ```
 
+### Infoboxを生成する関数の実行
+
+マップ表示後に関数を実行する．
+
 ```js
-// マップを表示する「mapsInit()」関数内でinfoboxを生成する関数を実行．
+// geo_and_map.html
 
 function mapsInit(position) {
   const lat = position.coords.latitude;
   const lng = position.coords.longitude;
-  // マップを表示する処理（省略）
-  pushPin(lat, lng, map);			// ピンを立てる関数
-  generateInfobox(lat, lng, map);	// infoboxを生成する関数
-}
+  map = new Microsoft.Maps.Map('#map', {
+    center: {
+      latitude: lat, longitude: lng
+    },
+    zoom: 15,
+  });
+  pushPin(lat, lng, map);
+  generateInfobox(lat, lng, map);
+};
+
 ```
 
 
+## 実行結果
+
+マップ上にピンとInfoboxが表示される．
+
 ![ピン表示結果](./img/js_api_bingmapsapi_result02.png)
 
-他にも機能たくさん！！
-ドキュメントも読んでみよう！
-https://bingmapsv8samples.azurewebsites.net
-山崎先生が作ったサンプル集！！
-（かなり参考になる！！）
-https://mapapi.org
+
+## その他の機能
+
+ここまで紹介した機能はほんの一部！！
+
+### ドキュメントも読んでみよう！
+
+[https://bingmapsv8samples.azurewebsites.net](https://bingmapsv8samples.azurewebsites.net)
+### 山崎先生が作ったサンプル集！！（かなり参考になる！！）
+
+[https://mapapi.org](https://mapapi.org)

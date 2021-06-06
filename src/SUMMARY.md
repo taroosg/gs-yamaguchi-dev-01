@@ -58,7 +58,7 @@
     - [位置情報の活用](./js/js05/geolocation.md)
     - [BingMapsAPI/準備](./js/js05/bingmapsapi-setup.md)
     - [BingMapsAPI/実践](./js/js05/bingmapsapi-map.md)
-    - [BingMapsAPI/機能追加](./js/js05/bingmapsapi-pin.md)
+    - [【おまけ】BingMapsAPI/機能追加](./js/js05/bingmapsapi-pin.md)
     - [その他のAPI紹介](./js/js05/other-api.md)
     - [課題](./js/js05/work.md)
 
