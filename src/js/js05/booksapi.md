@@ -103,8 +103,12 @@ axios.get(requestUrl)
 
 したがって，リクエストの成否によって下記のどちらかの順番で処理が実行されることとなる．
 
-- 成功：`.then(function (response) {...})`の`{}`内 -> `.finally(function () {...}`の`{}`内．
-- 失敗：`.catch(function (error) {...})`の`{}`内 -> `.finally(function () {...}`の`{}`内．
+- リクエスト成功の場合
+    1. `.then(function (response) {...})`の`{}`内に記述した処理．
+    2. `.finally(function () {...}`の`{}`内に記述した処理．
+- リクエスト失敗の場合
+    1. `.catch(function (error) {...})`の`{}`内に記述した処理．
+    2. `.finally(function () {...}`の`{}`内に記述した処理．
 
 ### 💡 Key Point
 
