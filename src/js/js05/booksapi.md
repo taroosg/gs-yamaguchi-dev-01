@@ -1,38 +1,78 @@
 # GoogleBooksAPI
 
-google books API
-今回は本を検索するAPIを使用しましょう！
-ドキュメント：https://developers.google.com/books/docs/overview
-できること
-google booksに登録されている本のjsonデータを取得できる！
-タイトルや著者などで条件を指定できる！
-（仕様をよく読みましょう！）
-API keyが不要！！！
+## Google Books APIとは
 
-APIキー
-APIにリクエストを送るためにはユニークな文字列が必要．
-設定を行ったアプリケーションのみ動作させるため．
-（無断で使用されないように．．！）
-この文字列をAPIキーを呼び，APIの種類問わず必須の場合が多い．
+[ドキュメント](https://developers.google.com/books/docs/overview)
 
-準備
-下記のURLにリクエストしよう！
-https://www.googleapis.com/books/v1/volumes
-パラメータの追加
-今回はタイトルに「firebase」が入っている本を指定して検索してみよう！
-上記URLの最後に「?q=intitle:javascript」を追加しよう！
-リクエストにはaxiosライブラリを使う！！
-JavaScriptでhttp通信を行うためのライブラリ（読み込みが必要）
-最近のモダンなフレームワーク（react, vue.jsなど）でも利用されている
+本APIに限らず，APIには必ずドキュメント（仕様書）が存在する．
 
-```
+ドキュメントには下記のような重要な情報が記載されているため，必ず目を通そう．
+
+- APIにできること（得られるデータややってくれる処理など）．
+- APIの使い方やサンプルコード．
+- 料金（無料のものと有料のものが存在する）．
+
+## 特徴
+
+- Google Booksに登録されている本のjsonデータを取得できる！
+- タイトルや著者などで条件を指定できる！
+- （仕様をよく読みましょう！）
+- API keyが不要！！！
+
+>APIキー
+>- APIにリクエストを送るためにはユニークな文字列が必要．
+>- 設定を行ったアプリケーションのみ動作させるため．（無断で使用されないように．．！）
+>- この文字列をAPIキーを呼び，APIの種類問わず必須の場合が多い．
+
+
+## 処理の流れ
+
+- APIに定められたURLにリクエストを送信する．
+- 送信の際には欲しいデータに必要な条件などを指定する．
+
+
+## HTTP通信の準備
+
+APIへのリクエストには「HTTP通信」という方式で送信する．
+
+JavaScriptでHTTP通信を行うには下記のような複数の方法が存在する．下のものほどオススメ．
+
+|方法|特徴|
+|-|-|
+|XMLHttpRequest|生JS / 一番昔から存在する|
+|$.ajax()|jQuery / これが出てきて流行った|
+|fetch|生JS / 慣れないと分かりづらい|
+|axios|ReactとかVueでも使われていて使い勝手が良い|
+
+今回は`axios`ライブラリを使用する．ライブラリであるため，下記のコードで読み込みが必要となる．
+
+最近のモダンなフレームワーク（React, Vue.jsなど）でも利用されているため，今の時点から慣れておくのも良き．
+
+```html
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
 ```
+
+
+## リクエストの送信とデータの受け取り
+
+Google Books APIで指定された下記のURLにリクエストする．
+
+`https://www.googleapis.com/books/v1/volumes`
+
+リクエストの際には，得たいデータの条件などを指定する．
+
+- 今回は「本のタイトルに`javascript`が含まれる」という条件を指定してみる．
+- 本条件を指定する場合は，上記URLの最後に「`?q=intitle:javascript`」を追加する．
+- 条件の指定の仕方はドキュメントに記載されている．APIによって指定方法が異なるため，必ずドキュメントを確認しよう．
+
+リクエストは`axios.get()`関数で実行できる．
 
 ```js
-// APIにリクエストを送るときはaxios.get()を使用
-axios.get(url)
+// booksapi.html
+
+const requestUrl = 'https://www.googleapis.com/books/v1/volumes?q=intitle:javascript';
+
+axios.get(requestUrl)
   .then(function (response) {
     // リクエスト成功時の処理（responseに結果が入っている）
     console.log(response);
@@ -43,13 +83,19 @@ axios.get(url)
     // 成功失敗に関わらず必ず実行
     console.log('done!');
   });
+
 ```
 
-実行結果
 
-コンソールには以下のようなデータが表示される．
+## 実行結果
+
+上記のコードを実行すると，コンソールには以下のようなデータが表示される．
+
+データ全体はオブジェクトとなっており，`data.items`に本のデータが配列形式でまとまっている．ブラウザの検証画面をみてデータ構造や本のタイトルがどこに含まれているのかなど確認しよう．
 
 ```js
+// 検証画面に表示される内容
+
 {data: {…}, status: 200, statusText: "", headers: {…}, config: {…}, …}
   config: {url: "https://www.googleapis.com/books/v1/volumes?q=intitle:javascript", method: "get", headers: {…}, transformRequest: Array(1), transformResponse: Array(1), …}
   data:
@@ -75,10 +121,11 @@ axios.get(url)
 ```
 
 
-練習
+## 練習
 
-google books APIを使って下記を実行しよう！
-パラメータを自由に設定してURLを作成しよう！
-ボタン押下時に，本の情報をconsole.log()で出力しよう！
-できる人はブラウザ上に表示もしてみよう！
-（タイトルを表示してリンクを張ってみよう！）
+Google Books APIを使って下記を実行しよう！
+
+1. 検索の条件を自由に設定してURLを作成しよう！
+2. 本の情報をconsole.log()で出力しよう！
+3. 本のタイトルをブラウザ上に一覧表示してみよう！
+4. （タイトルにリンクを張る，本の画像を表示，などもチャレンジ）
