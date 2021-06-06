@@ -1,0 +1,1 @@
+# BingMapsAPI/準備
