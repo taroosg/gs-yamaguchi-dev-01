@@ -100,6 +100,12 @@
 
   - [PHP_セッション](./php/php04/README.md)
 
+    - [セッションとは](./php/php04/about-session.md)
+    - [セッション変数](./php/php04/session-variables.md)
+    - [認証処理の実装1（ログインとログアウト）](./php/php04/auth-01.md)
+    - [認証処理の実装2（認証状態の確認）](./php/php04/auth-02.md)
+    - [課題](./php/php04/work.md)
+
   - [PHP_DB応用_RDB](./php/php05/README.md)
 
   - [PHP_ファイル操作とAjax](./php/php06/README.md)
