@@ -20,6 +20,6 @@
 以下4点ができているか確認しよう！
 
 - XAMPPの起動確認
-- http://localhost/のアクセス確認
-- http://localhost/phpmyadminのアクセス確認
+- [http://localhost/](http://localhost/)のアクセス確認
+- [http://localhost/phpmyadmin](http://localhost/phpmyadmin)のアクセス確認
 - サンプルフォルダを「htdocs」フォルダに入れる

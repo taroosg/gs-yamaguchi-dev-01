@@ -21,5 +21,5 @@
 以下3点ができているか確認しよう！
 
 - XAMPPの起動確認
-- http://localhost/のアクセス確認
+- [http://localhost/](http://localhost/)のアクセス確認
 - サンプルフォルダを「htdocs」フォルダに入れる
