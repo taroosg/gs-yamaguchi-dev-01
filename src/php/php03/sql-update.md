@@ -44,7 +44,9 @@ $id = $_POST['id'];
 
 続いてDB接続し，UPDATEのSQLを実行する．SQLが正常に実行された場合は一覧画面に移動する．
 
-必ずWHEREでidを指定すること！！！
+### 💡 Key Point
+
+>必ずWHEREでidを指定すること！！！
 
 ```php
 // todo_update.php

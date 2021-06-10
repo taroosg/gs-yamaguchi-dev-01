@@ -35,7 +35,9 @@ DELETE FROM todo_table WHERE id = 2;
   - SQL実行（DELETE文）
   - 一覧画面へ移動
 
-⚠️ DELETE文を実行する場合には必ずWHEREで`id`を指定すること．
+### 💡 Key Point
+
+>⚠️ DELETE文を実行する場合には必ずWHEREで`id`を指定すること．
 
 ```php
 $id = $_GET['id'];

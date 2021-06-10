@@ -100,6 +100,7 @@ Windowsの人は以下の画面．
 ## まとめ
 
 下記3点が実施できていることを確認しよう！
-- xamppの起動！
-- http://localhost/にアクセス！
-- http://localhost/phpmyadmin/にアクセス！
+
+- XAMPPの起動確認
+- [http://localhost/](http://localhost/)のアクセス確認
+- [http://localhost/phpmyadmin](http://localhost/phpmyadmin)のアクセス確認
