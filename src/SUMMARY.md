@@ -111,7 +111,8 @@
     - [RDBの構造](./php/php05/about-rdb.md)
     - [Like機能の実装1（データの追加1）](./php/php05/like-add.md)
     - [Like機能の実装2（データの追加2）](./php/php05/like-delete.md)
-    - [Like機能の実装3（集計とLike数表示）](./php/php05/like-groupby.md)
+    - [Like機能の実装3（データの集計）](./php/php05/like-groupby.md)
+    - [Like機能の実装4（データの結合）](./php/php05/like-join.md)
     - [課題](./php/php05/work.md)
 
   - [PHP_ファイル操作とAjax](./php/php06/README.md)
