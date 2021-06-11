@@ -108,6 +108,12 @@
 
   - [PHP_DB応用_RDB](./php/php05/README.md)
 
+    - [RDBの構造](./php/php05/about-rdb.md)
+    - [Like機能の実装1（データの追加1）](./php/php05/like-add.md)
+    - [Like機能の実装2（データの追加2）](./php/php05/like-delete.md)
+    - [Like機能の実装3（集計とLike数表示）](./php/php05/like-groupby.md)
+    - [課題](./php/php05/work.md)
+
   - [PHP_ファイル操作とAjax](./php/php06/README.md)
 
   - [Webサービス選手権](./php/web_contest/README.md)
