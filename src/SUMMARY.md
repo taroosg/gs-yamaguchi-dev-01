@@ -154,10 +154,10 @@
 
 - [Git](./git/README.md)
 
-  <!-- - [yyyymmdd_cli](./git/cli.md)
-  - [yyyymmdd_git](./git/git.md)
-  - [yyyymmdd_github概要](./git/github-about.md)
-  - [yyyymmdd_github設定](./git/github-setup.md)
-  - [yyyymmdd_githubにプロダクトをpush](./git/github-init.md)
-  - [yyyymmdd_githubに最新版をpush](./git/github-push.md) -->
+  <!-- - [GUIとCLI](./git/cli.md)
+  - [Git](./git/git.md)
+  - [GitHub概要](./git/github-about.md)
+  - [GitHub設定](./git/github-setup.md)
+  - [GitHubにプロダクトをpush](./git/github-init.md)
+  - [GitHubに最新版をpush](./git/github-push.md) -->
 
