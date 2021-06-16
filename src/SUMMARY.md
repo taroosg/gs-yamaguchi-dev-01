@@ -40,16 +40,15 @@
     - [課題](./js/js03/work.md) -->
 
   - [JS_Firebase](./js/js04/README.md)
-    <!-- - [関数](./components/function.md)
+    - [関数](./components/function.md)
     - [リアルタイムチャットの実装](./js/js04/chat-app.md)
-    - [Firebaseとは](./js/js04/firebase-about.md)
     - [Firebaseの準備1（プロジェクトの作成）](./js/js04/firebase-project.md)
-    - [Firebaseの準備2（ソースコード修正）](./js/js04/firebase-js.md)
+    - [Firebaseの準備2（ソースコードの準備）](./js/js04/firebase-js.md)
     - [Firebaseの準備3（データベースの準備）](./js/js04/firebase-db.md)
     - [チャット画面の実装とデータの送信](./js/js04/chat-create.md)
     - [データのリアルタイム取得と画面表示](./js/js04/chat-read.md)
     - [【参考】Enterキーで送信](./js/js04/keycode.md)
-    - [課題と提出時の注意点](./js/js04/work.md) -->
+    - [課題と提出時の注意点](./js/js04/work.md)
 
   - [JS_API](./js/js05/README.md)
 
@@ -88,7 +87,7 @@
     - [SQLによるDB操作](./php/php02/db-sql.md)
     - [PHPとDBの連携1（データ作成処理）](./php/php02/sql-create.md)
     - [PHPとDBの連携2（データ参照処理）](./php/php02/sql-read.md)
-    - [課題](./php/php02/work.md)
+    - [課題と提出時の注意点](./php/php02/work.md)
 
   - [PHP_DB連携_CRUD処理後半](./php/php03/README.md)
 
