@@ -107,7 +107,7 @@ calculate(10);    // 121
 |10|`calculate(x)`|121|
 
 
-### 💡Key Point
+### 💡 Key Point
 
 >引数と戻り値がない場合もある（ややこしいポイント）
 

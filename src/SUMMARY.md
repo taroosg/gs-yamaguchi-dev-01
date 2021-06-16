@@ -47,7 +47,7 @@
     - [Firebaseの準備3（データベースの準備）](./js/js04/firebase-db.md)
     - [チャット画面の実装とデータの送信](./js/js04/chat-create.md)
     - [データのリアルタイム取得と画面表示](./js/js04/chat-read.md)
-    - [【参考】Enterキーで送信](./js/js04/keycode.md)
+    - [機能追加](./js/js04/optimize.md)
     - [課題と提出時の注意点](./js/js04/work.md)
 
   - [JS_API](./js/js05/README.md)
