@@ -116,6 +116,12 @@
 
   - [PHP_ファイル操作とAjax](./php/php06/README.md)
 
+    - [ファイルアップロードの流れ](./php/php06/about-upload.md)
+    - [ファイルアップロード実装](./php/php06/upload-file.md)
+    - [ファイルアップロードとDB連携](./php/php06/upload-db.md)
+    - [Ajax実装](./php/php06/ajax.md)
+    - [課題](./php/php06/work.md)
+
   - [Webサービス選手権](./php/web_contest/README.md)
 
 - [Laravel](./laravel/README.md)
