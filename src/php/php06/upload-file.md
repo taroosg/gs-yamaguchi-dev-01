@@ -1,95 +1,165 @@
 # ファイルアップロード実装
 
-①フォームからアップロード（file_upform.php）
+## フォームからファイルを送信
 
-// <input type="file">を使用．
-// 使用時には「enctype="multipart/form-data"」が必須！！
-// methodはpostを使用！getだと容量不足の可能性が．．．！
+ファイルをサーバに送信する場合もこれまで同様フォームから操作するが，一部追記が必要となる．
 
-// コード
+-  `<input type="file">`を使用．
+- 使用時には`<form>`内に「`enctype="multipart/form-data"`」が必須！！
+- methodは`POST`を使用！
+
+>【解説 / `enctype="multipart/form-data"`について】
+>
+> - これまで`<form>`から送信していたのはテキストデータのみであったが，画像や音声のファイルはバイナリ形式である．
+>- この2つのデータを混在させてデータを送信する場合にはこの記述が必要となる．
+
 ```html
-<form action="file_upload.php"
-      method="POST"
-      enctype="multipart/form-data">
-  // ...
-  <input type="file" name="upfile" accept="image/*"capture="camera">
-  // ...
+<!-- file_upform.php -->
+<form action="file_upload.php" method="POST" enctype="multipart/form-data">
+  <!-- 省略 -->
+  <input type="file" name="upfile" accept="image/*" capture="camera">
+  <!-- 省略 -->
 </form>
 ```
 
-ファイル保存の流れ（file_upload.php）
+## サーバ側でのファイル保存の流れ
 
-準備：送信時にエラー等ないかどうか確認．
-送られてきたファイルの情報を取得（自動的にtmp領域に保管）
-ファイル名を準備（他のファイルと被らないように）
-サーバの保存領域に移動（サンプルでは「upload」）
-（ファイル名に保存ディレクトリも含めている点に注意！）
-サンプルファイルではimgタグで表示
+今回は画像ファイルをサーバに送信して保存する処理を実装する．以下の流れで順番に進める．
 
-if文が多いのでコードをどこに書くか確認しましょう！
+0. 準備：送信時にエラー等ないかどうか確認する．
+1. 送られてきたファイルの情報を取得する（ファイルは自動的にtmp領域に保管されている状態）．
+2. ファイル名を準備する（他のファイルと被らないようにするため）．
+3. サーバの保存領域に移動（今回は「`upload`」ディレクトリ）．
+4. サンプルファイルでは保存した画像ファイルをimgタグで画面に表示する．
+
+### 💡 Key Point
+
+>if文が多いのでコードをどこに書くか確認しましょう！
+
+### 送信時のエラー確認
+
+まず，「送信されたデータを正しく受け取ることができているかどうか」を確認する．
+
+- 「ファイルが送信されていない」 or 「送信時にエラーが発生した」状態はエラーを出して終了させる．
+- 送信されたファイルは`$_FILES`で受け取ることができる！
+- まずは`var_dump()`でデータを確認すること！
+
+>【参考 / `$_FILES`の中身】
+>
+>- `$_FILES`には名前，種類，サイズなどファイルに関する情報が含まれている．
+>- また，送信時のエラー状況も含まれており，`["error"]`が0の場合は正常に送信されていることを示している．
+>
+>```bash
+>array(1) {
+>  ["upfile"] =>
+>  array(5) {
+>    ["name"] => string(19) "EH91HetUUAgJkWW.jpg"
+>    ["type"] => string(10) "image/jpeg"
+>    ["tmp_name"] => string(25) "/opt/lampp/temp/phpFq7XJl"
+>    ["error"] => int(0)
+>    ["size"] => int(85162)
+>  }
+>}
+>
+>```
+
 
 ```php
-// ファイルが追加されていない or エラー発生の場合を分ける．
-// 送信されたファイルは$_FILES['...'];で受け取る！
+// file_upload.php
 
-// コード
 if (isset($_FILES['upfile']) && $_FILES['upfile']['error'] == 0) {
-  // 送信が正常に行われたときの処理（この後記述）
-  ...
+  // 送信が正常に行われたときの処理
+  // ...
 } else {
-  // 送られていない，エラーが発生，などの場合
   exit('Error:画像が送信されていません');
 }
-```
-
-```php
-// アップロードしたファイル名を取得．
-// 一時保管しているtmpフォルダの場所の取得．
-// アップロード先のパスの設定（サンプルではuploadフォルダ <- 作成！）
-
-// コード
-$uploaded_file_name = $_FILES['upfile']['name'];	//ファイル名の取得
-$temp_path  = $_FILES['upfile']['tmp_name'];		//tmpフォルダの場所
-$directory_path = 'upload/';						//アップロード先ォルダ
-													// （↑自分で決める）
 
 ```
 
-```php
-// ファイルの拡張子の種類を取得．
-// ファイルごとにユニークな名前を作成．（最後に拡張子を追加）
-// ファイルの保存場所をファイル名に追加．
+### 送信されたデータから必要な情報を取得
 
-// コード
+正しくデータが送信されていれば，ファイル自体はtmp領域に保存された状態になっている．
+
+ここでは，ファイルを指定の場所に保存するために必要な情報を取得する．
+
+必要な情報は以下のとおり．
+- ファイル名
+- 一時保存されている場所
+- 指定の保存場所（前項で作成した`upload`フォルダ）
+
+```php
+// file_upload.php
+
+$uploaded_file_name = $_FILES['upfile']['name'];
+$temp_path  = $_FILES['upfile']['tmp_name'];
+$directory_path = 'upload/';
+
+```
+
+### ファイル名の準備
+
+サーバにファイルを保存する場合は名前の付け方が重要となる．
+
+Webアプリケーションでは様々なユーザが使用することが想定され，ファイル名が重複すると予期せぬ結果が発生するリスクがある．
+
+そのため，ファイルを指定の場所に保存するタイミングで重複しない名前をつけておくことが重要となる．ここでは次の手順で重複しない名前を準備する．
+
+- ファイルの拡張子の種類を取得する．
+- ファイルごとにユニークな名前を作成し，末尾に拡張子を追加する．
+- 指定の保存場所を追加し，保存用のパスを作成（`upload/hogehoge.png`のような形になる）．
+
+```php
+// file_upload.php
+
 $extension = pathinfo($uploaded_file_name, PATHINFO_EXTENSION);
-$unique_name = date('YmdHis').md5(session_id()) . "." . $extension;
-$filename_to_save = $directory_path . $unique_name;
+$unique_name = date('YmdHis').md5(session_id()) . '.' . $extension;
+$save_path = $directory_path . $unique_name;
 
-// 最終的に「upload/hogehoge.png」のような形になる
 ```
 
-アップロード領域へファイルを移動．
-権限の変更．
-`<img>`で出力．
-    ※権限：https://www.atmarkit.co.jp/ait/articles/1605/23/news020.html
+### 指定の場所に指定の名前でファイルを保存する
+
+ファイル名の準備ができたら，tmp領域から指定の保存場所へファイルを移動する．
+
+移動する際には下記の条件分岐を行う．
+
+- tmp領域にファイルが存在しているかどうか．
+- 指定のパスでファイルの保存が成功したかどうか．
+
+双方の条件をクリアした場合は，PHPがファイルを操作するために権限を変更し，画像をHTMLに埋め込む．
+
+HTML内の適当な場所への`$img`の出力を忘れずに！
+
+[権限の参考：https://www.atmarkit.co.jp/ait/articles/1605/23/news020.html](https://www.atmarkit.co.jp/ait/articles/1605/23/news020.html)
+
+[chmodについて：https://www.php.net/manual/ja/function.chmod.php](https://www.php.net/manual/ja/function.chmod.php)
 
 ```php
+// file_upload.php
+
 if (is_uploaded_file($temp_path)) {
-  // ↓ここでtmpファイルを移動する
-  if (move_uploaded_file($temp_path, $filename_to_save)) {
-    chmod($filename_to_save, 0644);					// 権限の変更
-    $img = '<img src="'. $filename_to_save . '" >';	// imgタグを設定
+  if (move_uploaded_file($temp_path, $save_path)) {
+    chmod($save_path, 0644);
+    $img = '<img src="'. $save_path . '" >';
   } else {
-    exit('Error:アップロードできませんでした');	// 画像の保存に失敗
+    exit('Error:アップロードできませんでした');
   }
 } else {
-  exit('Error:画像がありません');			// tmpフォルダにデータがない
+  exit('Error:画像がありません');
 }
+
 ```
 
-練習
-アップロード用のフォームを準備しよう！（file_upform.php）
-アップロード処理を記述して画像をアップロードしよう！
-アップロードしたファイルを表示しよう！
-（file_upload.phpで$imgを出力！）
--> 「画像が`upload`ファルダに保存」されて「画面に表示」されていればOK
+
+## 練習
+
+ファイルをアップロードする処理を実装しよう．
+
+- `file_upform.php`にアップロード用のフォームを準備しよう！
+- `file_upload.php`アップロード処理を記述して画像をアップロードしよう！
+
+送信側ファイルからファイルをアップロードし，下記の状態になっていればOK！
+
+- 送信したファイルが`upload`フォルダに保存されている．
+- 画面に送信したファイルが表示されている．
+
