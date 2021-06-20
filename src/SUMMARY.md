@@ -23,13 +23,12 @@
     - [課題](./js/js01/work.md) -->
 
   - [JS_メモパッド](./js/js02/README.md)
-    <!-- - [配列](./components/array.md)
+    - [配列](./components/array.md)
     - [繰り返し処理](./components/for.md)
     - [オブジェクト](./components/object.md)
-    - [localstorage（メモ帳初級）](./js/js02/memopad01.md)
-    - [JSONデータ（メモ帳中級）](./js/js02/json.md)
-    - [演習（メモ帳Webアプリの実装）](./js/js02/memopad02.md)
-    - [課題](./js/js02/work.md) -->
+    - [LocalStorage（メモ帳初級）](./js/js02/memopad01.md)
+    - [JSONデータ（メモ帳中級）](./js/js02/memopad02.md)
+    - [課題](./js/js02/work.md)
 
   - [JS_配列と繰り返し](./js/js03/README.md)
     <!-- - [配列](./components/array.md)
