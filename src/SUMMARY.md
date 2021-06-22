@@ -14,6 +14,7 @@
 
 - [JavaScript](./js/README.md)
   - [JS_おみくじ](./js/js01/README.md)
+    - [JavaScriptとは](./js/README.md)
     - [変数と計算](./components/variable.md)
     - [ランダムな数（乱数）をつくる](./components/random.md)
     - [条件分岐](./components/if.md)
