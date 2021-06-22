@@ -9,50 +9,84 @@
 - classやidでDOMを特定する．
 - 指定したDOMに対してJavaScriptで操作を行う！
 
-例
+### 例
 
-- 「idがbutton」の要素を「クリック」したら．．．
+- 「`id`が`button`」の要素を「クリック」したら．．．
 - 「大吉-大凶のどれかをランダムに表示」！
 
-参考（DOM）
+### 参考（DOM）
 
 >HTMLに記述されている各要素のこと（document object model）
 
-基本の3要素
 
-selector
-（どこを）
+## 基本の3要素
 
-event
-（いつ）
-
-method
-（どうする）
+- selector（どこを）
+- event（いつ）
+- method（どうする）
 
 ![dom3要素](./img/20210622123450.png)
 
 なんだけど．．．
 
-JavaScriptはDOM操作が苦手．．．
+```
+＿人人人人人人人人人人人人人人＿
+＞　JavaScriptはDOM操作が苦手　＜
+￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^￣
+```
+
 
 ## jQueryライブラリ
 
-【重要】最初に読み込みが必要！
+### jQueryとは
+
+- セレクタをcssと同じ要領で指定できる．
+- 素のJavaScriptよりも短く書ける！
+- アニメーションなど手軽に設定できる．
+- 書き方（順序や考え方）はJavaScriptと同様！
+- 導入が簡単（フレームワークなどは環境構築で詰む）
+
+[【参考】https://webkikaku.co.jp/homepage/blog/hpseisaku/webdesign/jquery_start/](https://webkikaku.co.jp/homepage/blog/hpseisaku/webdesign/jquery_start/)
+
+### 💡 Key Point
+
+>jQueryはJavaScriptのDOM操作を短縮して書けるライブラリ
+
+### 補足
+
+>ライブラリは他の開発者がつくったコードを利用させてもらうイメージ．手間のかかる処理を一発で書けるように実装してくれている．
+
+
+### ライブラリ読み込み
+
+（jQueryに限らず）ライブラリはソースコードの読み込みが必要！！
+
+（読み込みのコードは毎回同じなのでコピペでOK！）
 
 ```html
+<!-- 🔽 ここで読み込み 🔽 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+  // 自分で書いた処理
+</script>
 ```
 
-cssと同じ要領で対象箇所を指定できる
-素のJavaScriptよりも短く書ける！			<- 重要
-アニメーションなど手軽に設定できる．
-書き方（順序や考え方）はJavaScriptと同様！	<- 重要
-導入が簡単（フレームワークなどは環境構築で詰む）
-jQueryはJavaScriptを短縮して書けるライブラリ
-    【参考】https://webkikaku.co.jp/homepage/blog/hpseisaku/webdesign/jquery_start/
+### 💡 Key Point
 
+>ライブラリを使用する場合は「自分で書くJavaScriptより上の行で」読み込むこと．ライブラリで決められた関数を実行しようとして，読み込みが終わっていない状態だとエラーになってしまう．
+
+## jQueryの書き方と動き方
+
+基本の考え方はJavaScriptと全く同じッ！
 
 ![dom3要素](./img/20210622123450.png)
+
+### コード例
+
+- `id`が`button`の要素を
+- クリックしたときに
+- アラートを出す
 
 ```js
 $('#button').on('click', function () {
@@ -61,6 +95,8 @@ $('#button').on('click', function () {
 
 ```
 
+コード内でそれぞれ以下の場所で指定している．
+
 ```js
 $(`セレクタ名`).on(`イベント名`, function () {
   `実行したい処理（メソッド）`
@@ -68,12 +104,15 @@ $(`セレクタ名`).on(`イベント名`, function () {
 
 ```
 
-たくさんあります
-「jQuery セレクタ」でググる！
-「jQuery イベント」でググる！
+今回は`id`で指定しているが，セレクタの指定方法はたくさんある．イベントもたくさんある．
+
+- 「`jQuery セレクタ`」でググる！
+- 「`jQuery イベント`」でググる！
 
 
 ## まずは形の入力に慣れよう！
+
+いろいろな処理を書く前に，形の入力に慣れることが大事！！（慣れないとしょうもないスペルミスで時間溶かす）
 
 ```js
 $('#id').on('click', function () {
