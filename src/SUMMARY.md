@@ -13,14 +13,12 @@
   - [演習](./html_css/work.md) -->
 
 - [JavaScript](./js/README.md)
-    <!-- - [JavaScriptとは]() -->
   - [JS_おみくじ](./js/js01/README.md)
-    <!-- - [JavaScriptを書く](./js/js01/code-javascript.md)
-    - [変数と計算](./js/js01/variable.md)
+    - [変数と計算](./components/variable.md)
     - [ランダムな数（乱数）をつくる](./components/random.md)
     - [条件分岐](./components/if.md)
-    - [演習（おみくじWebアプリの実装）](./js/js01/omikuji.md)
-    - [課題](./js/js01/work.md) -->
+    - [おみくじのWebアプリ実装](./js/js01/omikuji.md)
+    - [課題](./js/js01/work.md)
 
   - [JS_メモパッド](./js/js02/README.md)
     - [配列](./components/array.md)
