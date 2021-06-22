@@ -1,6 +1,6 @@
 # JavaScript
 
-### JavaScriptの役割
+## JavaScriptの役割
 
 |言語|役割|
 |-|-|
