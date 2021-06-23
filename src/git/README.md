@@ -46,3 +46,5 @@ $ xcode-select --install
 >
 >- 検索窓に`command line tools`を入力し，`Command Line Tools for Xcode 11.5`を探し，ダウンロード → インストール．
 
+準備していないと完全に詰みます！！！
+
