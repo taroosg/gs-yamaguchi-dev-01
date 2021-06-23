@@ -158,7 +158,7 @@
 
 - [Git](./git/README.md)
 
-  <!-- - [GUIとCLI](./git/cli.md)
+  - [GUIとCLI](./git/cli.md)
   - [Git](./git/git.md)
   - [GitHub概要](./git/github-about.md)
   - [GitHub設定](./git/github-setup/README.md)
@@ -167,5 +167,5 @@
     - [GitHubへのSSH鍵登録](./git/github-setup/add-ssy-key-to-github.md)
     - [GitHubとの接続設定](./git/github-setup/connect-to-github.md)
   - [GitHubにプロダクトをpush](./git/github-init.md)
-  - [GitHubに最新版をpush](./git/github-push.md) -->
+  - [GitHubに最新版をpush](./git/github-push.md)
 
