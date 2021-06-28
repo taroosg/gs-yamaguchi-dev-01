@@ -13,3 +13,35 @@ Laravelで開発をするためには，開発環境を用意する必要があ�
 
 今回はLaravel公式が準備する機能を用い，仮想マシン上で開発を行う．
 
+## 多用するコマンドまとめ
+
+### 仮想コンテナを立ち上げる
+
+```bash
+$ ./vendor/bin/sail up -d
+```
+
+### 仮想コンテナを終了させる
+
+```bash
+$ ./vendor/bin/sail down
+```
+
+### Laravelコンテナへログインする
+
+```bash
+$ docker-compose exec laravel.test bash
+```
+
+### MySQLコンテナへログインする
+
+```bash
+$ docker-compose exec mysql bash
+```
+
+### コンテナからログアウトする
+
+```bash
+$ exit
+```
+

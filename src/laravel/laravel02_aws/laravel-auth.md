@@ -68,12 +68,11 @@ class CreateTodosTable extends Migration
   {
     Schema::create('todos', function (Blueprint $table) {
       $table->id();
-      // ↓追加
+      // ↓`user_id`を追加
       $table->integer('user_id');
       $table->string('todo');
       $table->date('deadline');
       $table->text('comment')->nullable();
-      // ↑ここまで
       $table->timestamps();
     });
   }

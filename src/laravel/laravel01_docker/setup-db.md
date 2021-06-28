@@ -63,8 +63,6 @@ mysql> exit;
 Bye
 ```
 
-これで MySQL 側の準備は完了．
-
 
 ## LaravelからDBに接続するための準備
 
