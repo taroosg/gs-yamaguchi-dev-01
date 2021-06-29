@@ -3,7 +3,7 @@
 - [講義資料ノート](./note/README.md)
   - [受講時の注意](./note/about.md)
   - [コードに向き合いやすくなる考え方](./note/with-code.md)
-  <!-- - [課題提出](./note/work-post.md) -->
+  - [課題提出](./note/work-post.md)
   <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->
   <!-- - [時間をコミットせよ](./note/commit-time.md) -->
 
