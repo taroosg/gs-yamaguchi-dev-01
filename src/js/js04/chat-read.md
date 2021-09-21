@@ -18,14 +18,20 @@ Firestoreではデータの取得方法はいくつか用意されているが�
 
 まずはFirestore上に保存されているデータを取得してconsoleに出力する．
 
-- データに変更（追加，更新，削除など）が生じたタイミングで実行される`.onSnapshot()`を使用する．
-- `.onSnapshot()`はデータベース上でデータの変更が発生したタイミングで`{}`内の処理を実行する．
+- データに変更（追加，更新，削除など）が生じたタイミングで実行される`onSnapshot()`を使用する．
+- `onSnapshot()`はデータベース上でデータの変更が発生したタイミングで`{}`内の処理を実行する．
 - Firestore上に保存されているデータは`querySnapshot.docs`に入っている．
 
 ```js
 // chatapp.html
 
-db.onSnapshot(function (querySnapshot) {
+// ↓`onSnapshot`を追記
+import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot, } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+// 省略
+
+// データ取得処理
+onSnapshot(collection(db, 'chat'), (querySnapshot) => {
   console.log(querySnapshot.docs);
 });
 
@@ -82,10 +88,10 @@ console.log(dataArray);
 const tagArray = [];
 dataArray.forEach(function (data) {
   tagArray.push(`
-    <div id="${data.id}">
+    <li id="${data.id}">
       <p>${data.data.name} at ${data.data.time}</p>
       <p>${data.data.text}</p>
-    </div>
+    </li>
   `);
 });
 

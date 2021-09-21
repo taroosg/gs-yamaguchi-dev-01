@@ -41,10 +41,10 @@ function convertTimestampToDatetime(timestamp) {
 const tagArray = [];
 dataArray.forEach(function (data) {
   tagArray.push(`
-    <div id="${data.id}">
+    <li id="${data.id}">
       <p>${data.data.name} at ${convertTimestampToDatetime(data.data.time.seconds)}</p>
       <p>${data.data.text}</p>
-    </div>
+    </li>
   `);
 });
 
@@ -63,15 +63,23 @@ dataArray.forEach(function (data) {
 
 しかし，初期状態ではFirestore上のID名順でデータを取得しているため，`time`でソートされた状態でデータを取得できるようにしたい．
 
-- データのソートには`.orderBy()`を利用する．
-- `.orderBy()`には2つのデータを入力する．1つ目は「どの項目で並び替えをするか」2つ目は「昇順（`asc`）か降順（`desc`）」である．
+- データのソートには`orderBy()`を利用する．
+- `orderBy()`には2つのデータを入力する．1つ目は「どの項目で並び替えをするか」2つ目は「昇順（`asc`）か降順（`desc`）」である．
 
 データ取得時の処理に追記する．
 
 ```js
 // chatapp.html
 
-db.orderBy('time', 'desc').onSnapshot(function (querySnapshot) {
+// ↓`query`と`orderBy`を追記
+import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, onSnapshot, } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+// 省略
+
+// ↓データ取得条件の指定（今回は時間の新しい順に並び替えて取得）
+const q = query(collection(db, 'chat'), orderBy('time', 'desc'));
+
+onSnapshot(q, (querySnapshot) => {
   // 省略
 });
 
@@ -97,9 +105,9 @@ $('#text').on('keydown', function (e) {
     const data = {
       name: $('#name').val(),
       text: $('#text').val(),
-      time: firebase.firestore.FieldValue.serverTimestamp(),
+      time: serverTimestamp(),
     };
-    db.add(data);
+    addDoc(data);
     $('#text').val('');
   }
 });

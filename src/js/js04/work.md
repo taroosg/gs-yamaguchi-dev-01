@@ -34,19 +34,24 @@ Githubにpushする前に．．．
 - 提出フォームのコメント欄にAPIキーを記述してください！
 
 ```html
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+  import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, onSnapshot, } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+  const firebaseConfig = {
     // 🔽この1行を`git add .`する前に一旦削除！削除したAPIキーは「提出フォームのAPIkey欄」に記述！
-    apiKey: "AIzaSyBPm676fTHNHq2_hogehoge_wryyyyyy",
-    authDomain: "chat-app-test-4e1e4.firebaseapp.com",
-    projectId: "chat-app-test-4e1e4",
-    storageBucket: "chat-app-test-4e1e4.appspot.com",
-    messagingSenderId: "929064315016",
-    appId: "1:929064315016:web:79dd676be9a71b1803173d"
+    apiKey: "AIzaSyD7uBPYxKsUJQrJ94D8Ss5Ss5ETRpUzNbs",
+    authDomain: "chatapp-4cdef.firebaseapp.com",
+    projectId: "chatapp-4cdef",
+    storageBucket: "chatapp-4cdef.appspot.com",
+    messagingSenderId: "647489237948",
+    appId: "1:647489237948:web:1a75f2713344937854f1b9"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+
+  const app = initializeApp(firebaseConfig);
+
+  // 以下，JavaScriptのコードたくさん
+
 </script>
 
 ```

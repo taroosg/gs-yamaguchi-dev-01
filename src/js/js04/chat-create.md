@@ -37,16 +37,28 @@ nameとtextの入力欄を作成する．
 
 ### リアルタイム通信の準備
 
-前項で作成したコレクションとやり取りをするため，下記のコードを追記する．追記場所は張り付けたFirebase関連のコード下くらいでOK．
+前項で作成したコレクションとやり取りをするため，下記のコードを追記する．
 
 ### 💡 Key Point
 
->このコードでは`chat`コレクションの接続情報を`db`に保存する．この1行を書いておくことで`db`に対してデータの追加や取得ができるようになる．
+>このコードでは接続情報を`db`に保存する．この1行を書いておくことで`db`に対してデータの追加や取得ができるようになる．
 
 ```js
 // chatapp.html
 
-const db = firebase.firestore().collection('chat');
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+
+// ↓追加
+import { getFirestore, collection, addDoc, serverTimestamp, } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  // 省略
+};
+
+const app = initializeApp(firebaseConfig);
+
+// ↓追加
+const db = getFirestore(app);
 
 ```
 
@@ -79,9 +91,9 @@ $('#send').on('click', function () {
 const data = {
   name: $('#name').val(),
   text: $('#text').val(),
-  time: firebase.firestore.FieldValue.serverTimestamp(),
+  time: serverTimestamp(),
 };
-db.add(data);
+addDoc(data);
 $('#text').val('');
 
 ```

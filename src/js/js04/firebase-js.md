@@ -14,44 +14,34 @@
 
 コードが表示されるので全てコピーする．
 
-![コードコピー](./img/20210616122317.png)
+![コードコピー](./img/20210921105725.png)
 
 `chatapp.html`にコピーしたコードを貼り付ける．このコードがFirebaseのプロジェクトとソースコードでやり取りをするために必要になる．
-
-貼り付けた`<script>`タグの中身を修正する．
-
->修正前
->
->`<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>`
-
->修正後
->
->`<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase.js"></script>`
 
 エディタ上で下記のような状態になっていればOK！
 
 ```html
 <!-- chatapp.html -->
+
 <!-- ここにFirebaseのコードを貼り付けよう -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<script>
   // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBPm676fTHNHq2_hogehoge_wryyyyyy",
-    authDomain: "chat-app-test-4e1e4.firebaseapp.com",
-    projectId: "chat-app-test-4e1e4",
-    storageBucket: "chat-app-test-4e1e4.appspot.com",
-    messagingSenderId: "929064315016",
-    appId: "1:929064315016:web:79dd676be9a71b1803173d"
+  const firebaseConfig = {
+    apiKey: "AIzaSyAfiXSG63mRJrfnWb2pSHH-tCUtPptP-Qw",
+    authDomain: "test-466a4.firebaseapp.com",
+    projectId: "test-466a4",
+    storageBucket: "test-466a4.appspot.com",
+    messagingSenderId: "1012034593201",
+    appId: "1:1012034593201:web:9d9dbbd31cf63275761d90"
   };
+
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
 </script>
 
 ```
