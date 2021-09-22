@@ -1,6 +1,10 @@
 # Laravelプロジェクト作成
 
-下記コマンドで一撃．`laravel_todo`部分がプロジェクト名となる．
+Mac の人は「ターミナル」，Windowsの人は「Windows ターミナル」を起動する．
+
+（Windows の人は Ubuntu 20.04 で動かしている状態でコマンドを実行する必要があるので，適宜前項の「Docker の動作確認」を確認しておく．）
+
+下記コマンドでプロジェクトのファイルができる．`laravel_todo`部分がプロジェクト名となる．
 
 ```bash
 $ curl -s https://laravel.build/laravel_todo | bash
@@ -76,7 +80,7 @@ Creating laravel_todo_laravel.test_1 ... done
 
 ## 動作確認
 
-ブラウザでlocalhostにアクセスし，下記画面が表示されればOK．
+ブラウザで`localhost`にアクセスし，下記画面が表示されればOK．
 
 ![トップ画面](../img/20210104-laravel-firstview.png)
 
@@ -85,15 +89,21 @@ Creating laravel_todo_laravel.test_1 ... done
 
 ## エラーが出る場合
 
+### XAMPP が動いている
+
+XAMPP が動いていると立ち上がらない場合があるため，一度 XAMPP を終了させてから再度コマンドを実行する．
+
+また，Laravel の仮想コンテナが立ち上がっていると XAMPP が動かない場合があるので，XAMPP で開発を行う場合には仮想コンテナを終了させておく．
+
 ### M1のMacで`ERROR: no matching manifest for linux/arm64/v8 in the manifest list entries`が出る
 
-`docker-compoes.yml`に下記を追加
+`docker-compoes.yml`に下記を追加する，
 
 ```yml
 platform: 'linux/x86_64'
 ```
 
-追記場所はこのへん
+追記場所はこのへん．
 
 ```yml
 mysql:
@@ -116,12 +126,14 @@ mysql:
 
 ## いけてそうだけどブラウザで表示できない
 
-アクセスするときのURLを`https://localhost`を`http://localhost`に変更
+アクセスするときのURLを`https://localhost`から`http://localhost`に変更
 
 
 ## 終了するとき
 
 仮想マシン（コンテナ）を終了させる場合は以下のコマンドを実行する．
+
+コンテナが立ち上がっていると XAMPP が立ち上がらなくなるため，開発が終わったら下記コマンドで終了させること．
 
 ```bash
 $ ./vendor/bin/sail down

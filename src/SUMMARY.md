@@ -148,6 +148,8 @@
     - [あとがき](./laravel/laravel02_aws/summary.md)
 
   - [【Docker編】環境構築とLaravel準備](./laravel/laravel01_docker/README.md)
+    - [【Mac編】環境構築](./laravel/laravel01_docker/setup-for-mac.md)
+    - [【Windows編】環境構築](./laravel/laravel01_docker/setup-for-windows.md)
     - [Laravelプロジェクト作成](./laravel/laravel01_docker/create-project.md)
     - [ライブラリ準備](./laravel/laravel01_docker/add-laravel-breeze.md)
     - [データベース準備](./laravel/laravel01_docker/setup-db.md)
