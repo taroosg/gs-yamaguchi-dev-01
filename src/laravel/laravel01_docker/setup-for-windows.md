@@ -39,11 +39,19 @@ Docker を使用するための準備を進めていく．
 
 ## Docker の動作確認
 
-1. Docker Desktop を起動し，「`Setting`」 -> 「`Resources`」 -> 「`WSL INTEGRATION`」の `Enable Integration ...` にチェックを入れ，「`Ubuntu 20.04`」のトグルをオンにする．トグルが出てこない場合は PC を再起動する．
+1. Docker Desktop を起動する．
 
-2. Windows ターミナルを Ubuntu20.04 で動かす．
+2. 「`Setting`（画面上部の⚙アイコン）」 -> 「`General`」 -> 「`Use the WSL2 based engine`」にチェックを入れる．
 
-↓Windows ターミナルを開いて上部の「∨」をクリックするとメニューが出るので，ここで `Ubuntu 20.04` を選ぶ．
+![docker 設定画面01](./img/docker_setting01.PNG)
+
+3. 「`Setting`（画面上部の⚙アイコン）」 -> 「`Resources`」 -> 「`WSL INTEGRATION`」の `Enable Integration ...` にチェックを入れ，「`Ubuntu 20.04`」のトグルをオンにする．トグルが出てこない場合は PC を再起動する．
+
+![docker 設定画面02](./img/docker_setting02.PNG)
+
+4. Windows ターミナルを Ubuntu 20.04 で動かす．
+
+↓Windows ターミナルを開いて上部の「∨」をクリックするとメニューが出るので，ここで `Ubuntu 20.04` を選ぶ．出てこない場合は PC を再起動する．
 
 ![Ubuntu 設定箇所](./img/terminal_image01.png)
 
@@ -52,7 +60,7 @@ Docker を使用するための準備を進めていく．
 ![Windows ターミナル動作画面](./img/terminal_image02.png)
 
 
-6. 下記のコマンドを実行し， `docker` のバージョンが表示されれば準備完了（バージョンなどの数値は資料と異なっていて問題ない）．
+5. 下記のコマンドを実行し， `docker` のバージョンが表示されれば準備完了（バージョンなどの数値は資料と異なっていて問題ない）．
 
 ```bash
 $ docker -v
