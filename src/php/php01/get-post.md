@@ -2,10 +2,10 @@
 
 ## サーバへデータを送る，とは？？
 
-htmlファイルやphpファイルから別のphpファイルへデータを送る．
-データを受け取ったphpファイルがDBへの保存などの処理を実行．
+html ファイルや php ファイルから別の php ファイルへデータを送る．
+データを受け取った php ファイルが DB への保存などの処理を実行．
 
-データ送信には以下の2種類が存在する．
+データ送信には以下の 2 種類が存在する．
 
 - GET
 - POST
@@ -14,8 +14,7 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
 
 ### 💡 Key Point
 
->必ず送信側ファイルと受信側ファイルの2つでやり取りを行う．
-
+> 必ず送信側ファイルと受信側ファイルの 2 つでやり取りを行う．
 
 ## `GET`でのデータ送受信
 
@@ -23,9 +22,9 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
 
 #### 送信側の処理
 
-`<form></form>`を用いてデータを送信する．必ず以下の3項目を設定する．
+`<form></form>`を用いてデータを送信する．必ず以下の 3 項目を設定する．
 
-- データの送信宛先（`action="todo_get_receive.php"`）．
+- データの送信宛先（`action="data_get_confirm.php"`）．
 - データの送信方法（`method="GET"`）．
 - データの項目名（`name="hoge"`）．
 
@@ -38,11 +37,11 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
 ### 送信側のコード
 
 ```php
-// todo_get.php
+// data_get.php
 
 // formタグに`action`と`method`を記述
 // 個々の項目（inputタグ）に`name`を指定する
-<form action="todo_get_confirm.php" method="GET">
+<form action="data_get_confirm.php" method="GET">
   <div>
     todo: <input type="text" name="todo">
   </div>
@@ -55,13 +54,13 @@ htmlファイルやphpファイルから別のphpファイルへデータを送�
 
 ### 受信側のコード
 
-- GETで送信された情報は`$_GET`に入って送られる．
+- GET で送信された情報は`$_GET`に入って送られる．
 - まず「情報が受け取れているかどうか」をチェックすることが大事！！
 - （情報が受け取れないと以降どうしようもない）
 - `exit()`は以降の処理を中止する．
 
 ```php
-// todo_get_confirm.php
+// data_get_confirm.php
 
 <?php
 
@@ -79,10 +78,9 @@ $deadline = $_GET['deadline'];
 
 ### `GET`方式の特徴
 
-- サーバから情報を取得する． URLに情報を追加して送信できる．
-- データの特定（自分の名前で検索）など，少量のデータ送信に向く（URLにデータが含まれている）．
-- URLにデータが含まれるため，URLをシェアするだけでデータを共有できる．
-
+- サーバから情報を取得する． URL に情報を追加して送信できる．
+- データの特定（自分の名前で検索）など，少量のデータ送信に向く（URL にデータが含まれている）．
+- URL にデータが含まれるため，URL をシェアするだけでデータを共有できる．
 
 ## `POST`でのデータ送受信
 
@@ -90,9 +88,9 @@ $deadline = $_GET['deadline'];
 
 #### 送信側の処理
 
-`<form></form>`を用いてデータを送信する．必ず以下の3項目を設定する．
+`<form></form>`を用いてデータを送信する．必ず以下の 3 項目を設定する．
 
-- データの送信宛先（`action="todo_post_confirm.php"`）．
+- データの送信宛先（`action="data_post_confirm.php"`）．
 - データの送信方法（`method="POST"`）．
 - データの項目名（`name="hoge"`）．
 
@@ -105,11 +103,11 @@ $deadline = $_GET['deadline'];
 ### 送信側のコード
 
 ```php
-// todo_post.php
+// data_post.php
 
 // formタグに`action`と`method`を記述
 // 個々の項目（inputタグ）に`name`を指定する
-<form action="todo_post_confirm.php" method="POST">
+<form action="data_post_confirm.php" method="POST">
   <div>
     todo: <input type="text" name="todo">
   </div>
@@ -122,11 +120,11 @@ $deadline = $_GET['deadline'];
 
 ### 受信側のコード
 
-- POSTで送信された情報は`$_POST`に入って送られる．
+- POST で送信された情報は`$_POST`に入って送られる．
 - 以降の流れは`GET`の場合と同様．
 
 ```php
-// todo_post_confirm.php
+// data_post_confirm.php
 
 <?php
 
@@ -145,15 +143,14 @@ $deadline = $_POST['deadline'];
 ### `POST`方式の特徴
 
 - サーバにデータを送信するときに使用．情報を見えないように送信する方法
-- 個人情報など．（送れるデータ量がGETと比較して多い）
+- 個人情報など．（送れるデータ量が GET と比較して多い）
 - ファイルを送信する場合にも使用
-
 
 ## 【参考】XSS : クロスサイトスクリプティング
 
-formに悪意あるJavaScriptを埋め込まれて実行される場合がある．
+form に悪意ある JavaScript を埋め込まれて実行される場合がある．
 
-HTMLにデータを埋め込む際に対策できる．
+HTML にデータを埋め込む際に対策できる．
 
 ```php
 <?php
@@ -173,11 +170,11 @@ $hoge = $_POST['hoge'];
 
 ```
 
+<!-- 次の項では，データ送信機能を用いて検索処理を実装してみよう． -->
 
 ## 練習
 
-1. `todo_get.php`と`todo_get_confirm.php`でGET方式のデータ送受信を実装しよう．
-2. `todo_post.php`と`todo_post_confirm.php`でPOST方式のデータ送受信を実装しよう．
+1. `todo_get.php` と `todo_get_confirm.php` で GET 方式のデータ送受信を実装しよう．
+2. `todo_post.php` と `todo_post_confirm.php` で POST 方式のデータ送受信を実装しよう．
 
-双方とも，データを受け取ったらHTML部分に受信内容を表示しよう．
-
+双方とも，データを受け取ったら HTML 部分に受信内容を表示しよう．入力画面で入力した内容が受信側ファイルの画面に表示されていれば OK！

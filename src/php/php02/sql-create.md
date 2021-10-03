@@ -80,7 +80,7 @@ if (
 
 ### データ受け取り
 
-前回講義のtxtファイルの場合と同様．POSTで送信しているため`$_POST`で受け取る．
+前回講義の場合と同様．今回はPOSTで送信しているため`$_POST`で受け取る．
 
 ```php
 // todo_create.php
@@ -96,7 +96,8 @@ DBに接続するコードは決まった形式（`PDO`）．
 
 接続の際には以下の情報が必要になる．今回は`dbname`のみ設定が必要．
 
-- `dbname`：DBの名前
+- `mysql`：DBの種類（他に`PostgreSQL`，`Oracle Database`，などが存在する）
+- `dbname`：DBの名前（今回はここを`dec_todo`に設定する！）
 - `port`：接続ポート
 - `host`：DBのホスト名
 - `username`：DB接続時のユーザ名
@@ -184,6 +185,7 @@ if ($status == false) {
   exit('sqlError:'.$error[2]);
 } else {
   header('Location:todo_input.php');
+  exit();
 }
 
 ```

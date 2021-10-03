@@ -52,18 +52,48 @@
 
 一覧画面のタグ生成部分にLikeボタンを追記する．
 
-user_idはログイン時にセッション変数に保存している値を使用している（`todo_login_act.php`を参照）．
+user_idはログイン時にセッション変数に保存している値を使用する（`todo_login_act.php`に追記）．
+
+```php
+// todo_login_act.php
+
+if (!$val) {
+  echo "<p>ログイン情報に誤りがあります</p>";
+  echo "<a href=todo_login.php>ログイン</a>";
+  exit();
+} else {
+  $_SESSION = array();
+  // ↓ここを追記
+  $_SESSION['user_id'] = $val['id'];
+  $_SESSION['session_id'] = session_id();
+  $_SESSION['is_admin'] = $val['is_admin'];
+  $_SESSION['username'] = $val['username'];
+  header("Location:todo_read.php");
+  exit();
+}
+
+```
 
 `user_id`と`todo_id`を`like_create.php`にGETで送信する．
 
 ```php
 // todo_read.php
 
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['user_id'];
 
 // ↓タグ生成部分
-$output .= "<td><a href='like_create.php?user_id={$user_id}&todo_id={$record["id"]}'>like</a></td>";
-// 以下編集ボタン，削除ボタンなど
+foreach ($result as $record) {
+  $output .= "
+    <tr>
+      <td>{$record["deadline"]}</td>
+      <td>{$record["todo"]}</td>
+      // ↓ここ1行追記
+      <td><a href='like_create.php?user_id={$user_id}&todo_id={$record["id"]}'>like</a></td>
+      <td><a href='todo_edit.php?id={$record["id"]}'>edit</a></td>
+      <td><a href='todo_delete.php?id={$record["id"]}'>delete</a></td>
+    </tr>
+  ";
+}
 
 ```
 
@@ -83,7 +113,7 @@ $todo_id = $_GET['todo_id'];
 
 $pdo = connect_to_db();
 
-$sql = 'INSERT INTO like_table (id, user_id, todo_id, created_at) VALUES (NULL, :user_id, :todo_id, sysdate())';
+$sql = 'INSERT INTO like_table (id, user_id, todo_id, created_at) VALUES (NULL, :user_id, :todo_id, now())';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
