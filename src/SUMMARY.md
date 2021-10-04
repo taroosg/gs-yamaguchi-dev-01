@@ -15,6 +15,7 @@
   - [ファイルの準備と動作確認](./html-css/get-started.md)
   - [HTML](./html-css/html.md)
   - [CSS/ページ設定，背景，文字の大きさ，色](./html-css/css.md)
+  - [【tips】検証画面の活用](./html-css/inspect.md)
   - [CSS/レイアウト](./html-css/flex.md)
   - [演習](./html-css/work.md)
 

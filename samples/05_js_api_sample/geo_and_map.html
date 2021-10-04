@@ -27,41 +27,8 @@
   <div id="map"></div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src='https://www.bing.com/api/maps/mapcontrol?key=AvMXPDCA23mcRR36GSPRBHXfjw4lZhAyjV8_yn7P5AZUIoGg3opZORqTiBAyB_7v' async defer></script>
+  <script src='https://www.bing.com/api/maps/mapcontrol?key=YOUR_API_KEY' async defer></script>
   <script>
-
-    let map;
-
-    function mapsInit(position) {
-      console.log(position);
-      const lat = position.coords.latitude;
-      const lng = position.coords.longitude;
-      map = new Microsoft.Maps.Map('#map', {
-        center: {
-          latitude: lat, longitude: lng
-        },
-        zoom: 15,
-      });
-    }
-
-    function showError(error) {
-      const errorMessages = [
-        '位置情報が許可されてません',
-        '現在位置を特定できません',
-        '位置情報を取得する前にタイムアウトになりました',
-      ];
-      alert(`error:${errorMessages[error.code - 1]}`);
-    }
-
-    const option = {
-      enableHighAccuracy: true,
-      maximumAge: 20000,
-      timeout: 1000000,
-    }
-
-    window.onload = function () {
-      navigator.geolocation.getCurrentPosition(mapsInit, showError, option);
-    }
 
   </script>
 

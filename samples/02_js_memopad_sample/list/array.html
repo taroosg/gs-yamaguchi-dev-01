@@ -19,68 +19,12 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
+    // optionタグの生成
     const start = 1901;
     const end = 2021;
 
-    let option = '';
-
-    for (let i = start; i <= end; i++) {
-      option += '<option>' + i + '</option>';
-    }
-
-    $('#select').html(option);
-
+    // 配列の中身表示
     const list01 = ['月', '火', '水', '木', '金', '土', '日'];
-
-    const array = [];
-
-    for (let i = 0; i < list01.length; i++) {
-      array.push('<p>' + list01[i] + '</p>');
-    }
-
-    // $('#echo').html(array);
-
-    const tweet = [
-      {
-        tweet: 'コードを書く',
-        date: '2021-08-10',
-        user: 'Dio',
-      },
-      {
-        tweet: 'ロードローラー',
-        date: '2021-08-11',
-        user: 'Dio',
-      },
-      {
-        tweet: 'ザワールド',
-        date: '2021-08-12',
-        user: 'Dio',
-      },
-    ];
-    const tweetArray = [];
-
-    for (let i = 0; i < tweet.length; i++) {
-      tweetArray.push('<p>' + tweet[i].tweet + ' by ' + tweet[i].user + '</p>');
-    }
-
-    $('#tweet').html(tweetArray);
-
-    $('#btn').on('click', function () {
-      const data = {
-        tweet: $('#input').val(),
-        date: '2021-08-07',
-        user: 'Dio',
-      }
-      tweet.unshift(data);
-
-      const tweetArray = [];
-
-      for (let i = 0; i < tweet.length; i++) {
-        tweetArray.push('<p>' + tweet[i].tweet + ' by ' + tweet[i].user + '</p>');
-      }
-
-      $('#tweet').html(tweetArray);
-    })
 
 
   </script>
