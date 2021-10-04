@@ -49,12 +49,13 @@
   - [課題](./js/js02/work.md)
 
 - [JS\_配列と繰り返し](./js/js03/README.md)
-  <!-- - [配列](./components/array.md)
+
+  - [配列](./components/array.md)
   - [繰り返し処理](./components/for.md)
   - [配列と繰り返しの練習](./js/js03/array-for.md)
   - [クイズアプリ初級](./js/js03/quiz01.md)
   - [クイズアプリ中級](./js/js03/quiz02.md)
-  - [課題](./js/js03/work.md) -->
+  - [課題](./js/js03/work.md)
 
 - [JS_Firebase](./js/js04/README.md)
 
@@ -203,13 +204,13 @@
   - [【Windows 編】環境構築](./laravel/laravel_setup/setup-for-windows.md)
   - [Laravel プロジェクト作成](./laravel/laravel_setup/create-project.md)
   - [【補足】Docker と Docker Compose の解説](./laravel/laravel_setup/about-docker-and-docker-compose.md)
-  - [ライブラリ準備](./laravel/laravel_setup/add-laravel-breeze.md)
-  - [【今回は不要】データベース準備](./laravel/laravel_setup/setup-db.md)
-  - [phpmyadmin の追加](./laravel/laravel_setup/phpmyadmin.md)
 
 - [Laravel 01](./laravel/laravel01/readme.md)
 
   - [Laravel と MVC フレームワーク](./laravel/laravel01/about-laravel-and-mvc.md)
+  - [ライブラリ準備](./laravel/laravel_setup/add-laravel-breeze.md)
+  - [【今回は不要】データベース準備](./laravel/laravel_setup/setup-db.md)
+  - [phpmyadmin の追加](./laravel/laravel_setup/phpmyadmin.md)
   - [マイグレーションによるテーブル作成](./laravel/laravel01/migration.md)
   - [ルーティングとコントローラ](./laravel/laravel01/route-and-controller.md)
   - [必要な画面の作成と動作確認](./laravel/laravel01/views.md)
