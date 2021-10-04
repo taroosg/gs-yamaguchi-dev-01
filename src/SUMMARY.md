@@ -15,8 +15,6 @@
   - [CSS/レイアウト](./html_css/flex.md)
   - [演習](./html_css/work.md) -->
 
-<!-- - [JavaScript](./js/README.md) -->
-
 - [JS\_おみくじ](./js/js01/README.md)
 
   - [JavaScript とは](./js/README.md)
@@ -50,8 +48,9 @@
 
 - [JS\_配列と繰り返し](./js/js03/README.md)
 
-  - [配列](./components/array.md)
-  - [繰り返し処理](./components/for.md)
+  <!-- - [配列](./components/array.md) -->
+  <!-- - [繰り返し処理](./components/for.md) -->
+
   - [配列と繰り返しの練習](./js/js03/array-for.md)
   - [クイズアプリ初級](./js/js03/quiz01.md)
   - [クイズアプリ中級](./js/js03/quiz02.md)
@@ -92,8 +91,6 @@
   - [071-080](./js/js06/071-080.md)
 
 - [チーム開発 01 JS 選手権](./js/js_contest/README.md)
-
-<!-- - [PHP](./php/README.md) -->
 
 - [PHP 事前準備](./php/php_setup/README.md)
 
@@ -150,53 +147,6 @@
   - [課題](./php/php06/work.md)
 
 - [チーム開発 02 Web サービス選手権](./php/web_contest/README.md)
-
-<!-- - [Laravel](./laravel/README.md)
-
-  - [【AWS Cloud9 編】環境構築と Laravel 準備](./laravel/laravel01_aws/README.md)
-
-    - [Environment（仮想マシン）準備](./laravel/laravel01_aws/environment.md)
-    - [⚠️ 仮想マシンの容量追加（EC2 操作）](./laravel/laravel01_aws/add-volume.md)
-    - [⚠️ swap メモリ作成](./laravel/laravel01_aws/add-memory.md)
-    - [Laravel インストール準備](./laravel/laravel01_aws/laravel-install.md)
-    - [Laravel プロジェクト作成](./laravel/laravel01_aws/create-project.md)
-    - [ライブラリ準備](./laravel/laravel01_aws/add-laravel-breeze.md)
-    - [データベース準備](./laravel/laravel01_aws/setup-db.md)
-
-  - [【AWS Cloud9 編】todo アプリケーションの実装](./laravel/laravel02_aws/README.md)
-
-    - [マイグレーションによるテーブル設計](./laravel/laravel02_aws/laravel-migration.md)
-    - [ルーティングとコントローラ](./laravel/laravel02_aws/laravel-routes-controllers.md)
-    - [必要な画面の作成と動作確認](./laravel/laravel02_aws/laravel-views.md)
-    - [データ作成処理の実装](./laravel/laravel02_aws/laravel-create.md)
-    - [データ一覧画面の実装](./laravel/laravel02_aws/laravel-read.md)
-    - [データ詳細画面の実装](./laravel/laravel02_aws/laravel-show.md)
-    - [データ削除処理の実装](./laravel/laravel02_aws/laravel-delete.md)
-    - [データ更新処理の実装](./laravel/laravel02_aws/laravel-update.md)
-    - [ユーザ情報の利用](./laravel/laravel02_aws/laravel-auth.md)
-    - [あとがき](./laravel/laravel02_aws/summary.md)
-
-  - [【Docker 編】環境構築と Laravel 準備](./laravel/laravel01_docker/README.md)
-
-    - [【Mac 編】環境構築](./laravel/laravel01_docker/setup-for-mac.md)
-    - [【Windows 編】環境構築](./laravel/laravel01_docker/setup-for-windows.md)
-    - [Laravel プロジェクト作成](./laravel/laravel01_docker/create-project.md)
-    - [ライブラリ準備](./laravel/laravel01_docker/add-laravel-breeze.md)
-    - [データベース準備](./laravel/laravel01_docker/setup-db.md)
-    - [phpmyadmin の追加](./laravel/laravel01_docker/phpmyadmin.md)
-
-  - [【Docker 編】todo アプリケーションの実装](./laravel/laravel02_docker/README.md)
-
-    - [マイグレーションによるテーブル設計](./laravel/laravel02_docker/laravel-migration.md)
-    - [ルーティングとコントローラ](./laravel/laravel02_docker/laravel-routes-controllers.md)
-    - [必要な画面の作成と動作確認](./laravel/laravel02_docker/laravel-views.md)
-    - [データ作成処理の実装](./laravel/laravel02_docker/laravel-create.md)
-    - [データ一覧画面の実装](./laravel/laravel02_docker/laravel-read.md)
-    - [データ詳細画面の実装](./laravel/laravel02_docker/laravel-show.md)
-    - [データ削除処理の実装](./laravel/laravel02_docker/laravel-delete.md)
-    - [データ更新処理の実装](./laravel/laravel02_docker/laravel-update.md)
-    - [ユーザ情報の利用](./laravel/laravel02_docker/laravel-auth.md)
-    - [あとがき](./laravel/laravel02_docker/summary.md) -->
 
 - [Laravel 事前準備](./laravel/laravel_setup/README.md)
 

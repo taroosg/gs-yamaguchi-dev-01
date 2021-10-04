@@ -35,11 +35,15 @@
 
     $('#question').text(quiz.question);
     $('#answer00').text(quiz.answers[0]);
+    $('#answer00').val(0);
     $('#answer01').text(quiz.answers[1]);
+    $('#answer01').val(1);
     $('#answer02').text(quiz.answers[2]);
+    $('#answer02').val(2);
 
     $('button').on('click', function (e) {
-      if (quiz.answers.indexOf(e.target.innerText) === quiz.correct) {
+      // if (quiz.answers.indexOf(e.target.innerText) === quiz.correct) {
+      if (Number(e.target.value) === quiz.correct) {
         $('#result').text('正解！！！')
       } else {
         $('#result').text('不正解．．．')
