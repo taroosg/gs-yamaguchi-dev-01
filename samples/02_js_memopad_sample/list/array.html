@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>配列の練習</title>
+</head>
+
+<body>
+  <h1>配列の練習</h1>
+  <input type="text" id="input">
+  <button id="btn">tweet</button>
+  <div id="tweet"></div>
+  <div id="echo">
+  </div>
+  <select name="" id="select"></select>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    const start = 1901;
+    const end = 2021;
+
+    let option = '';
+
+    for (let i = start; i <= end; i++) {
+      option += '<option>' + i + '</option>';
+    }
+
+    $('#select').html(option);
+
+    const list01 = ['月', '火', '水', '木', '金', '土', '日'];
+
+    const array = [];
+
+    for (let i = 0; i < list01.length; i++) {
+      array.push('<p>' + list01[i] + '</p>');
+    }
+
+    // $('#echo').html(array);
+
+    const tweet = [
+      {
+        tweet: 'コードを書く',
+        date: '2021-08-10',
+        user: 'Dio',
+      },
+      {
+        tweet: 'ロードローラー',
+        date: '2021-08-11',
+        user: 'Dio',
+      },
+      {
+        tweet: 'ザワールド',
+        date: '2021-08-12',
+        user: 'Dio',
+      },
+    ];
+    const tweetArray = [];
+
+    for (let i = 0; i < tweet.length; i++) {
+      tweetArray.push('<p>' + tweet[i].tweet + ' by ' + tweet[i].user + '</p>');
+    }
+
+    $('#tweet').html(tweetArray);
+
+    $('#btn').on('click', function () {
+      const data = {
+        tweet: $('#input').val(),
+        date: '2021-08-07',
+        user: 'Dio',
+      }
+      tweet.unshift(data);
+
+      const tweetArray = [];
+
+      for (let i = 0; i < tweet.length; i++) {
+        tweetArray.push('<p>' + tweet[i].tweet + ' by ' + tweet[i].user + '</p>');
+      }
+
+      $('#tweet').html(tweetArray);
+    })
+
+
+  </script>
+</body>
+
+</html>

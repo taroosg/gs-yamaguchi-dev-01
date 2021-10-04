@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>googleBooksAPI</title>
+</head>
+
+<body>
+
+  <h1>google books API</h1>
+  <button id="btn">データ取得</button>
+  <div id="output"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- axiosライブラリの読み込み -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script>
+
+    // リクエストを送るurlを準備
+    const url = 'https://www.googleapis.com/books/v1/volumes?q=intitle:javascript';
+
+    axios.get(url)
+      .then(function (response) {
+        // まずデータの構造と，欲しいデータがどこにあるのか調べる
+        console.log(response.data.items[0].volumeInfo);
+        // 配列を指定して，配列から欲しい情報を取り出して，タグをつくる
+        const tagArray = [];
+        response.data.items.forEach(function (x) {
+          // tagArray.push('<p>' + x.volumeInfo.title + '</p>');
+          tagArray.push(`<p>${x.volumeInfo.title}</p>`);
+        });
+        // つくったタグを画面上に表示する
+        $('#output').html(tagArray);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      .finally(function () {
+        console.log('done!');
+      });
+
+  </script>
+</body>
+
+</html>
