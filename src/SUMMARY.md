@@ -9,11 +9,14 @@
     <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->
     <!-- - [時間をコミットせよ](./note/commit-time.md) -->
 
-- [HTML&CSS](./html_css/README.md)
-  <!-- - [HTML](./html_css/html.md)
-  - [CSS/背景，文字の大きさ，色](./html_css/css.md)
-  - [CSS/レイアウト](./html_css/flex.md)
-  - [演習](./html_css/work.md) -->
+- [HTML&CSS](./html-css/README.md)
+
+  - [HTML と CSS の役割](./html-css/about-html-and-css.md)
+  - [ファイルの準備と動作確認](./html-css/get-started.md)
+  - [HTML](./html-css/html.md)
+  - [CSS/ページ設定，背景，文字の大きさ，色](./html-css/css.md)
+  - [CSS/レイアウト](./html-css/flex.md)
+  - [演習](./html-css/work.md)
 
 - [JS\_おみくじ](./js/js01/README.md)
 
