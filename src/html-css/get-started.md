@@ -101,12 +101,13 @@ html ファイルと css ファイルの関連付け
 
 ブラウザ画面で「Hello World!」が表示されれば OK！
 
-![Hello World 確認]()
+![Hello World 確認](./img/html_css_work_hello.png)
 
-> **💡 開発の流れ**
+> **💡 【Point】開発の流れ**
 >
-> エディタでコードを書く
-> 保存する（command + s, ctrl + s）
-> vs code でファイル名を右クリック →「Copy Path」
-> ブラウザのアドレスバーに貼り付けて Enter
-> 意図したとおりになっているかどうか確認（今回は ↓ のようになれば OK）
+> 1. エディタでコードを書く
+> 2. 保存する（`command + s`, `ctrl + s`）
+> 3. vs code でファイル名を右クリック →「`Copy Path`」
+> 4. ブラウザのアドレスバーに貼り付けて Enter
+> 5. 意図したとおりになっているかどうか確認
+> 6. 1-5 の繰り返し

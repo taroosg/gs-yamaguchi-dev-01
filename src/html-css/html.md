@@ -70,14 +70,16 @@
 
 ## 今回の Web サイトの構造
 
-![練習用Webサイト構造1]()
+![練習用Webサイト構造2](./img/html_css_construct01.svg)
 
-![練習用Webサイト構造2]()
+![練習用Webサイト構造2](./img/html_css_construct02.svg)
 
 ## 練習
 
 イメージを参考に HTML を書こう！
 
+- 画像部分は `content_img.jpg` を使用！
+
 ↓ こんな感じになれば OK！
 
-![HTML記述イメージ]()
+![HTML記述イメージ](./img/html_css_work_html.png)
