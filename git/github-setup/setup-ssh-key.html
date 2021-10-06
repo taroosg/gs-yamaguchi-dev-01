@@ -165,7 +165,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ssh鍵の発行"><a class="header" href="#ssh鍵の発行">SSH鍵の発行</a></h1>
+                        <h1 id="ssh-鍵の発行"><a class="header" href="#ssh-鍵の発行">SSH 鍵の発行</a></h1>
 <h2 id="作業ディレクトリの確認"><a class="header" href="#作業ディレクトリの確認">作業ディレクトリの確認</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
@@ -178,7 +178,7 @@
 <p>💻 ターミナルの操作</p>
 </blockquote>
 <ul>
-<li>ssh-keyは適切な場所に配置しないと動かない．</li>
+<li>ssh-key は適切な場所に配置しないと動かない．</li>
 <li>以下の手順でフォルダを準備する．</li>
 </ul>
 <p>下記コマンドでファイルとフォルダの一覧を表示する．</p>
@@ -188,35 +188,35 @@
 <p><strong><code>「.ssh」</code>が存在しない場合のみ</strong>下記コマンドでホームディレクトリに<code>.ssh</code>フォルダを作成する．</p>
 <pre><code class="language-bash">$ mkdir -p ~/.ssh
 </code></pre>
-<p>エラーが出なければOK．</p>
+<p>エラーが出なければ OK．</p>
 <h2 id="ssh-key-の発行"><a class="header" href="#ssh-key-の発行">ssh-key の発行</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
 <ul>
-<li>GitHubにアクセスするにはssh-keyが必要となる．</li>
-<li>ssh-keyは公開鍵と秘密鍵のペアになっており，「公開鍵をGitHubに登録」「秘密鍵をPCのローカルに保存」することで通信時に組み合わせがあっているかどうか判断する．</li>
-<li>ターミナル(windowsはGitBash)を開いて以下のコマンドを入力する．</li>
+<li>GitHub にアクセスするには ssh-key が必要となる．</li>
+<li>ssh-key は公開鍵と秘密鍵のペアになっており，「公開鍵を GitHub に登録」「秘密鍵を PC のローカルに保存」することで通信時に組み合わせがあっているかどうか判断する．</li>
+<li>ターミナル(windows は GitBash)を開いて以下のコマンドを入力する．</li>
 </ul>
 <p>まずは以下のコマンドで作業ディレクトリを<code>.ssh</code>（前項で準備したフォルダ）に変更する．</p>
 <pre><code class="language-bash">$ cd ~/.ssh
 </code></pre>
-<p>続いて，以下のコマンドでsshキー（公開鍵と秘密鍵のペア）を発行する．</p>
+<p>続いて，以下のコマンドで ssh キー（公開鍵と秘密鍵のペア）を発行する．</p>
 <pre><code class="language-bash">$ ssh-keygen
 </code></pre>
 <p>実行結果</p>
 <pre><code class="language-bash">Generating public/private rsa key pair.
 Enter file in which to save the key (/home/vagrant/.ssh/id_rsa):
 </code></pre>
-<p>上の後で<code>github_rsa</code>を入力してEnter．</p>
+<p>そのまま何も入力せずに Enter．</p>
 <pre><code class="language-bash">Enter passphrase (empty for no passphrase):
 </code></pre>
-<p>続き．とりあえず入力せずにEnter．</p>
+<p>続き．何も入力せずに Enter．</p>
 <pre><code class="language-bash">Enter same passphrase again:
 </code></pre>
-<p>続き．パスワード入力していないので再度そのままEnter．</p>
-<pre><code class="language-bash">Your identification has been saved in github_rsa.
-Your public key has been saved in github_rsa.pub.
+<p>続き．パスワード入力していないので何も入力せずに Enter．</p>
+<pre><code class="language-bash">Your identification has been saved in id_rsa.
+Your public key has been saved in id_rsa.pub.
 The key fingerprint is:
 6f:09:00:22:44:55:66:77:95:89:41:7d:a7:58:1b:92 vagrant@localhost.localdomain
 The key's randomart image is:
@@ -232,34 +232,36 @@ The key's randomart image is:
 |                 |
 +-----------------+
 </code></pre>
-<p>これでssh-keyを発行できた．</p>
-<h3 id="参考"><a class="header" href="#参考">【参考】</a></h3>
+<p>これで ssh-key を発行できた．</p>
 <blockquote>
+<p><strong>【参考】</strong></p>
 <p>以下のコマンドで発行した内容を確認できるので，うまくいかない場合は確認してみると良い．</p>
-<pre><code class="language-bash">$ ls -la | grep GitHub
-</code></pre>
-<p>下記のようになっていればOK．（細かな文字列や数値は異なっていてOK）．</p>
-<pre><code class="language-bash">-rw-------  1 vagrant vagrant 1675 11月 20 12:18 2014 github_rsa
--rw-r--r--  1 vagrant vagrant  411 11月 20 12:18 2014 github_rsa.pub
+<p>下記のようになっていれば OK．（細かな文字列や数値は異なっていて OK）．</p>
+<pre><code class="language-bash">$ ls -la | grep id_rsa
+
+# 実行結果
+-rw-------  1 taroosg taroosg 1856 Dec 28  2018 id_rsa
+-rw-rw-r--  1 taroosg taroosg  403 Dec 28  2018 id_rsa.pub
 </code></pre>
 </blockquote>
-<h2 id="sshキーの設定"><a class="header" href="#sshキーの設定">sshキーの設定</a></h2>
+<h2 id="ssh-キーの設定"><a class="header" href="#ssh-キーの設定">ssh キーの設定</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>引き続き，以下のコマンドでssh-keyを動作するようにする．</p>
+<p>以下 2 つのコマンドで ssh-key を動作するように設定する．</p>
 <pre><code class="language-bash">$ eval $(ssh-agent)
+
+# 実行結果（数値は毎回異なる）
+Agent pid 9899
+
 </code></pre>
-<p>実行結果（数値は異なっていてOK）</p>
-<pre><code class="language-bash">Agent pid 9899
+<pre><code class="language-bash">$ ssh-add ~/.ssh/id_rsa
+
+# 実行結果（ディレクトリは各自異なる）
+Identity added: /home/taroosg/.ssh/id_rsa
+
 </code></pre>
-<p>作成したキーペアをssh-agentに登録する．</p>
-<pre><code class="language-bash">$ ssh-add ~/.ssh/github_rsa
-</code></pre>
-<p>実行結果（ディレクトリなどは異なっていてOK）</p>
-<pre><code class="language-bash">Identity added: /home/vagrant/.ssh/github_rsa
-</code></pre>
-<p>以上でssh-keyの準備は完了だが，設定ファイルに変更を加える必要がある．</p>
+<p>以上で ssh-key の準備は完了だが，設定ファイルに変更を加える必要がある．</p>
 
                     </main>
 

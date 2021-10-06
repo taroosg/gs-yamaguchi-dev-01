@@ -165,26 +165,26 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="guiとcli"><a class="header" href="#guiとcli">GUIとCLI</a></h1>
+                        <h1 id="gui-と-cli"><a class="header" href="#gui-と-cli">GUI と CLI</a></h1>
 <p>「GUI」と「CLI」とは，ユーザがコンピュータを操作するときの方式である．</p>
-<h2 id="guiとは"><a class="header" href="#guiとは">GUIとは</a></h2>
-<p>Graphical User Interfaceの略．</p>
+<h2 id="gui-とは"><a class="header" href="#gui-とは">GUI とは</a></h2>
+<p>Graphical User Interface の略．</p>
 <p>情報の提示に画像や図形を多用し，基礎的な操作の大半をマウスやタッチスクリーンなどによる画面上の位置の指示により行うことができるもの．</p>
 <p>「いつも使用している画面上の操作」という認識で問題ない．</p>
 <p><img src="./img/git_gui.png" alt="GUI画面の例" /></p>
-<h2 id="cliとは"><a class="header" href="#cliとは">CLIとは</a></h2>
-<p>Command Line Interfaceの略．</p>
+<h2 id="cli-とは"><a class="header" href="#cli-とは">CLI とは</a></h2>
+<p>Command Line Interface の略．</p>
 <p>コンピュータを操作するすべてのやり取りを文字によって行う方式．予め定められた「コマンド」を入力して操作を行うことが多い．</p>
-<p>GUIでは，ユーザがマウスやタッチ操作を行うのに対し，CUIで使用するのはキーボードのみ．</p>
+<p>GUI では，ユーザがマウスやタッチ操作を行うのに対し，CUI で使用するのはキーボードのみ．</p>
 <p><img src="./img/git_cli.png" alt="CLI画面の例" /></p>
-<h2 id="結局cliが必要"><a class="header" href="#結局cliが必要">結局CLIが必要</a></h2>
-<p>もともとPCはCLIしかなかった．</p>
-<p>現代のPCはGUI（の表示されたディスプレイ）を見ながら操作する．</p>
-<p>一方で，サーバなどを操作する場合にはCUI（ターミナルなど）を使用する．自分のPC内でも，操作によってはCLIが必須な場合がある．</p>
-<p>例えば，以下の写真では自分のPCのターミナルからサーバマシンにアクセスしてコマンド操作している．</p>
+<h2 id="結局-cli-が必要"><a class="header" href="#結局-cli-が必要">結局 CLI が必要</a></h2>
+<p>もともと PC は CLI しかなかった．</p>
+<p>現代の PC は GUI（の表示されたディスプレイ）を見ながら操作する．</p>
+<p>一方で，サーバなどを操作する場合には CUI（ターミナルなど）を使用する．自分の PC 内でも，操作によっては CLI が必須な場合がある．</p>
+<p>例えば，以下の写真では自分の PC のターミナルからサーバマシンにアクセスしてコマンド操作している．</p>
 <p><img src="./img/git_server.jpg" alt="CLIでサーバを操作する" /></p>
-<p>このように，Webの開発ではCLIを使用するタイミングが必ず出てくる．基本的な操作を行って慣れておくことが大切．</p>
-<h2 id="cliの操作"><a class="header" href="#cliの操作">CLIの操作</a></h2>
+<p>このように，Web の開発では CLI を使用するタイミングが必ず出てくる．基本的な操作を行って慣れておくことが大切．</p>
+<h2 id="cli-の操作"><a class="header" href="#cli-の操作">CLI の操作</a></h2>
 <p>以下のアプリケーションを立ち上げよう！</p>
 <p>これらのアプリケーションからコマンドを実行することができます！</p>
 <table><thead><tr><th>OS</th><th>コマンドを実行するアプリケーション</th></tr></thead><tbody>
@@ -203,7 +203,7 @@
 <h2 id="代表的な操作"><a class="header" href="#代表的な操作">代表的な操作</a></h2>
 <p><code>$</code>マーク（<code>%</code>マークの場合もある）が出ているときはコマンド待機中（入力できる状態）</p>
 <table><thead><tr><th>コマンド</th><th>実行例</th><th>意味</th></tr></thead><tbody>
-<tr><td><code>cd</code></td><td><code>$ cd Desktop</code></td><td>最重要．<br>作業ディレクトリを変更する．<code>cd ..</code>で1階層上に移動．<br><code>cd </code>まで入力して，フォルダのドラッグ&amp;ドロップでも移動先を指定できる．</td></tr>
+<tr><td><code>cd</code></td><td><code>$ cd Desktop</code></td><td>最重要．<br>作業ディレクトリを変更する．<code>cd ..</code>で 1 階層上に移動．<br><code>cd </code>まで入力して，フォルダのドラッグ&amp;ドロップでも移動先を指定できる．</td></tr>
 <tr><td><code>ls</code></td><td><code>$ ls -a</code></td><td>現在のディレクトリにあるファイルとフォルダを表示する．<br><code> -a</code>をつけることで隠しファイルやフォルダを表示する．</td></tr>
 </tbody></table>
 <h2 id="ファイルとフォルダの作成"><a class="header" href="#ファイルとフォルダの作成">ファイルとフォルダの作成</a></h2>
@@ -213,10 +213,10 @@
 <tr><td><code>cat</code></td><td><code>$ cat memo.txt</code></td><td>ファイルの内容を表示する．</td></tr>
 </tbody></table>
 <h2 id="ファイルを編集する"><a class="header" href="#ファイルを編集する">ファイルを編集する</a></h2>
-<h3 id="cli上で使えるエディタ"><a class="header" href="#cli上で使えるエディタ">CLI上で使えるエディタ</a></h3>
-<p>CLIで使用できる<code>vi</code>というエディタが存在する．今後多用するため，操作を押さえておこう．</p>
+<h3 id="cli-上で使えるエディタ"><a class="header" href="#cli-上で使えるエディタ">CLI 上で使えるエディタ</a></h3>
+<p>CLI で使用できる<code>vi</code>というエディタが存在する．今後多用するため，操作を押さえておこう．</p>
 <ul>
-<li>CLI上では<code>vi</code>と呼ばれるエディタを使用できる（他にもある）．</li>
+<li>CLI 上では<code>vi</code>と呼ばれるエディタを使用できる（他にもある）．</li>
 <li><code>vi</code>コマンドでエディタを起動する．</li>
 </ul>
 <pre><code class="language-bash">$ vi 編集したいファイルの名前
@@ -230,33 +230,33 @@
 </tbody></table>
 <p>使い方は主に下記の流れとなる．</p>
 <ul>
-<li>viを起動する．</li>
-<li><code>i</code>を入力してインサートモードに変化する．<code>-INSERT-</code>などが表示される．</li>
+<li>vi を起動する．</li>
+<li><code>i</code> を入力してインサートモードに変化する．<code>-INSERT-</code> などが表示される．</li>
 <li>インサートモードで，ファイルに対して文字列の入力や編集が行う．</li>
-<li><code>Esc</code>キーでコマンドモードに戻る．</li>
+<li><code>Esc</code> キーでコマンドモードに戻る．</li>
 <li>コマンドモードで「ファイルを保存」「閉じる」などの操作を行う．</li>
 </ul>
 <h3 id="コマンドモードで使用する代表的なコマンド"><a class="header" href="#コマンドモードで使用する代表的なコマンド">コマンドモードで使用する代表的なコマンド</a></h3>
 <table><thead><tr><th>コマンド</th><th>意味</th></tr></thead><tbody>
 <tr><td><code>:w</code></td><td>現在開いているファイルを保存．</td></tr>
 <tr><td><code>:q</code></td><td>現在開いているファイルを閉じる．</td></tr>
-<tr><td><code>:wq</code></td><td>上記2つの組み合わせ．保存して閉じるの意味．</td></tr>
+<tr><td><code>:wq</code></td><td>上記 2 つの組み合わせ．保存して閉じるの意味．</td></tr>
 <tr><td><code>:!q</code></td><td>保存せずに閉じる．書いていて訳がわからなくなったらこれ．</td></tr>
 </tbody></table>
 <h2 id="練習"><a class="header" href="#練習">練習</a></h2>
 <p>以下の処理をやってみよう！</p>
-<p>CLI操作に慣れるのが目的！</p>
+<p>CLI 操作に慣れるのが目的！</p>
 <ul>
 <li>ターミナルでデスクトップに移動する．</li>
-<li><code>test</code>フォルダを作成する．</li>
-<li><code>test</code>フォルダに移動する．</li>
-<li><code>test</code>フォルダ内に<code>sample.txt</code>ファイルを作成する．</li>
-<li>viで<code>sample.txt</code>を開き，<code>Hello CLI!</code>と記述して保存して閉じる．</li>
-<li>ターミナルで<code>sample.txt</code>の内容を表示する．（Hello CLIが表示されればOK）</li>
-<li>GUIで上記ファイルが作成されていることを確認．</li>
+<li><code>test</code> フォルダを作成する．</li>
+<li><code>test</code> フォルダに移動する．</li>
+<li><code>test</code> フォルダ内に <code>sample.txt</code> ファイルを作成する．</li>
+<li>vi で <code>sample.txt</code> を開き，<code>Hello CLI!</code> と記述して保存して閉じる．</li>
+<li>ターミナルで <code>sample.txt</code> の内容を表示する．（Hello CLI! が表示されれば OK）</li>
+<li>GUI で上記ファイルが作成されていることを確認．</li>
 </ul>
 <h2 id="危険滅びの呪文"><a class="header" href="#危険滅びの呪文">【危険】滅びの呪文</a></h2>
-<p>PCの全てが死ぬ．絶対に実行してはならない．</p>
+<p>PC の全てが死ぬ．絶対に実行してはならない．</p>
 <p>（実行すると講義の受講に著しく支障をきたします）</p>
 <p><a href="https://news.mynavi.jp/article/dont_run_on_linux-11/">参考：https://news.mynavi.jp/article/dont_run_on_linux-11/</a></p>
 

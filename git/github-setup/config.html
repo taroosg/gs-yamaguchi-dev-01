@@ -170,12 +170,12 @@
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>ややこしいので1つずつ確認しながら進めること！</p>
+<p>ややこしいので 1 つずつ確認しながら進めること！</p>
 <ul>
 <li>下記のコマンドで設定ファイルに書き込む．</li>
-<li>2行目の「<code>vi ~...</code>」ではターミナル内でエディタを起動する．画面が変わりますがパニックにならないよう注意！</li>
+<li>2 行目の「<code>vi ~...</code>」ではターミナル内でエディタを起動する．画面が変わりますがパニックにならないよう注意！</li>
 </ul>
-<p>ターミナルで以下を1行ずつ実行．1行目がファイルの作成で，2行目でエディタでファイルを開く．</p>
+<p>ターミナルで以下を 1 行ずつ実行．1 行目がファイルの作成で，2 行目でエディタでファイルを開く．</p>
 <pre><code class="language-bash">$ touch ~/.ssh/config
 $ vi ~/.ssh/config
 </code></pre>
@@ -184,15 +184,15 @@ $ vi ~/.ssh/config
 <p>💻 ターミナルの操作</p>
 </blockquote>
 <ul>
-<li>このエディタにはインサートモードとコマンドモードの2つがあり，最初はコマンドモードで表示されるが，追記を行うにはインサートモードに変更する必要がある．</li>
-<li>インサートモードにするには「<code>i</code>」キーを押す．画面のどこかに<code>—INSERT—</code>や<code>—挿入—</code>などの文字列が表示される．その状態で「<code>Host github</code>」からの5行を追記する．</li>
+<li>このエディタにはインサートモードとコマンドモードの 2 つがあり，最初はコマンドモードで表示されるが，追記を行うにはインサートモードに変更する必要がある．</li>
+<li>インサートモードにするには「<code>i</code>」キーを押す．画面のどこかに <code>—INSERT—</code> や <code>—挿入—</code> などの文字列が表示される．その状態で「<code>Host github</code>」からの 5 行を追記する．</li>
 <li>追記が終わったら「esc（コマンドモードに戻る）」→「<code>:wq</code>（保存して終了のコマンド）」→「<code>enter</code>（実行）」で元の画面に戻る．</li>
 <li>ミスったと感じたら「<code>esc</code>」→「<code>:q!</code>」→「<code>enter</code>」でエディタを終了できるので，もう一度「<code>vi ~...</code>」を入力してやり直しましょう．</li>
 </ul>
-<p><code>.ssh/config</code>ファイルを開くと空なので以下を追記する．</p>
+<p><code>.ssh/config</code> ファイルを開くと空なので以下を追記する．</p>
 <pre><code class="language-text">Host github.com
   HostName github.com
-  Identityfile ~/.ssh/github_rsa
+  Identityfile ~/.ssh/id_rsa
   Port 22
   User git
 </code></pre>

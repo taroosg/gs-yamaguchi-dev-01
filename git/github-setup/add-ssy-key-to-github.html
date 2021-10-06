@@ -165,15 +165,15 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="githubへのssh鍵登録"><a class="header" href="#githubへのssh鍵登録">GitHubへのSSH鍵登録</a></h1>
-<h2 id="作成したsshキーの表示"><a class="header" href="#作成したsshキーの表示">作成したsshキーの表示</a></h2>
+                        <h1 id="github-への-ssh-鍵登録"><a class="header" href="#github-への-ssh-鍵登録">GitHub への SSH 鍵登録</a></h1>
+<h2 id="作成した-ssh-キーの表示"><a class="header" href="#作成した-ssh-キーの表示">作成した ssh キーの表示</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>ターミナルで下記のコマンドを入力し，ssh-keyを表示させる．</p>
-<pre><code class="language-bash">$ cat ~/.ssh/github_rsa.pub
+<p>ターミナルで下記のコマンドを入力し，ssh-key を表示させる．</p>
+<pre><code class="language-bash">$ cat ~/.ssh/id_rsa.pub
 </code></pre>
-<p>実行結果（各自異なる文字列が表示される）</p>
+<p>実行結果（先頭は <code>ssh-rsa</code> だが，残りは各自異なる文字列となる）</p>
 <pre><code class="language-bash">ssh-rsa ...
 ...
 ...
@@ -181,14 +181,14 @@
 ...
 ... localhost@0-mac
 </code></pre>
-<h2 id="githubにssh-keyを登録"><a class="header" href="#githubにssh-keyを登録">GitHubにssh-keyを登録</a></h2>
+<h2 id="github-に-ssh-key-を登録"><a class="header" href="#github-に-ssh-key-を登録">GitHub に ssh-key を登録</a></h2>
 <blockquote>
 <p>🌏 ブラウザの操作</p>
 </blockquote>
-<p>GitHubのサイトにアクセスし，「設定」→「SSH keys」へ進む．「Add SSH key」をクリックして入力画面へ進む．</p>
-<p>ターミナルに表示された文字列を「ssh-rsa」から全てコピーし，GitHubサイトの入力欄に貼り付ける．タイトルはPC名など適当につけて OK．
+<p>GitHub のサイトにアクセスし，「設定」→「SSH keys」へ進む．「Add SSH key」をクリックして入力画面へ進む．</p>
+<p>ターミナルに表示された文字列を「ssh-rsa」から全てコピーし，GitHub サイトの入力欄に貼り付ける．タイトルは PC 名など適当につけて OK．
 入力したら「Add key」をクリックして終了．</p>
-<p>※公開鍵はPC毎にペアを作成するため，どのPCで発行した公開鍵なのか判別できるように名前をつけると良い．</p>
+<p>※公開鍵は PC 毎にペアを作成するため，どの PC で発行した公開鍵なのか判別できるように名前をつけると良い．</p>
 
                     </main>
 

@@ -165,17 +165,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="githubとの接続設定"><a class="header" href="#githubとの接続設定">GitHubとの接続設定</a></h1>
-<h2 id="githubの接続情報を登録"><a class="header" href="#githubの接続情報を登録">GitHubの接続情報を登録</a></h2>
+                        <h1 id="github-との接続設定"><a class="header" href="#github-との接続設定">GitHub との接続設定</a></h1>
+<h2 id="github-の接続情報を登録"><a class="header" href="#github-の接続情報を登録">GitHub の接続情報を登録</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>「GitHubのユーザ名」と「GitHubで使用しているメールアドレス」をローカルPCに登録する．</p>
+<p>「GitHub のユーザ名」と「GitHub で使用しているメールアドレス」をローカル PC に登録する．</p>
 <p>ターミナルで下記コマンドを入力し，エンターを押す．</p>
 <p><strong>！！！それぞれ自身のアカウントのものを入力すること！！！</strong></p>
 <ul>
-<li>1行目はユーザ名を入力する．</li>
-<li>2行目はメールアドレスを入力する．</li>
+<li>1 行目はユーザ名を入力する．</li>
+<li>2 行目はメールアドレスを入力する．</li>
 </ul>
 <pre><code class="language-bash">$ git config --global user.name &quot;hoge&quot;
 $ git config --global user.email &quot;hoge@example.com&quot;
@@ -186,21 +186,22 @@ $ git config --global user.email &quot;hoge@example.com&quot;
 </blockquote>
 <p>以下のコマンドを入力して内容を確認する．</p>
 <pre><code class="language-bash">$ git config -l
-</code></pre>
-<p>実行結果（下記以外にいくつか表示される場合もある．下記の内容が含まれていればOK）</p>
-<pre><code class="language-bash">user.name=hoge
+
+# 実行結果（下記以外にいくつか表示される場合もある．下記の内容が含まれていればOK）
+user.name=hoge
 user.email=hoge@example.com
+
 </code></pre>
-<p>上で入力した内容に間違いなければOK．</p>
+<p>上で入力した内容に間違いなければ OK．</p>
 <h2 id="接続テスト"><a class="header" href="#接続テスト">接続テスト</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>ターミナルで書きを実行．途中でなにか訊かれたら「<code>yes</code>」を入力して進める．</p>
-<pre><code class="language-bash">$ ssh -i ~/.ssh/github_rsa git@github.com
-</code></pre>
-<p>実行結果（<code>Hi</code>の後は自分のユーザ名が表示される）</p>
-<pre><code class="language-bash">Hi hoge! You've successfully authenticated, but GitHub does not provide shell access.
+<p>ターミナルで下記を実行．途中でなにか訊かれたら「<code>yes</code>」と入力して進める．</p>
+<pre><code class="language-bash">$ ssh -i ~/.ssh/id_rsa git@github.com
+
+# 実行結果（`Hi` の後は自分のユーザ名が表示される）
+Hi hoge! You've successfully authenticated, but GitHub does not provide shell access.
 Connection to github.com closed.
 </code></pre>
 <p>上記のように表示されれば OK．</p>
@@ -208,9 +209,9 @@ Connection to github.com closed.
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>Gitでソースコードを管理する際には「ブランチ」という考え方が存在する．</p>
-<p>GitHubではデフォルトのブランチが<code>main</code>という名前になっているが，ローカルのPCでは<code>master</code>となっている場合がある（バージョンなどで異なる）．</p>
-<p><code>main</code>に統一しておかないと後々面倒なので，下記のコマンドでローカルPCのデフォルトブランチを<code>main</code>に変更する．</p>
+<p>Git でソースコードを管理する際には「ブランチ」という考え方が存在する．</p>
+<p>GitHub ではデフォルトのブランチが<code>main</code>という名前になっているが，ローカルの PC では<code>master</code>となっている場合がある（バージョンなどで異なる）．</p>
+<p><code>main</code>に統一しておかないと後々面倒なので，下記のコマンドでローカル PC のデフォルトブランチを<code>main</code>に変更する．</p>
 <pre><code class="language-bash">$ git config --global init.defaultBranch main
 </code></pre>
 

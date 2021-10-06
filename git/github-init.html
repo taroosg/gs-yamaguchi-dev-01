@@ -165,29 +165,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="githubにプロダクトをpush"><a class="header" href="#githubにプロダクトをpush">GitHubにプロダクトをpush</a></h1>
+                        <h1 id="github-にプロダクトを-push"><a class="header" href="#github-にプロダクトを-push">GitHub にプロダクトを push</a></h1>
 <h2 id="この手順を行うタイミング"><a class="header" href="#この手順を行うタイミング">この手順を行うタイミング</a></h2>
 <ul>
-<li>新しいプロダクトを作成し，初めてGitHubにソースコードを共有するとき．</li>
+<li>新しいプロダクトを作成し，初めて GitHub にソースコードを共有するとき．</li>
 </ul>
 <h2 id="リポジトリを作成する"><a class="header" href="#リポジトリを作成する">リポジトリを作成する</a></h2>
 <blockquote>
 <p>🌏 ブラウザの操作</p>
 </blockquote>
 <ul>
-<li>ブラウザでGitHubにアクセスし，新しいリポジトリを作成する．</li>
-<li>Repository nameはプロダクト名にしておくとわかりやすくて良い．(janken, mamopad など)</li>
+<li>ブラウザで GitHub にアクセスし，新しいリポジトリを作成する．</li>
+<li>Repository name はプロダクト名にしておくとわかりやすくて良い．(janken, mamopad など)</li>
 <li>【重要】下の方の<code>Initialize this repository with:</code>部分はチェックを入れないこと．</li>
-<li>作成するとURLが表示されるのでそのままにしておく．「SSHのタブ」を選択しておく(後でURLを使用するため)</li>
+<li>作成すると URL が表示されるのでそのままにしておく．「SSH のタブ」を選択しておく(後で URL を使用するため)</li>
 </ul>
 <h2 id="超重要ディレクトリを変更する"><a class="header" href="#超重要ディレクトリを変更する">【超重要】ディレクトリを変更する</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
 <p>まず，ターミナルの作業ディレクトリをプロダクトのディレクトリに移動する必要がある．</p>
-<p><strong>移動しない場合，PCの中身全てをGitHubにプッシュする羽目になるので必ず行うこと！！</strong></p>
-<p><strong>この手順を行わなかった場合，今後あらゆるコマンドでエラーが発生する，PCがクラッシュするなどの危険が伴う．</strong></p>
-<p>ターミナルで下記コマンドを入力する．(enterは押さないこと)</p>
+<p><strong>移動しない場合，PC の中身全てを GitHub にプッシュする羽目になるので必ず行うこと！！</strong></p>
+<p><strong>この手順を行わなかった場合，今後あらゆるコマンドでエラーが発生する，PC がクラッシュするなどの危険が伴う．</strong></p>
+<p>ターミナルで下記コマンドを入力する．(enter は押さないこと)</p>
 <p>【重要】<code>cd</code>のあとにスペースを入れること</p>
 <pre><code class="language-bash">$ cd
 </code></pre>
@@ -197,7 +197,7 @@
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>プロダクトのフォルダでGitによる管理をできるようにする．</p>
+<p>プロダクトのフォルダで Git による管理をできるようにする．</p>
 <p>下記コマンドを入力する．</p>
 <pre><code class="language-bash">$ git init
 </code></pre>
@@ -206,7 +206,7 @@
 <p>💻 ターミナルの操作</p>
 </blockquote>
 <p>コードをアップするリポジトリを連携させる．</p>
-<p>先程ブラウザで作成したリポジトリのURL（<code>git@github.com/***</code>）を使用する．</p>
+<p>先程ブラウザで作成したリポジトリの URL（<code>git@github.com/***</code>）を使用する．</p>
 <p>ターミナルで以下を実行する．</p>
 <pre><code class="language-bash">$ git remote add origin リポジトリのURL
 </code></pre>
@@ -220,33 +220,33 @@ origin	git@github.com:******/******.git (push)
 <p>間違っている場合は以下で登録し直す．</p>
 <pre><code class="language-bash">$ git remote set-url origin 正しいURL
 </code></pre>
-<h2 id="ファイルをadd"><a class="header" href="#ファイルをadd">ファイルをadd</a></h2>
+<h2 id="ファイルを-add"><a class="header" href="#ファイルを-add">ファイルを add</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p>Gitで管理するファイルを指定する．アップするには「<code>add</code>」「<code>commit</code>」「<code>push</code>」の3手順が必要．</p>
-<p>ターミナルで以下を実行する．<code>.</code>は「フォルダ内の全てのファイル」の意味で，<code>add</code>の後にはスペースが入る点に注意！</p>
+<p>Git で管理するファイルを指定する．アップするには「<code>add</code>」「<code>commit</code>」「<code>push</code>」の 3 手順が必要．</p>
+<p>ターミナルで以下を実行する．<code>.</code> は「フォルダ内の全てのファイル」の意味で，<code>add</code> の後にはスペースが入る点に注意！</p>
 <pre><code class="language-bash">$ git add .
 </code></pre>
-<h2 id="ファイルをcommit"><a class="header" href="#ファイルをcommit">ファイルをcommit</a></h2>
+<h2 id="ファイルを-commit"><a class="header" href="#ファイルを-commit">ファイルを commit</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p><code>commit</code>はファイルのバージョンを作成するイメージ．</p>
+<p><code>commit</code> はファイルのバージョンを作成するイメージ．</p>
 <p>コミットを重ねても，以前のコミットへ状態を戻すことでファイルの内容をもとに戻すことが可能．</p>
 <p>以下のコマンドを入力する．</p>
-<p><code>-m</code>のあとの「<code>&quot;&quot;</code>」内にコミットメッセージを追加する．(変更内容などが把握できるコメント)</p>
-<pre><code class="language-bash">$ git commit -m&quot;コミットメッセージ&quot;
+<p><code>-m</code> のあとの「<code>&quot;&quot;</code>」内にコミットメッセージを追加する．(変更内容などが把握できるコメント)</p>
+<pre><code class="language-bash">$ git commit -m &quot;コミットメッセージ&quot;
 </code></pre>
-<h2 id="ファイルをpush"><a class="header" href="#ファイルをpush">ファイルをpush</a></h2>
+<h2 id="ファイルを-push"><a class="header" href="#ファイルを-push">ファイルを push</a></h2>
 <blockquote>
 <p>💻 ターミナルの操作</p>
 </blockquote>
-<p><code>push</code>は実際にファイルをアップロードするイメージ．この段階ではじめてGitHubにコードが追加される．</p>
+<p><code>push</code> は実際にファイルをアップロードするイメージ．この段階ではじめて GitHub にコードが追加される．</p>
 <p>下記コマンドを入力する．</p>
 <pre><code class="language-bash">$ git push origin main
 </code></pre>
-<p>実行結果（似たような感じになっていればOK）</p>
+<p>実行結果（似たような感じになっていれば OK）</p>
 <pre><code class="language-bash">Counting objects: 4, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (4/4), done.
@@ -256,7 +256,7 @@ remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To github.com:******/******.git
    9ae72be..eb700ec  main -&gt; main
 </code></pre>
-<p>ブラウザでGitHubのページを確認し，ファイルがアップされていれば成功！</p>
+<p>ブラウザで GitHub のページを確認し，ファイルがアップされていれば成功！</p>
 
                     </main>
 

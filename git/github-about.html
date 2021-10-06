@@ -165,53 +165,56 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="github概要"><a class="header" href="#github概要">GitHub概要</a></h1>
+                        <h1 id="github-概要"><a class="header" href="#github-概要">GitHub 概要</a></h1>
 <h2 id="gitとgithubは異なる"><a class="header" href="#gitとgithubは異なる">「Git」と「GitHub」は異なる！</a></h2>
-<p>「Gitのバージョン管理」をオンラインで共有できるのがGitHub</p>
+<p>「Git のバージョン管理」をオンラインで共有できるのが GitHub</p>
 <p><img src="./img/cli_git_github_01.svg" alt="GitHub解説1" /></p>
 <h2 id="複数人でのバージョン管理がより簡単に"><a class="header" href="#複数人でのバージョン管理がより簡単に">複数人でのバージョン管理がより簡単に！</a></h2>
 <p>オンライン上でソースコードを共有できるため，複数人で協力して開発を進めることが容易になる．</p>
 <p><img src="./img/cli_git_github_02.svg" alt="GitHub解説2" /></p>
-<h2 id="githubはエンジニア同士のsns"><a class="header" href="#githubはエンジニア同士のsns">Githubはエンジニア同士のSNS</a></h2>
-<p>GitHubは単にソースコードをオンラインで管理するだけが役割ではない．</p>
-<p>その他にも，下記のようなことが実現できる「エンジニアのSNS」であるッ！</p>
+<h2 id="github-はエンジニア同士の-sns"><a class="header" href="#github-はエンジニア同士の-sns">Github はエンジニア同士の SNS</a></h2>
+<p>GitHub は単にソースコードをオンラインで管理するだけが役割ではない．</p>
+<p>その他にも，下記のようなことが実現できる「エンジニアの SNS」であるッ！</p>
 <ul>
 <li>開発者同士でのソースコード共有．</li>
 <li>複数人のチームでのプロダクト開発．</li>
 <li>有志による機能開発とプロダクトへの反映（pull request）</li>
 <li>バグ報告などコードを使ったコミュニケーション（issue）</li>
 </ul>
-<h2 id="重要readmeファイル"><a class="header" href="#重要readmeファイル">【重要】readmeファイル</a></h2>
-<p>ソースコードをGitHubにpushするときは，コードの案内（どんなプロダクトなのか，など）が必要となる．</p>
+<h2 id="重要readme-ファイル"><a class="header" href="#重要readme-ファイル">【重要】readme ファイル</a></h2>
+<p>ソースコードを GitHub に push するときは，コードの案内（どんなプロダクトなのか，など）が必要となる．</p>
 <p>そのために「<code>readme</code>」ファイルというものが存在する．下記の手順で作成してみよう．</p>
 <ol>
 <li>エディタでプロダクトのフォルダを開き，<code>readme.md</code>を新規作成．</li>
-<li>新規作成したreadmeファイルに次の内容を記述しよう！
+<li>新規作成した readme ファイルに次の内容を記述しよう！
 <ul>
-<li><code>readme</code>ファイルは「マークダウン形式」で記述する．</li>
+<li><code>readme</code> ファイルは「マークダウン形式」で記述する．</li>
 </ul>
 </li>
 </ol>
 <pre><code class="language-md"># プロダクトのタイトル
 
 ## プロダクトの紹介
+
 - 箇条書きにすると
 - 読みやすい
 
 ## 工夫した点，こだわった点
+
 - 特に見てほしい点，
 - うまくできたと感じている点など．
 
 ## 苦戦した点，共有したいハマりポイントなど
+
 - ハマった経験は資産．
 - あとで自分で見返しても有用．
 </code></pre>
-<p><code>readme</code>ファイルはプロダクトのフォルダ内に保存しておき，他のソースコードと一緒にGitHubにpushするとリポジトリの画面に表示される．</p>
+<p><code>readme</code> ファイルはプロダクトのフォルダ内に保存しておき，他のソースコードと一緒に GitHub に push するとリポジトリの画面に表示される．</p>
 <h2 id="重要ディレクトリ間違えた場合"><a class="header" href="#重要ディレクトリ間違えた場合">【重要】ディレクトリ間違えた場合</a></h2>
-<p>コマンド<code>git init</code>を実行すると隠しフォルダ<code>.git</code>が作成される．</p>
+<p>コマンド <code>git init</code> を実行すると隠しフォルダ <code>.git</code> が作成される．</p>
 <p>このフォルダの中に，バージョンの履歴などが保存されている．</p>
-<p>誤ったフォルダで<code>git init</code>した場合は，<code>.git</code>フォルダを削除するとなかったことにできる．</p>
-<p>→再度目的のディレクトリに移動して<code>git init</code>しよう！</p>
+<p>誤ったフォルダで <code>git init</code> した場合は，<code>.git</code> フォルダを削除するとなかったことにできる．</p>
+<p>→ 再度目的のディレクトリに移動して <code>git init</code> しよう！</p>
 
                     </main>
 
