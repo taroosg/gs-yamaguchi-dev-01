@@ -23,7 +23,7 @@ jobs:
       - run: |
           mkdir ./book/samples
           cd samples
-          for i in */; do tar -czvf "${i%/}.tar.gz" "$i"; done
+          for i in */; do tar -czvf "${i%/}.zip" "$i"; done
           mv *.zip ../book/samples
 
       - name: Deploy
