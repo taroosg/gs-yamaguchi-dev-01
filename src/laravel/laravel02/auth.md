@@ -19,12 +19,12 @@ use Illuminate\Http\Request;
 
 use Validator;
 use App\Models\Tweet;
-// ↓追加
+// 🔽 追加
 use Auth;
 
 class TodoController extends Controller
 {
-  // ↓関数を作成
+  // 🔽 関数を作成
   public function __construct()
   {
     $this->middleware(['auth']);
@@ -85,7 +85,7 @@ Created Migration: 2021_09_24_061716_add_user_id_to_tweets_table
 public function up()
 {
   Schema::table('tweets', function (Blueprint $table) {
-    // ↓ 1行追加
+    // 🔽 1行追加
     $table->integer('user_id')->after('id');
   });
 }
@@ -196,7 +196,7 @@ public function store(Request $request)
       ->withErrors($validator);
   }
 
-  // ↓編集 フォームから送信されてきたデータとユーザIDをマージし，DBにinsertする
+  // 🔽 編集 フォームから送信されてきたデータとユーザIDをマージし，DBにinsertする
   $data = $request->merge(['user_id' => Auth::user()->id])->all();
   $result = Tweet::create($data);
 

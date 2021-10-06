@@ -35,7 +35,7 @@
                   </a>
                   <div class="flex">
                     <!-- 更新ボタン -->
-                    <!-- 削除ボタン -->
+                    <!-- 🔽 削除ボタン -->
                     <form action="{{ route('tweet.destroy',$tweet->id) }}" method="POST" class="text-left">
                       @method('delete')
                       @csrf

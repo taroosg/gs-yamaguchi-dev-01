@@ -37,7 +37,7 @@ Controller created successfully.
 <?php
 
 use Illuminate\Support\Facades\Route;
-// ↓追加
+// 🔽 追加
 use App\Http\Controllers\TweetController;
 
 /*
@@ -51,7 +51,7 @@ use App\Http\Controllers\TweetController;
 |
 */
 
-// ↓追加
+// 🔽 追加
 Route::resource('tweet', TweetController::class);
 
 Route::get('/', function () {
@@ -113,7 +113,7 @@ URL にリクエストが来た場合に実行される関数はコントロー�
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// ↓2行追加
+// 🔽 2行追加
 use Validator;
 use App\Models\Tweet;
 
@@ -126,7 +126,7 @@ class TweetController extends Controller
    */
   public function index()
   {
-    // ↓追加
+    // 🔽 追加
     return view('tweet.index');
   }
 
@@ -137,7 +137,7 @@ class TweetController extends Controller
    */
   public function create()
   {
-    // ↓追加
+    // 🔽 追加
     return view('tweet.create');
   }
 

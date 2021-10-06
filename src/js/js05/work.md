@@ -3,9 +3,10 @@
 **「API」を使用したアプリケーションを実装！！**
 
 ## 考え方
-- APIを組み合わせる！
-- FirebaseやLocalStorageを組み込んでもOK！
-- API自体を作ってもいいぞ．．！
+
+- API を組み合わせる！
+- Firebase や LocalStorage を組み込んでも OK！
+- API 自体を作ってもいいぞ．．！
 
 ## アレンジの例
 

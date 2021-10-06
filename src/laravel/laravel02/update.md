@@ -38,7 +38,7 @@
                     <h3 class="text-left font-bold text-lg text-grey-dark">{{$tweet->tweet}}</h3>
                   </a>
                   <div class="flex">
-                    <!-- 更新ボタン -->
+                    <!-- 🔽 更新ボタン -->
                     <form action="{{ route('tweet.edit',$tweet->id) }}" method="GET" class="text-left">
                       @csrf
                       <button type="submit" class="mr-2 ml-2 text-sm hover:bg-gray-200 hover:shadow-none text-white py-1 px-2 focus:outline-none focus:shadow-outline">

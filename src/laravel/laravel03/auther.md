@@ -39,7 +39,7 @@ class Tweet extends Model
     return self::orderBy('updated_at', 'desc')->get();
   }
 
-  // ↓追加
+  // 🔽 追加
   public function user()
   {
     return $this->belongsTo(User::class);
@@ -82,7 +82,7 @@ class Tweet extends Model
               <tr class="hover:bg-grey-lighter">
                 <td class="py-4 px-6 border-b border-grey-light">
                   <a href="{{ route('tweet.show',$tweet->id) }}">
-                    <!-- ↓追加 -->
+                    <!-- 🔽 追加 -->
                     <p class="text-left text-grey-dark">{{$tweet->user->name}}</p>
                     <h3 class="text-left font-bold text-lg text-grey-dark">{{$tweet->tweet}}</h3>
                   </a>

@@ -76,10 +76,10 @@ class CreateTweetsTable extends Migration
   {
     Schema::create('tweets', function (Blueprint $table) {
       $table->id();
-      // ↓ここから追加
+      // 🔽 ここから追加
       $table->string('tweet');
       $table->text('description')->nullable();
-      // ↑ここまで追加
+      // 🔼 ここまで追加
       $table->timestamps();
     });
   }
@@ -114,7 +114,7 @@ class CreateTweetsTable extends Migration
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-// ↓ 1行追加
+// 🔽  1行追加
 use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
@@ -281,7 +281,7 @@ class DatabaseSeeder extends Seeder
    */
   public function run()
   {
-    // ↓この行のコメントから外す
+    // 🔽 この行のコメントから外す
     \App\Models\User::factory(10)->create();
   }
 }

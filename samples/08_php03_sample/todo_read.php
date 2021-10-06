@@ -11,7 +11,7 @@ try {
   exit();
 }
 
-$sql = 'SELECT * FROM todo_table WHERE is_deleted=0 ORDER BY deadline ASC';
+$sql = 'SELECT * FROM todo_table ORDER BY deadline ASC';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();

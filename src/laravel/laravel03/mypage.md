@@ -19,7 +19,7 @@ class User extends Authenticatable
 
   // 省略
 
-  // ↓追加
+  // 🔽 追加
   public function mytweets()
   {
     return $this->hasMany(Tweet::class)->orderBy('updated_at', 'desc');
@@ -46,7 +46,7 @@ class User extends Authenticatable
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TweetController;
 
-// ↓追加
+// 🔽 追加
 Route::get('/tweet/mypage', [TweetController::class, 'mydata'])->name('tweet.mypage');;
 
 Route::resource('tweet', TweetController::class);
@@ -80,7 +80,7 @@ use Illuminate\Http\Request;
 use Validator;
 use App\Models\Tweet;
 use Auth;
-// ↓追加
+// 🔽 追加
 use App\Models\User;
 
 class TweetController extends Controller
@@ -131,19 +131,19 @@ class TweetController extends Controller
             {{ __('Dashboard') }}
           </x-nav-link>
         </div>
-        <!-- ↓一覧ページへのリンクを追加 -->
+        <!-- 🔽 一覧ページへのリンクを追加 -->
         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
           <x-nav-link :href="route('tweet.index')" :active="request()->routeIs('tweet.index')">
             {{ __('Index') }}
           </x-nav-link>
         </div>
-        <!-- ↓作成ページへのリンクを追加 -->
+        <!-- 🔽 作成ページへのリンクを追加 -->
         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
           <x-nav-link :href="route('tweet.create')" :active="request()->routeIs('tweet.create')">
             {{ __('Create') }}
           </x-nav-link>
         </div>
-        <!-- ↓マイページへのリンクを追加 -->
+        <!-- 🔽 マイページへのリンクを追加 -->
         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
           <x-nav-link :href="route('tweet.mypage')" :active="request()->routeIs('tweet.mypage')">
             {{ __('Mypage') }}
@@ -199,19 +199,19 @@ class TweetController extends Controller
         {{ __('Dashboard') }}
       </x-responsive-nav-link>
     </div>
-    <!-- ↓一覧ページへのリンクを追加 -->
+    <!-- 🔽 一覧ページへのリンクを追加 -->
     <div class="pt-2 pb-3 space-y-1">
       <x-responsive-nav-link :href="route('tweet.index')" :active="request()->routeIs('tweet.index')">
         {{ __('Index') }}
       </x-responsive-nav-link>
     </div>
-    <!-- ↓作成ページへのリンクを追加 -->
+    <!-- 🔽 作成ページへのリンクを追加 -->
     <div class="pt-2 pb-3 space-y-1">
       <x-responsive-nav-link :href="route('tweet.create')" :active="request()->routeIs('tweet.create')">
         {{ __('Create') }}
       </x-responsive-nav-link>
     </div>
-    <!-- ↓マイページへのリンクを追加 -->
+    <!-- 🔽 マイページへのリンクを追加 -->
     <div class="pt-2 pb-3 space-y-1">
       <x-responsive-nav-link :href="route('tweet.mypage')" :active="request()->routeIs('tweet.mypage')">
         {{ __('Mypage') }}
@@ -303,7 +303,7 @@ tweets テーブルのデータを確認し，レコード毎に`user_id`が異�
                     <h3 class="text-left font-bold text-lg text-grey-dark">{{$tweet->tweet}}</h3>
                   </a>
                   <div class="flex">
-                    <!-- ↓条件分岐でログインしているユーザが投稿したtweetのみ編集ボタンと削除ボタンが表示される -->
+                    <!-- 🔽 条件分岐でログインしているユーザが投稿したtweetのみ編集ボタンと削除ボタンが表示される -->
                     @if ($tweet->user_id === Auth::user()->id)
                     <!-- 更新ボタン -->
                     <form action="{{ route('tweet.edit',$tweet->id) }}" method="GET" class="text-left">

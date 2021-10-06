@@ -1,23 +1,23 @@
-# GitHub上のコードをマネージドクラウドにデプロイ
+# GitHub 上のコードをマネージドクラウドにデプロイ
 
 ここまでで下記のように必要な通信ができるようになった．
 
-- ローカルPCとGitHub
-- ローカルPCとマネージドクラウドの仮想マシン
-- マネージドクラウドの仮想マシンとGitHub
+- ローカル PC と GitHub
+- ローカル PC とマネージドクラウドの仮想マシン
+- マネージドクラウドの仮想マシンと GitHub
 
-通信の環境が整ったので，マネージドクラウドの仮想マシン上にGitHubのコードをデプロイする．
+通信の環境が整ったので，マネージドクラウドの仮想マシン上に GitHub のコードをデプロイする．
 
 ## 仮想マシンの準備
 
->🔗 Lolipopでの作業
+> 🔗 Lolipop での作業
 
 まず，デプロイに関する準備（以下）をする．
 
 - デプロイ用ディレクトリの作成
 - `composer`のダウンロード
 - 必要なパスを通す
-- Laravelの準備
+- Laravel の準備
 
 ### デプロイ用ディレクトリの作成
 
@@ -29,7 +29,7 @@ $ mkdir bin
 $ cd bin
 ```
 
-### composerのダウンロード
+### composer のダウンロード
 
 ```bash
 $ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -46,7 +46,7 @@ Composer (version 1.10.8) successfully installed to: /var/www/bin/composer.phar
 Use it: php composer.phar
 ```
 
-composerのファイルを移動する．
+composer のファイルを移動する．
 
 ```bash
 $ mv composer.phar composer
@@ -72,9 +72,9 @@ $ vi ~/.bash_profile
 export PATH=$PATH:/var/www/bin
 ```
 
-### Laravelの準備
+### Laravel の準備
 
-ディレクトリを移動し，Laravelのインストーラを準備する．
+ディレクトリを移動し，Laravel のインストーラを準備する．
 
 ```bash
 $ cd /var/www
@@ -93,10 +93,9 @@ Generating autoload files
 Use the `composer fund` command to find out more!
 ```
 
+## GitHub 上のコードをデプロイ
 
-## GitHub上のコードをデプロイ
-
-GitHubから自分が作成したプロジェクトのファイルをダウンロードして`project`ディレクトリにコピーし，アプリケーションが動作するように設定を行う．
+GitHub から自分が作成したプロジェクトのファイルをダウンロードして`project`ディレクトリにコピーし，アプリケーションが動作するように設定を行う．
 
 ```bash
 $ git clone YOUR_REPOSITORY_URL project
@@ -118,7 +117,7 @@ Checking connectivity... done.
 
 ### 💡 Key Point
 
->初回は`git clone`コマンドでソースコードをダウンロードするが，2回め以降（機能追加した場合など）は`git pull`コマンドで差分管理する．
+> 初回は`git clone`コマンドでソースコードをダウンロードするが，2 回め以降（機能追加した場合など）は`git pull`コマンドで差分管理する．
 
 デプロイしたディレクトリに移動し，必要なライブラリをインストールする．
 
@@ -141,9 +140,9 @@ Package manifest generated successfully.
 Use the `composer fund` command to find out more!
 ```
 
-## DB関連の準備
+## DB 関連の準備
 
-設定ファイルを準備し，DB関連の設定を記述する．
+設定ファイルを準備し，DB 関連の設定を記述する．
 
 ```bash
 $ cp .env.example .env
@@ -197,6 +196,6 @@ $ rm -rf /var/www/html/
 $ ln -s /var/www/project/public/ /var/www/html
 ```
 
-ブラウザでプロジェクトのURLにアクセスして表示されればOK！
+ブラウザでプロジェクトの URL にアクセスして表示されれば OK！
 
 以上である( `･ω･)b

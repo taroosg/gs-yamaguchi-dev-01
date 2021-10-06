@@ -1,16 +1,14 @@
-# 【Docker編】実装したコードをGitHubへpush
+# 【Docker 編】実装したコードを GitHub へ push
 
-いつもどおりGitHubにコードをpushする．
-
+いつもどおり GitHub にコードを push する．
 
 ## リポジトリの作成
 
 適当につくっておく．
 
+## ソースコードの push
 
-## ソースコードのpush
-
->ローカルでの操作．「コンテナにログインしていない状態」で実行すること．
+> ローカルでの操作．「コンテナにログインしていない状態」で実行すること．
 
 以下のコマンドを実行する．
 
@@ -24,5 +22,4 @@ $ git commit -m"first commit"
 $ git push origin main
 ```
 
-GitHubにプロダクトのソースコードがpushされていればOK！
-
+GitHub にプロダクトのソースコードが push されていれば OK！

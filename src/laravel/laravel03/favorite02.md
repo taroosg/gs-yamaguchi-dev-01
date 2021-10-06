@@ -37,15 +37,15 @@ Controller created successfully.
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TweetController;
 
-// ↓追加
+// 🔽 追加
 use App\Http\Controllers\FavoriteController;
 
 // 省略
 
-// ↓追加
+// 🔽 追加
 Route::post('tweet/{tweet}/favorites', [FavoriteController::class, 'store'])->name('favorites');
 
-// ↓追加
+// 🔽 追加
 Route::post('tweet/{tweet}/unfavorites', [FavoriteController::class, 'destroy'])->name('unfavorites');
 
 Route::get('/tweet/mypage', [TweetController::class, 'mydata'])->name('tweet.mypage');
@@ -81,7 +81,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// ↓2行追加
+// 🔽 2行追加
 use App\Models\Tweet;
 use Auth;
 
@@ -90,14 +90,14 @@ class FavoriteController extends Controller
 
   // 省略
 
-  // ↓編集
+  // 🔽 編集
   public function store(Tweet $tweet)
   {
     $tweet->users()->attach(Auth::id());
     return redirect()->route('tweet.index');
   }
 
-  // ↓編集
+  // 🔽 編集
   public function destroy(Tweet $tweet)
   {
     $tweet->users()->detach(Auth::id());
@@ -146,7 +146,7 @@ class FavoriteController extends Controller
                     <h3 class="text-left font-bold text-lg text-grey-dark">{{$tweet->tweet}}</h3>
                   </a>
                   <div class="flex">
-                    <!-- ↓追加 -->
+                    <!-- 🔽 追加 -->
                     <!-- favorite 状態で条件分岐 -->
                     @if($tweet->users()->where('user_id', Auth::id())->exists())
                     <!-- unfavorite ボタン -->

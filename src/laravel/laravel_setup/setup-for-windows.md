@@ -77,7 +77,7 @@ wsl --set-default-version 2
 
 4. Windows ターミナルを Ubuntu 20.04 で動かす．
 
-↓Windows ターミナルを開いて上部の「∨」をクリックするとメニューが出るので，ここで `Ubuntu 20.04` を選ぶ．出てこない場合は PC を再起動する．
+↓ Windows ターミナルを開いて上部の「∨」をクリックするとメニューが出るので，ここで `Ubuntu 20.04` を選ぶ．出てこない場合は PC を再起動する．
 
 ![Ubuntu 設定箇所](./img/terminal_image01.png)
 

@@ -52,13 +52,13 @@ public function up()
 {
   Schema::create('tweet_user', function (Blueprint $table) {
     $table->id();
-    // ↓ ここから追加
+    // 🔽 ここから追加
     $table->unsignedBigInteger('user_id');
     $table->unsignedBigInteger('tweet_id');
     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
     $table->foreign('tweet_id')->references('id')->on('tweets')->onDelete('cascade');
     $table->unique(['user_id', 'tweet_id']);
-    // ↑ ここまで追加
+    // 🔼 ここまで追加
     $table->timestamps();
   });
 }
@@ -186,7 +186,7 @@ class User extends Authenticatable
 
   // 省略
 
-  // ↓追加
+  // 🔽 追加
   public function tweets()
   {
     return $this->belongsToMany(Tweet::class)->withTimestamps();
@@ -213,7 +213,7 @@ class Tweet extends Model
 
   // 省略
 
-  // ↓追加
+  // 🔽 追加
   public function users()
   {
     return $this->belongsToMany(User::class)->withTimestamps();

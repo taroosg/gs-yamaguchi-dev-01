@@ -1,6 +1,6 @@
-# PHPとDBの連携4（データ更新処理の作成）
+# PHP と DB の連携 4（データ更新処理の作成）
 
-## データ更新のSQl
+## データ更新の SQl
 
 ```sql
 -- UPDATE文の基本構造
@@ -14,7 +14,7 @@ UPDATE todo_table SET todo='PHP課題' WHERE id = 1;
 
 ## 更新の処理
 
-前項の編集画面からデータを受け取り，DBのデータを更新する．
+前項の編集画面からデータを受け取り，DB のデータを更新する．
 
 処理の流れは`todo_create.php`とよく似ている．
 
@@ -39,13 +39,13 @@ $id = $_POST['id'];
 
 ```
 
-### DB接続とSQL実行
+### DB 接続と SQL 実行
 
-続いてDB接続し，UPDATEのSQLを実行する．SQLが正常に実行された場合は一覧画面に移動する．
+続いて DB 接続し，UPDATE の SQL を実行する．SQL が正常に実行された場合は一覧画面に移動する．
 
 ### 💡 Key Point
 
->必ずWHEREでidを指定すること！！！
+> 必ず WHERE で id を指定すること！！！
 
 ```php
 // todo_update.php
@@ -74,9 +74,8 @@ if ($status == false) {
 
 ## 練習
 
-`todo_update.php`でUPDATEの処理を実装しよう！
+`todo_update.php`で UPDATE の処理を実装しよう！
 
-更新処理実行後，一覧ページでデータが更新されていればOK！
+更新処理実行後，一覧ページでデータが更新されていれば OK！
 
-（phpmyadminでも確認しよう）
-
+（phpmyadmin でも確認しよう）

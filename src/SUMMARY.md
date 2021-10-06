@@ -9,7 +9,7 @@
     <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->
     <!-- - [時間をコミットせよ](./note/commit-time.md) -->
 
-- [HTML&CSS](./html-css/README.md)
+- [HTML & CSS](./html-css/README.md)
 
   - [HTML と CSS の役割](./html-css/about-html-and-css.md)
   - [ファイルの準備と動作確認](./html-css/get-started.md)
@@ -21,10 +21,10 @@
 
 - [JS\_おみくじ](./js/js01/README.md)
 
-  - [JavaScript とは](./components/about-js.md)
-  - [変数と計算](./components/variable.md)
-  - [ランダムな数（乱数）をつくる](./components/random.md)
-  - [条件分岐](./components/if.md)
+  - [JavaScript とは](./js/js01/about-js.md)
+  - [変数と計算](./js/js01/variable.md)
+  - [ランダムな数（乱数）をつくる](./js/js01/random.md)
+  - [条件分岐](./js/js01/if.md)
   - [おみくじの Web アプリ実装](./js/js01/omikuji.md)
   - [課題](./js/js01/work.md)
 
@@ -43,9 +43,9 @@
 
 - [JS\_メモパッド](./js/js02/README.md)
 
-  - [配列](./components/array.md)
-  - [繰り返し処理](./components/for.md)
-  - [オブジェクト](./components/object.md)
+  - [配列](./js/js02/array.md)
+  - [繰り返し処理](./js/js02/for.md)
+  - [オブジェクト](./js/js02/object.md)
   - [LocalStorage（メモ帳初級）](./js/js02/memopad01.md)
   - [JSON データ（メモ帳中級）](./js/js02/memopad02.md)
   - [課題](./js/js02/work.md)
@@ -62,7 +62,7 @@
 
 - [JS_Firebase](./js/js04/README.md)
 
-  - [関数](./components/function.md)
+  - [関数](./js/js04/function.md)
   - [リアルタイムチャットの実装](./js/js04/chat-app.md)
   - [Firebase の準備 1（プロジェクトの作成）](./js/js04/firebase-project.md)
   - [Firebase の準備 2（ソースコードの準備）](./js/js04/firebase-js.md)
@@ -75,7 +75,7 @@
 - [JS_API](./js/js05/README.md)
 
   - [API とは](./js/js05/about-api.md)
-  - [GoogleBooksAPI](./js/js05/booksapi.md)
+  - [GoogleBooks API](./js/js05/booksapi.md)
   - [位置情報の活用](./js/js05/geolocation.md)
   - [BingMapsAPI/準備](./js/js05/bingmapsapi-setup.md)
   - [BingMapsAPI/実践](./js/js05/bingmapsapi-map.md)
