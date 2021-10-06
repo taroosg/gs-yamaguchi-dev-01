@@ -1,5 +1,9 @@
 # PHP_DB 応用\_RDB
 
+## サンプルコード
+
+[download](../../samples/10_php05_sample.zip)
+
 ## 本講義の内容とゴール
 
 ### 本講義の内容

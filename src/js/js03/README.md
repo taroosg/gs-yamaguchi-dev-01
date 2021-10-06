@@ -1,5 +1,9 @@
 # JS\_配列と繰り返し
 
+## サンプルコード
+
+[download](../../samples/03_js_quiz_sample.zip)
+
 ## 本講義の内容とゴール
 
 ### 本講義の内容

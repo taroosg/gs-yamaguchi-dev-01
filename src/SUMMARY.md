@@ -2,8 +2,9 @@
 
 - [講義資料ノート](./note/README.md)
 
+  - [初回課題の案内](./note/first-work.md)
   - [受講時の注意](./note/about.md)
-  - [コードに向き合いやすくなる考え方](./note/with-code.md)
+  - [コードへの向き合い方](./note/with-code.md)
   - [課題にチャレンジするコツ](./note/for-work.md)
   - [課題提出](./note/work-post.md)
     <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->

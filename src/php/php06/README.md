@@ -1,5 +1,9 @@
 # PHP\_ファイル操作と Ajax
 
+## サンプルコード
+
+[download](../../samples/11_php06_sample.zip)
+
 ## 本講義の内容とゴール
 
 ### 本講義の内容

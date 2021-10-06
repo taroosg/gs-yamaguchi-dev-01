@@ -1,5 +1,9 @@
 # PHP_DB 連携\_CRUD 処理後半
 
+## サンプルコード
+
+[download](../../samples/08_php03_sample.zip)
+
 ## 本講義の内容とゴール
 
 ### 本講義の内容

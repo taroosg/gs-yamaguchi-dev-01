@@ -1,5 +1,9 @@
 # PHP 基礎
 
+## サンプルコード
+
+[download](../../samples/06_php01_sample.zip)
+
 ## 本講義の内容とゴール
 
 ### 本講義の内容

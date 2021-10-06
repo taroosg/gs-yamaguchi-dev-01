@@ -1,5 +1,9 @@
 # JS_API
 
+## サンプルコード
+
+[download](../../samples/05_js_api_sample.zip)
+
 ## 事前準備
 
 今回はマイクロソフトのアカウントを使用します！

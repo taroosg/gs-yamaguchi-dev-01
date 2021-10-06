@@ -2,7 +2,7 @@
 
 ## サンプルコード
 
-[sample](../samples/00_html_css.zip)
+[download](../samples/00_html_css.zip)
 
 ### 本講義の内容
 

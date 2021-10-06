@@ -1,6 +1,6 @@
 <?php
 
-$dbn = 'mysql:dbname=dec_todo;charset=utf8;port=3306;host=localhost';
+$dbn = 'mysql:dbname=YOUR_DB_NAME;charset=utf8;port=3306;host=localhost';
 $user = 'root';
 $pwd = '';
 
