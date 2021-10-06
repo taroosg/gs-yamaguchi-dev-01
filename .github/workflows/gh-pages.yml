@@ -20,6 +20,12 @@ jobs:
 
       - run: mdbook build
 
+      - run: |
+          mkdir ./book/samples
+          cd samples
+          for i in */; do tar -czvf "${i%/}.tar.gz" "$i"; done
+          mv *.zip ../book/samples
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
