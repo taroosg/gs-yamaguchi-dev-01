@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>071-080 - G's-Yamaguchi-Dev01</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../note/index.html"><strong aria-hidden="true">1.</strong> 講義資料ノート</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../note/first-work.html"><strong aria-hidden="true">1.1.</strong> 初回課題の案内</a></li><li class="chapter-item expanded "><a href="../../note/about.html"><strong aria-hidden="true">1.2.</strong> 受講時の注意</a></li><li class="chapter-item expanded "><a href="../../note/with-code.html"><strong aria-hidden="true">1.3.</strong> コードへの向き合い方</a></li><li class="chapter-item expanded "><a href="../../note/for-work.html"><strong aria-hidden="true">1.4.</strong> 課題にチャレンジするコツ</a></li><li class="chapter-item expanded "><a href="../../note/work-post.html"><strong aria-hidden="true">1.5.</strong> 課題提出</a></li></ol></li><li class="chapter-item expanded "><a href="../../html-css/index.html"><strong aria-hidden="true">2.</strong> HTML &amp; CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../html-css/about-html-and-css.html"><strong aria-hidden="true">2.1.</strong> HTML と CSS の役割</a></li><li class="chapter-item expanded "><a href="../../html-css/get-started.html"><strong aria-hidden="true">2.2.</strong> ファイルの準備と動作確認</a></li><li class="chapter-item expanded "><a href="../../html-css/html.html"><strong aria-hidden="true">2.3.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../../html-css/css.html"><strong aria-hidden="true">2.4.</strong> CSS / ページ設定，背景，文字の大きさ，色</a></li><li class="chapter-item expanded "><a href="../../html-css/inspect.html"><strong aria-hidden="true">2.5.</strong> 【tips】検証画面の活用</a></li><li class="chapter-item expanded "><a href="../../html-css/flex.html"><strong aria-hidden="true">2.6.</strong> CSS / レイアウト</a></li><li class="chapter-item expanded "><a href="../../html-css/work.html"><strong aria-hidden="true">2.7.</strong> 演習</a></li></ol></li><li class="chapter-item expanded "><a href="../../js/js01/index.html"><strong aria-hidden="true">3.</strong> JS_おみくじ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/js01/about-js.html"><strong aria-hidden="true">3.1.</strong> JavaScript とは</a></li><li class="chapter-item expanded "><a href="../../js/js01/variable.html"><strong aria-hidden="true">3.2.</strong> 変数と計算</a></li><li class="chapter-item expanded "><a href="../../js/js01/random.html"><strong aria-hidden="true">3.3.</strong> ランダムな数（乱数）をつくる</a></li><li class="chapter-item expanded "><a href="../../js/js01/if.html"><strong aria-hidden="true">3.4.</strong> 条件分岐</a></li><li class="chapter-item expanded "><a href="../../js/js01/omikuji.html"><strong aria-hidden="true">3.5.</strong> おみくじの Web アプリ実装</a></li><li class="chapter-item expanded "><a href="../../js/js01/work.html"><strong aria-hidden="true">3.6.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../git/index.html"><strong aria-hidden="true">4.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../git/cli.html"><strong aria-hidden="true">4.1.</strong> GUI と CLI</a></li><li class="chapter-item expanded "><a href="../../git/git.html"><strong aria-hidden="true">4.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../../git/github-about.html"><strong aria-hidden="true">4.3.</strong> GitHub 概要</a></li><li class="chapter-item expanded "><a href="../../git/github-setup/index.html"><strong aria-hidden="true">4.4.</strong> GitHub 設定</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../git/github-setup/setup-ssh-key.html"><strong aria-hidden="true">4.4.1.</strong> SSH 鍵の発行</a></li><li class="chapter-item expanded "><a href="../../git/github-setup/config.html"><strong aria-hidden="true">4.4.2.</strong> 設定ファイルの編集</a></li><li class="chapter-item expanded "><a href="../../git/github-setup/add-ssy-key-to-github.html"><strong aria-hidden="true">4.4.3.</strong> GitHub への SSH 鍵登録</a></li><li class="chapter-item expanded "><a href="../../git/github-setup/connect-to-github.html"><strong aria-hidden="true">4.4.4.</strong> GitHub との接続設定</a></li></ol></li><li class="chapter-item expanded "><a href="../../git/github-init.html"><strong aria-hidden="true">4.5.</strong> GitHub にプロダクトを push</a></li><li class="chapter-item expanded "><a href="../../git/github-push.html"><strong aria-hidden="true">4.6.</strong> GitHub に最新版を push</a></li></ol></li><li class="chapter-item expanded "><a href="../../js/js02/index.html"><strong aria-hidden="true">5.</strong> JS_メモパッド</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/js02/array.html"><strong aria-hidden="true">5.1.</strong> 配列</a></li><li class="chapter-item expanded "><a href="../../js/js02/for.html"><strong aria-hidden="true">5.2.</strong> 繰り返し処理</a></li><li class="chapter-item expanded "><a href="../../js/js02/object.html"><strong aria-hidden="true">5.3.</strong> オブジェクト</a></li><li class="chapter-item expanded "><a href="../../js/js02/memopad01.html"><strong aria-hidden="true">5.4.</strong> LocalStorage（メモ帳初級）</a></li><li class="chapter-item expanded "><a href="../../js/js02/memopad02.html"><strong aria-hidden="true">5.5.</strong> JSON データ（メモ帳中級）</a></li><li class="chapter-item expanded "><a href="../../js/js02/work.html"><strong aria-hidden="true">5.6.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../js/js03/index.html"><strong aria-hidden="true">6.</strong> JS_配列と繰り返し</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/js03/array-for.html"><strong aria-hidden="true">6.1.</strong> 配列と繰り返しの練習</a></li><li class="chapter-item expanded "><a href="../../js/js03/quiz01.html"><strong aria-hidden="true">6.2.</strong> クイズアプリ初級</a></li><li class="chapter-item expanded "><a href="../../js/js03/quiz02.html"><strong aria-hidden="true">6.3.</strong> クイズアプリ中級</a></li><li class="chapter-item expanded "><a href="../../js/js03/work.html"><strong aria-hidden="true">6.4.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../js/js04/index.html"><strong aria-hidden="true">7.</strong> JS_Firebase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/js04/function.html"><strong aria-hidden="true">7.1.</strong> 関数</a></li><li class="chapter-item expanded "><a href="../../js/js04/chat-app.html"><strong aria-hidden="true">7.2.</strong> リアルタイムチャットの実装</a></li><li class="chapter-item expanded "><a href="../../js/js04/firebase-project.html"><strong aria-hidden="true">7.3.</strong> Firebase の準備 1（プロジェクトの作成）</a></li><li class="chapter-item expanded "><a href="../../js/js04/firebase-js.html"><strong aria-hidden="true">7.4.</strong> Firebase の準備 2（ソースコードの準備）</a></li><li class="chapter-item expanded "><a href="../../js/js04/firebase-db.html"><strong aria-hidden="true">7.5.</strong> Firebase の準備 3（データベースの準備）</a></li><li class="chapter-item expanded "><a href="../../js/js04/chat-create.html"><strong aria-hidden="true">7.6.</strong> チャット画面の実装とデータの送信</a></li><li class="chapter-item expanded "><a href="../../js/js04/chat-read.html"><strong aria-hidden="true">7.7.</strong> データのリアルタイム取得と画面表示</a></li><li class="chapter-item expanded "><a href="../../js/js04/optimize.html"><strong aria-hidden="true">7.8.</strong> 機能追加</a></li><li class="chapter-item expanded "><a href="../../js/js04/work.html"><strong aria-hidden="true">7.9.</strong> 課題と提出時の注意点</a></li></ol></li><li class="chapter-item expanded "><a href="../../js/js05/index.html"><strong aria-hidden="true">8.</strong> JS_API</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/js05/about-api.html"><strong aria-hidden="true">8.1.</strong> API とは</a></li><li class="chapter-item expanded "><a href="../../js/js05/booksapi.html"><strong aria-hidden="true">8.2.</strong> GoogleBooks API</a></li><li class="chapter-item expanded "><a href="../../js/js05/geolocation.html"><strong aria-hidden="true">8.3.</strong> 位置情報の活用</a></li><li class="chapter-item expanded "><a href="../../js/js05/bingmapsapi-setup.html"><strong aria-hidden="true">8.4.</strong> BingMapsAPI/準備</a></li><li class="chapter-item expanded "><a href="../../js/js05/bingmapsapi-map.html"><strong aria-hidden="true">8.5.</strong> BingMapsAPI/実践</a></li><li class="chapter-item expanded "><a href="../../js/js05/bingmapsapi-pin.html"><strong aria-hidden="true">8.6.</strong> 【おまけ】BingMapsAPI/機能追加</a></li><li class="chapter-item expanded "><a href="../../js/js05/other-api.html"><strong aria-hidden="true">8.7.</strong> その他の API 紹介</a></li><li class="chapter-item expanded "><a href="../../js/js05/work.html"><strong aria-hidden="true">8.8.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../js/js06/index.html"><strong aria-hidden="true">9.</strong> JS 修練場</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/js06/001-010.html"><strong aria-hidden="true">9.1.</strong> 001-010</a></li><li class="chapter-item expanded "><a href="../../js/js06/011-020.html"><strong aria-hidden="true">9.2.</strong> 011-020</a></li><li class="chapter-item expanded "><a href="../../js/js06/021-030.html"><strong aria-hidden="true">9.3.</strong> 021-030</a></li><li class="chapter-item expanded "><a href="../../js/js06/031-040.html"><strong aria-hidden="true">9.4.</strong> 031-040</a></li><li class="chapter-item expanded "><a href="../../js/js06/041-050.html"><strong aria-hidden="true">9.5.</strong> 041-050</a></li><li class="chapter-item expanded "><a href="../../js/js06/051-060.html"><strong aria-hidden="true">9.6.</strong> 051-060</a></li><li class="chapter-item expanded "><a href="../../js/js06/061-070.html"><strong aria-hidden="true">9.7.</strong> 061-070</a></li><li class="chapter-item expanded "><a href="../../js/js06/071-080.html" class="active"><strong aria-hidden="true">9.8.</strong> 071-080</a></li></ol></li><li class="chapter-item expanded "><a href="../../js/js_contest/index.html"><strong aria-hidden="true">10.</strong> チーム開発 01 JS 選手権</a></li><li class="chapter-item expanded "><a href="../../php/php_setup/index.html"><strong aria-hidden="true">11.</strong> PHP 事前準備</a></li><li class="chapter-item expanded "><a href="../../php/php01/index.html"><strong aria-hidden="true">12.</strong> PHP 基礎</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/php01/about-php.html"><strong aria-hidden="true">12.1.</strong> PHP 概要</a></li><li class="chapter-item expanded "><a href="../../php/php01/get-started.html"><strong aria-hidden="true">12.2.</strong> 開発の手順</a></li><li class="chapter-item expanded "><a href="../../php/php01/php-start.html"><strong aria-hidden="true">12.3.</strong> PHP 基礎</a></li><li class="chapter-item expanded "><a href="../../php/php01/get-post.html"><strong aria-hidden="true">12.4.</strong> クライアント - サーバ間の通信</a></li><li class="chapter-item expanded "><a href="../../php/php01/write-file.html"><strong aria-hidden="true">12.5.</strong> ファイル操作（書き込み）</a></li><li class="chapter-item expanded "><a href="../../php/php01/read-file.html"><strong aria-hidden="true">12.6.</strong> ファイル操作（読み込み）</a></li><li class="chapter-item expanded "><a href="../../php/php01/work.html"><strong aria-hidden="true">12.7.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/php02/index.html"><strong aria-hidden="true">13.</strong> PHP_DB 連携_CRUD 処理前半</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/php02/about-db.html"><strong aria-hidden="true">13.1.</strong> DB の基本</a></li><li class="chapter-item expanded "><a href="../../php/php02/start-db.html"><strong aria-hidden="true">13.2.</strong> DB / テーブルの作成</a></li><li class="chapter-item expanded "><a href="../../php/php02/db-sql.html"><strong aria-hidden="true">13.3.</strong> SQL による DB 操作</a></li><li class="chapter-item expanded "><a href="../../php/php02/sql-create.html"><strong aria-hidden="true">13.4.</strong> PHP と DB の連携 1（データ作成処理）</a></li><li class="chapter-item expanded "><a href="../../php/php02/sql-read.html"><strong aria-hidden="true">13.5.</strong> PHP と DB の連携 2（データ参照処理）</a></li><li class="chapter-item expanded "><a href="../../php/php02/work.html"><strong aria-hidden="true">13.6.</strong> 課題と提出時の注意点</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/php03/index.html"><strong aria-hidden="true">14.</strong> PHP_DB 連携_CRUD 処理後半</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/php03/function-db-connect.html"><strong aria-hidden="true">14.1.</strong> DB 接続関数の作成</a></li><li class="chapter-item expanded "><a href="../../php/php03/sql-edit.html"><strong aria-hidden="true">14.2.</strong> PHP と DB の連携 3（編集画面の作成）</a></li><li class="chapter-item expanded "><a href="../../php/php03/sql-update.html"><strong aria-hidden="true">14.3.</strong> PHP と DB の連携 4（データ更新処理の作成）</a></li><li class="chapter-item expanded "><a href="../../php/php03/sql-delete.html"><strong aria-hidden="true">14.4.</strong> PHP と DB の連携 5（データ削除処理）</a></li><li class="chapter-item expanded "><a href="../../php/php03/work.html"><strong aria-hidden="true">14.5.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/php04/index.html"><strong aria-hidden="true">15.</strong> PHP_セッション</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/php04/about-session.html"><strong aria-hidden="true">15.1.</strong> セッションとは</a></li><li class="chapter-item expanded "><a href="../../php/php04/session-variables.html"><strong aria-hidden="true">15.2.</strong> セッション変数</a></li><li class="chapter-item expanded "><a href="../../php/php04/auth-01.html"><strong aria-hidden="true">15.3.</strong> 認証処理の実装 1（ログインとログアウト）</a></li><li class="chapter-item expanded "><a href="../../php/php04/auth-02.html"><strong aria-hidden="true">15.4.</strong> 認証処理の実装 2（認証状態の確認）</a></li><li class="chapter-item expanded "><a href="../../php/php04/work.html"><strong aria-hidden="true">15.5.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/php05/index.html"><strong aria-hidden="true">16.</strong> PHP_DB 応用_RDB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/php05/about-rdb.html"><strong aria-hidden="true">16.1.</strong> RDB の構造</a></li><li class="chapter-item expanded "><a href="../../php/php05/like-add.html"><strong aria-hidden="true">16.2.</strong> Like 機能の実装 1（データの追加 1）</a></li><li class="chapter-item expanded "><a href="../../php/php05/like-delete.html"><strong aria-hidden="true">16.3.</strong> Like 機能の実装 2（データの追加 2）</a></li><li class="chapter-item expanded "><a href="../../php/php05/like-groupby.html"><strong aria-hidden="true">16.4.</strong> Like 機能の実装 3（データの集計）</a></li><li class="chapter-item expanded "><a href="../../php/php05/like-join.html"><strong aria-hidden="true">16.5.</strong> Like 機能の実装 4（データの結合）</a></li><li class="chapter-item expanded "><a href="../../php/php05/work.html"><strong aria-hidden="true">16.6.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/php06/index.html"><strong aria-hidden="true">17.</strong> PHP_ファイル操作と Ajax</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../php/php06/about-upload.html"><strong aria-hidden="true">17.1.</strong> ファイルアップロードの流れ</a></li><li class="chapter-item expanded "><a href="../../php/php06/upload-file.html"><strong aria-hidden="true">17.2.</strong> ファイルアップロード実装</a></li><li class="chapter-item expanded "><a href="../../php/php06/upload-db.html"><strong aria-hidden="true">17.3.</strong> ファイルアップロードと DB 連携</a></li><li class="chapter-item expanded "><a href="../../php/php06/ajax.html"><strong aria-hidden="true">17.4.</strong> Ajax 実装</a></li><li class="chapter-item expanded "><a href="../../php/php06/work.html"><strong aria-hidden="true">17.5.</strong> 課題</a></li></ol></li><li class="chapter-item expanded "><a href="../../php/web_contest/index.html"><strong aria-hidden="true">18.</strong> チーム開発 02 Web サービス選手権</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/index.html"><strong aria-hidden="true">19.</strong> Laravel 事前準備</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/setup-for-mac.html"><strong aria-hidden="true">19.1.</strong> 【Mac 編】環境構築</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/setup-for-windows.html"><strong aria-hidden="true">19.2.</strong> 【Windows 編】環境構築</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/create-project.html"><strong aria-hidden="true">19.3.</strong> Laravel プロジェクト作成</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/about-docker-and-docker-compose.html"><strong aria-hidden="true">19.4.</strong> 【補足】Docker と Docker Compose の解説</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/index.html"><strong aria-hidden="true">20.</strong> Laravel 01</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel01/about-laravel-and-mvc.html"><strong aria-hidden="true">20.1.</strong> Laravel と MVC フレームワーク</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/add-laravel-breeze.html"><strong aria-hidden="true">20.2.</strong> ライブラリ準備</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/setup-db.html"><strong aria-hidden="true">20.3.</strong> 【今回は不要】データベース準備</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel_setup/phpmyadmin.html"><strong aria-hidden="true">20.4.</strong> phpmyadmin の追加</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/migration.html"><strong aria-hidden="true">20.5.</strong> マイグレーションによるテーブル作成</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/route-and-controller.html"><strong aria-hidden="true">20.6.</strong> ルーティングとコントローラ</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/views.html"><strong aria-hidden="true">20.7.</strong> 必要な画面の作成と動作確認</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/create.html"><strong aria-hidden="true">20.8.</strong> tweet 作成処理の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel01/read.html"><strong aria-hidden="true">20.9.</strong> tweet 一覧画面の実装</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/index.html"><strong aria-hidden="true">21.</strong> Laravel 02</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel02/show.html"><strong aria-hidden="true">21.1.</strong> tweet 詳細画面の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/delete.html"><strong aria-hidden="true">21.2.</strong> tweet 削除処理の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/update.html"><strong aria-hidden="true">21.3.</strong> tweet 更新処理の実装</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel02/auth.html"><strong aria-hidden="true">21.4.</strong> tweet とユーザ認証の連携</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/index.html"><strong aria-hidden="true">22.</strong> Laravel 03</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/laravel03/mypage.html"><strong aria-hidden="true">22.1.</strong> マイページ機能の実装（1 対多のデータ）</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/auther.html"><strong aria-hidden="true">22.2.</strong> 投稿者名の表示（多対 1 のデータ）</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/favorite01.html"><strong aria-hidden="true">22.3.</strong> Favorite 機能 1（多対多のデータ・中間テーブル）</a></li><li class="chapter-item expanded "><a href="../../laravel/laravel03/favorite02.html"><strong aria-hidden="true">22.4.</strong> Favorite 機能 2（各処理の実装）</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/deploy/index.html"><strong aria-hidden="true">23.</strong> デプロイ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../laravel/deploy/docker-to-github.html"><strong aria-hidden="true">23.1.</strong> 実装したコードを GitHub へ push</a></li><li class="chapter-item expanded "><a href="../../laravel/deploy/setup-lolipop.html"><strong aria-hidden="true">23.2.</strong> ローカルからロリポップマネージドクラウドへのログイン</a></li><li class="chapter-item expanded "><a href="../../laravel/deploy/lolipop-to-github.html"><strong aria-hidden="true">23.3.</strong> ロリポップマネージドクラウドと GitHub の SSH 通信設定</a></li><li class="chapter-item expanded "><a href="../../laravel/deploy/github-to-lolipop.html"><strong aria-hidden="true">23.4.</strong> GitHub 上のコードをマネージドクラウドにデプロイ</a></li></ol></li><li class="chapter-item expanded "><a href="../../laravel/team_contest/index.html"><strong aria-hidden="true">24.</strong> チーム開発 03 フリー開発</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">G's-Yamaguchi-Dev01</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="ゾロ目の日付"><a class="header" href="#ゾロ目の日付">ゾロ目の日付</a></h2>
+<p>11 月 11 日が迫るある日，あなたはゾロ目の日付を判定するプログラムを作成することにしました．</p>
+<p>ゾロ目の日とはある日付に対して月と日に含まれる全ての桁の数字が同じものを指します．
+スペース区切りで月と日が与えられるのでゾロ目の日であれば<code>Yes</code>そうでなければ<code>No</code>と出力する<code>isSingleNumber()</code>関数を作成してください．</p>
+<p>例えば入力例 1 では 11 月 1 日が以下のように与えられます．</p>
+<p><code>11 1</code></p>
+<p>この場合，月と日ともに 1 のゾロ目なので</p>
+<p><code>Yes</code></p>
+<p>と出力して下さい．</p>
+<pre><code class="language-js">function isSingleNumber(s) {}
+
+console.log(isSingleNumber(&quot;11 1&quot;)); // Yes
+console.log(isSingleNumber(&quot;11 11&quot;)); // Yes
+console.log(isSingleNumber(&quot;12 11&quot;)); //  No
+</code></pre>
+<h2 id="花見の準備"><a class="header" href="#花見の準備">花見の準備</a></h2>
+<p>あなたはお花見の準備のためにレジャーシートを買うことにしました．</p>
+<p>レジャーシートの質に興味のないあなたは最も面積あたりの価格の安いレジャーシートを探すため，プログラムを書くことにしました．</p>
+<p>2 つのレジャーシートの横の長さ<code>x</code>, 縦の長さ<code>y</code>, 価格<code>p</code> がスペース区切りで与えられます．1 つ目のレジャーシートのデータと 2 つ目のレジャーシートのデータはカンマ区切りとなります．</p>
+<p>最も面積あたりの価格の安いレジャーシートの<code>x</code>, <code>y</code>, <code>p</code>をスペース区切りで出力する<code>judgeCheapSheet()</code>関数を作成してください．
+ただし，面積あたりの価格が同じ場合は<code>DRAW</code>と出力してください．</p>
+<pre><code class="language-js">function judgeCheapSheet(s) {}
+
+console.log(judgeCheapSheet(&quot;5 18 1000,12 21 3000&quot;)); // 5 18 1000
+console.log(judgeCheapSheet(&quot;5 5 1800,5 10 3600&quot;)); // DRAW
+</code></pre>
+<h2 id="下一桁はいくつ"><a class="header" href="#下一桁はいくつ">下一桁はいくつ</a></h2>
+<p>あなたは 5 つの数字を足し算するプログラムを作成しています．しかし，出力したい数字は下一桁のみです．</p>
+<p>5 つの数字がスペース区切りで入力されるので，全てを足した結果の下一桁を出力する<code>getLastNumber()</code>関数を作成してください．</p>
+<p>例えば以下のような入力の場合</p>
+<p><code>1 9 8 9 12</code></p>
+<p>足すと 39 となりますが<code>9</code>と下一桁のみ出力します．</p>
+<pre><code class="language-js">function getLastNumber(s) {}
+
+console.log(getLastNumber(&quot;1 9 8 9 12&quot;)); // 9
+console.log(getLastNumber(&quot;1 1 1 1 6&quot;)); // 0
+</code></pre>
+<h2 id="門松の作成"><a class="header" href="#門松の作成">門松の作成</a></h2>
+<p>あなたはお正月に向けて門松を作ることにしました．門松は 3 本の竹からなり，それぞれ竹の長さは<code>3:5:7</code>の比率で作る習わしとなっています．</p>
+<p>最も短い竹の長さが与えられるので， 3 本の竹に切断し門松を作るために必要な竹の長さを出力する<code>getAllLength()</code>関数を作成してください．この時切断面は竹に対して垂直に切られるものとします．</p>
+<pre><code class="language-js">function getAllLength(n) {}
+
+console.log(getAllLength(60)); // 300
+console.log(getAllLength(9)); // 45
+</code></pre>
+<h2 id="禁止ワード"><a class="header" href="#禁止ワード">禁止ワード</a></h2>
+<p>あなたは禁止ワードが含まれるかどうかを判定するプログラムを作成しています．</p>
+<p>禁止ワード<code>w</code>と判定する文字列<code>s</code>が改行区切りで順に与えられるので<code>s</code>に<code>w</code>が含まれている時は<code>NG</code>それ以外の場合は文字列<code>s</code>をそのまま出力する<code>hasNgWord()</code>関数を作成してください．</p>
+<pre><code class="language-js">function hasNgWord(s) {}
+
+console.log(hasNgWord(&quot;ngword thisisngword&quot;)); // NG
+console.log(hasNgWord(&quot;ngword gsprogramming&quot;)); // gsprogramming
+</code></pre>
+<h2 id="洗濯物と砂ぼこり"><a class="header" href="#洗濯物と砂ぼこり">洗濯物と砂ぼこり</a></h2>
+<p>あなたは洗濯物を干すかどうか，その日の気温と湿度で決めることにしました．</p>
+<p>暖かくて乾燥してる日を選んで干したいところですが，家の向には公園があり，そういった日は砂ぼこりが舞ってしまいます．</p>
+<p>そこであなたは干すためのルールを決めました．</p>
+<p>気温が 25℃ 以上の日，もしくは湿度が 40%以下の日は干します．それ以外の日は干しません．
+ただし，上記の干す条件を満たす日のうち，気温が 25℃ 以上かつ，湿度 40%以下の日は砂ぼこりが舞うので干しません．</p>
+<p>その日の気温と湿度が与えられるので，干すかどうか判断（<code>Yes</code>か<code>No</code>を出力）する<code>canDry()</code>関数を作成してください．</p>
+<pre><code class="language-js">function canDry(s) {}
+
+console.log(canDry(&quot;25 50&quot;)); // Yes
+console.log(canDry(&quot;10 20&quot;)); // Yes
+console.log(canDry(&quot;20 50&quot;)); // No
+</code></pre>
+<h2 id="カード並べ"><a class="header" href="#カード並べ">カード並べ</a></h2>
+<p>フライト中に退屈してしまったあなたは，持っているトランプを使用した簡単な遊びを考えました．</p>
+<p>この遊びでは 1 から 9 までの数字のカードのみを 4 枚使用します．
+ただし，この 4 枚の中で同じ数値のカードが重複する事もあります．</p>
+<p>ルールは以下の通りです．</p>
+<p>4 枚のカードを横に並べます．
+左から 2 枚のカード，右から 2 枚のカードをそれぞれ 2 ケタの整数とみなし，和を計算します．
+あらゆる並べ方を試し，和の最大値（最大スコア）を求めます．</p>
+<p>カード 4 枚に書かれた数が与えられるので，最大スコアを出力する<code>getBestScore()</code>関数を作成してください．
+入力例 1 の 2, 9, 3, 8 の 4 枚を使う場合，最大値 175 が最大スコアとなります．</p>
+<pre><code class="language-js">function getBestScore(s) {}
+
+console.log(getBestScore(&quot;2 9 3 8&quot;)); // 175
+console.log(getBestScore(&quot;7 8 7 7&quot;)); // 164
+</code></pre>
+<h2 id="ログのフィルター"><a class="header" href="#ログのフィルター">ログのフィルター</a></h2>
+<p>あなたはサーバ管理者です． 日々洪水のように流れるログを追っています．</p>
+<p>とうとう自分の目と頭では処理しきれない量になってしまったため，プログラムを作って，重要な文字列を含むログだけ抽出する事にしました．</p>
+<p>重要な文字列とログ（半角スペース区切り文字列）がカンマ区切りで入力されるので，重要な文字列が入ったログのみを半角スペース区切りで出力する<code>filterLogByKeyword()</code>関数を作成してください．</p>
+<p>ログ内に重要な文字列が含まれるデータがない場合な<code>None</code>と出力しましょう．</p>
+<pre><code class="language-js">function filterLogByKeyword() {}
+
+console.log(
+  filterLogByKeyword(&quot;gs,gsacademytokyo javascript gsacademyfukuoka gsbase&quot;)
+); // gsacademytokyo gsacademyfukuoka gsbase
+console.log(
+  filterLogByKeyword(&quot;script,javascript typescript googleappscript java&quot;)
+); // javascript typescript googleappscript
+console.log(
+  filterLogByKeyword(
+    &quot;dio,Giorno Bucciarati Abbacchio Mista Narancia Fugo Trish&quot;
+  )
+); // None
+</code></pre>
+<h2 id="メールアドレス認証"><a class="header" href="#メールアドレス認証">メールアドレス認証</a></h2>
+<p>ある開発者はベータテストユーザーを，メールアドレス登録によって受け付けることにしました．その際，ユーザーのメールアドレスが有効なものなのかをチェックするプログラムが必要になります．</p>
+<p>あるメールアドレスを受け取るので，それが正しいものであれば<code>true</code>を，そうでなければ<code>false</code>を返す<code>isValidEmail()</code>関数を作成してください．ここでの正しいアドレスというのは以下の 4 つの条件を満たすものを指します．</p>
+<ul>
+<li>「@」から始まらないこと</li>
+<li>スペースがないこと</li>
+<li>「@」を 1 つのみ含んでいること</li>
+<li>「@」の後に「.」があること</li>
+</ul>
+<pre><code class="language-js">function isValidEmail() {}
+
+console.log(isValidEmail(&quot;ccc@aaa.com&quot;)); // true
+console.log(isValidEmail(&quot;c@cc@aaa.com&quot;)); // false
+console.log(isValidEmail(&quot;cc c@aaa.com&quot;)); // false
+console.log(isValidEmail(&quot;cc.c@aaacom&quot;)); // false
+console.log(isValidEmail(&quot;cc.c@aaa.com&quot;)); // true
+console.log(isValidEmail(&quot;@aaa.com&quot;)); // false
+</code></pre>
+<h2 id="フィボナッチ数列"><a class="header" href="#フィボナッチ数列">フィボナッチ数列</a></h2>
+<p>自然界に多くみられる数列として，フィボナッチ数列という数列があります．フィボナッチ数列は以下の公式で表されます．</p>
+<p>【フィボナッチ数列とは】</p>
+<ul>
+<li>f(0) = 0</li>
+<li>f(1) = 1</li>
+<li>f(n) = f(n-2) + f(n-1) (ただし，n &gt;= 2 であることが条件)</li>
+</ul>
+<p>【具体例】</p>
+<ul>
+<li>f(2) = 0 + 1 = 1</li>
+<li>f(3) = 1 + 1 = 2</li>
+<li>f(4) = 1 + 2 = 3</li>
+<li>f(5) = 2 + 3 = 5</li>
+</ul>
+<p>ある青年は，手動で 50 番目まで計算したところで，この計算を手動で無限に続けるのは無理だと思い，これを 100 番目でも 10000 番目でも瞬時に計算できるプログラムを作りたいと考えました．</p>
+<p>青年を助けるための<code>getFibonacciNth()</code>関数を作成してください．</p>
+<p>数が大きくなると計算に時間を要するので，実装を工夫することをオススメします．</p>
+<pre><code class="language-js">function getFibonacciNth() {}
+
+console.log(getFibonacciNth(1)); // 1
+console.log(getFibonacciNth(5)); // 5
+console.log(getFibonacciNth(10)); // 55
+console.log(getFibonacciNth(90)); // 2880067194370816120
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../js/js06/061-070.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../js/js_contest/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../js/js06/061-070.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../js/js_contest/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
