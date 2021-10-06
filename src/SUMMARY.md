@@ -53,9 +53,6 @@
 
 - [JS\_配列と繰り返し](./js/js03/README.md)
 
-  <!-- - [配列](./components/array.md) -->
-  <!-- - [繰り返し処理](./components/for.md) -->
-
   - [配列と繰り返しの練習](./js/js03/array-for.md)
   - [クイズアプリ初級](./js/js03/quiz01.md)
   - [クイズアプリ中級](./js/js03/quiz02.md)
@@ -95,7 +92,7 @@
   - [061-070](./js/js06/061-070.md)
   - [071-080](./js/js06/071-080.md)
 
-- [チーム開発 01 JS 選手権](./js/js_contest/README.md)
+<!-- - [チーム開発 01 JS 選手権](./js/js_contest/README.md) -->
 
 - [PHP 事前準備](./php/php_setup/README.md)
 
@@ -151,7 +148,7 @@
   - [Ajax 実装](./php/php06/ajax.md)
   - [課題](./php/php06/work.md)
 
-- [チーム開発 02 Web サービス選手権](./php/web_contest/README.md)
+<!-- - [チーム開発 02 Web サービス選手権](./php/web_contest/README.md) -->
 
 - [Laravel 事前準備](./laravel/laravel_setup/README.md)
 
@@ -195,4 +192,4 @@
   - [ロリポップマネージドクラウドと GitHub の SSH 通信設定](./laravel/deploy/lolipop-to-github.md)
   - [GitHub 上のコードをマネージドクラウドにデプロイ](./laravel/deploy/github-to-lolipop.md)
 
-- [チーム開発 03 フリー開発](./laravel/team_contest/README.md)
+<!-- - [チーム開発 03 フリー開発](./laravel/team_contest/README.md) -->
