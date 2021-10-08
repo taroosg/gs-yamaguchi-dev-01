@@ -23,7 +23,7 @@ jobs:
       - run: |
           mkdir ./book/samples
           cd samples
-          find . \! -name ‘*.zip’ -type d -exec zip -r {}.zip {} \;
+          find . \! -name '*.zip' -type d -exec zip -r {}.zip {} \;
           mv *.zip ../book/samples
 
       - name: Deploy
