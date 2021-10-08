@@ -10339,31 +10339,30 @@ public function update(Request $request, $id)
 <p>はじめのほうで，ユーザ認証を行う breeze ライブラリをインストールしたため，これを利用してユーザ管理を行う．</p>
 <p>まず，認証ユーザのみがアプリケーションの機能を利用できるように処理を変更する．現状ではログインしていない状態でも一覧画面などにアクセスできてしまう（実際はユーザ情報が不足しているためエラー画面となる）．</p>
 <h2 id="ログインしていないユーザはアプリケーションにアクセスできないようにする"><a class="header" href="#ログインしていないユーザはアプリケーションにアクセスできないようにする">ログインしていないユーザはアプリケーションにアクセスできないようにする．</a></h2>
-<p><code>app/Http/Controllers/TweetController.php</code>を以下のように編集する．</p>
-<pre><code class="language-php">// app/Http/Controllers/TweetController.php
+<p><code>app/routes/web.php</code>を以下のように編集する．</p>
+<pre><code class="language-php">// app/routes/web.php
 
 &lt;?php
 
-namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TweetController;
 
-use Illuminate\Http\Request;
+// コメントは省略
 
-use Validator;
-use App\Models\Tweet;
-// 🔽 追加
-use Auth;
+// 🔽 ここを編集
+Route::group(['middleware' =&gt; 'auth'], function () {
+  Route::resource('tweet', TweetController::class);
+});
 
-class TodoController extends Controller
-{
-  // 🔽 関数を作成
-  public function __construct()
-  {
-    $this-&gt;middleware(['auth']);
-  }
+Route::get('/', function () {
+  return view('welcome');
+});
 
-  // ...省略
+Route::get('/dashboard', function () {
+  return view('dashboard');
+})-&gt;middleware(['auth'])-&gt;name('dashboard');
 
-}
+require __DIR__ . '/auth.php';
 
 </code></pre>
 <h2 id="動作確認ログイン必須"><a class="header" href="#動作確認ログイン必須">動作確認（ログイン必須）</a></h2>
@@ -10371,9 +10370,8 @@ class TodoController extends Controller
 <blockquote>
 <p>【解説】</p>
 <ul>
-<li>ユーザの認証情報を使用するため，<code>use Auth;</code>を記述している．</li>
-<li><code>__construct()</code>関数は，その他の関数が実行される場合にその前に実行される．</li>
-<li><code>middleware(['auth'])</code>はログイン状況を確認して，ログインしていない状態ならログインページに戻す処理を実行する．</li>
+<li><code>['middleware' =&gt; 'auth']</code> を記述することで認証状態をチェックしてくれる．</li>
+<li><code>{}</code> 内に記述したルーティングは認証必須となり，未認証（未ログイン）の場合はログイン画面に戻される．</li>
 </ul>
 </blockquote>
 <h2 id="tweet-テーブルにユーザ-id-カラムを追加する"><a class="header" href="#tweet-テーブルにユーザ-id-カラムを追加する">tweet テーブルにユーザ ID カラムを追加する</a></h2>
@@ -10437,23 +10435,27 @@ Migrated:  2021_09_24_061716_add_user_id_to_tweets_table (102.98ms)
 | updated_at  | timestamp       | YES  |     | NULL    |                |
 +-------------+-----------------+------+-----+---------+----------------+
 </code></pre>
-<p>【今回は不要】コマンドで確認する場合は以下の手順で行う．</p>
-<blockquote>
-<p>📦 <strong>MySQL コンテナ内の操作</strong></p>
-<pre><code class="language-bash">$ docker-compose exec mysql bash
-root@d984f6614597:/#
-</code></pre>
-</blockquote>
-<p>mysql にログインしてテーブルを確認する．パスワードは<code>password</code>．</p>
-<pre><code class="language-bash">$ mysql -u sail -p
+<!-- 【今回は不要】コマンドで確認する場合は以下の手順で行う．
 
-mysql&gt; use laratter
+> 📦 **MySQL コンテナ内の操作**
+>
+> ```bash
+> $ docker-compose exec mysql bash
+> root@d984f6614597:/#
+> ```
+
+mysql にログインしてテーブルを確認する．パスワードは`password`．
+
+```bash
+$ mysql -u sail -p
+
+mysql> use laratter
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
 Database changed
 
-mysql&gt; show tables;
+mysql> show tables;
 +------------------------+
 | Tables_in_laratter     |
 +------------------------+
@@ -10466,7 +10468,7 @@ mysql&gt; show tables;
 +------------------------+
 6 rows in set (0.01 sec)
 
-mysql&gt; desc tweets;
+mysql> desc tweets;
 +-------------+-----------------+------+-----+---------+----------------+
 | Field       | Type            | Null | Key | Default | Extra          |
 +-------------+-----------------+------+-----+---------+----------------+
@@ -10479,35 +10481,55 @@ mysql&gt; desc tweets;
 +-------------+-----------------+------+-----+---------+----------------+
 6 rows in set (0.00 sec)
 
-mysql&gt;
+mysql>
 
-</code></pre>
+``` -->
 <h2 id="データ追加時に-user_id-を追加"><a class="header" href="#データ追加時に-user_id-を追加">データ追加時に user_id を追加</a></h2>
 <p>tweet のデータを作成する際に，「誰が作成したのか」がわかるように，データにログインユーザの ID を追加する．</p>
 <p><code>app/Http/Controllers/TweetController.php</code>の<code>store()</code>を内容を以下のように編集する．</p>
 <pre><code class="language-php">// app/Http/Controllers/TweetController.php
 
-public function store(Request $request)
+&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Validator;
+use App\Models\Tweet;
+
+// 🔽 追加
+use Auth;
+
+class TweetController extends Controller
 {
-  // バリデーション
-  $validator = Validator::make($request-&gt;all(), [
-    'tweet' =&gt; 'required | max:191',
-    'description' =&gt; 'required',
-  ]);
-  // バリデーション:エラー
-  if ($validator-&gt;fails()) {
-    return redirect()
-      -&gt;route('tweet.create')
-      -&gt;withInput()
-      -&gt;withErrors($validator);
+
+  // 省略
+
+  public function store(Request $request)
+  {
+    // バリデーション
+    $validator = Validator::make($request-&gt;all(), [
+      'tweet' =&gt; 'required | max:191',
+      'description' =&gt; 'required',
+    ]);
+    // バリデーション:エラー
+    if ($validator-&gt;fails()) {
+      return redirect()
+        -&gt;route('tweet.create')
+        -&gt;withInput()
+        -&gt;withErrors($validator);
+    }
+
+    // 🔽 編集 フォームから送信されてきたデータとユーザIDをマージし，DBにinsertする
+    $data = $request-&gt;merge(['user_id' =&gt; Auth::user()-&gt;id])-&gt;all();
+    $result = Tweet::create($data);
+
+    // tweet.index」にリクエスト送信（一覧ページに移動）
+    return redirect()-&gt;route('tweet.index');
   }
 
-  // 🔽 編集 フォームから送信されてきたデータとユーザIDをマージし，DBにinsertする
-  $data = $request-&gt;merge(['user_id' =&gt; Auth::user()-&gt;id])-&gt;all();
-  $result = Tweet::create($data);
-
-  // tweet.index」にリクエスト送信（一覧ページに移動）
-  return redirect()-&gt;route('tweet.index');
+  // 省略
 }
 
 </code></pre>
@@ -10600,10 +10622,11 @@ class User extends Authenticatable
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TweetController;
 
-// 🔽 追加
-Route::get('/tweet/mypage', [TweetController::class, 'mydata'])-&gt;name('tweet.mypage');;
-
-Route::resource('tweet', TweetController::class);
+Route::group(['middleware' =&gt; 'auth'], function () {
+  // 🔽 追加
+  Route::get('/tweet/mypage', [TweetController::class, 'mydata'])-&gt;name('tweet.mypage');
+  Route::resource('tweet', TweetController::class);
+});
 
 Route::get('/', function () {
   return view('welcome');
@@ -10629,6 +10652,7 @@ use Illuminate\Http\Request;
 use Validator;
 use App\Models\Tweet;
 use Auth;
+
 // 🔽 追加
 use App\Models\User;
 
@@ -10792,7 +10816,7 @@ class TweetController extends Controller
 
 </code></pre>
 <h2 id="tweet-データの編集"><a class="header" href="#tweet-データの編集">tweet データの編集</a></h2>
-<p>tweets テーブルのデータを確認し，レコード毎に<code>user_id</code>が異なるよう調整しておく．</p>
+<p>phpmyadmin で tweets テーブルのデータを確認し，レコード毎に<code>user_id</code>が異なるよう調整しておく．</p>
 <h2 id="動作確認マイページ"><a class="header" href="#動作確認マイページ">動作確認（マイページ）</a></h2>
 <p>下図のようにマイページへのリンクが表示される．</p>
 <p><img src="laravel/laravel03/./img/laratter_index_add_mypage_nav.png" alt="マイページへのリンク" /></p>
@@ -11062,14 +11086,17 @@ Migrated:  2021_09_24_072924_create_tweet_user_table (451.37ms)
 | updated_at | timestamp       | YES  |     | NULL    |                |
 +------------+-----------------+------+-----+---------+----------------+
 </code></pre>
-<p>【今回は不要】以下にコマンドで確認する場合も示す．</p>
-<blockquote>
-<p>📦 <strong>MySQL コンテナ内の操作</strong></p>
-<pre><code class="language-bash">$ docker-compose exec mysql bash
-root@d984f6614597:/#
-</code></pre>
-</blockquote>
-<pre><code class="language-bash">$  mysql -u sail -p
+<!-- 【今回は不要】以下にコマンドで確認する場合も示す．
+
+> 📦 **MySQL コンテナ内の操作**
+>
+> ```bash
+> $ docker-compose exec mysql bash
+> root@d984f6614597:/#
+> ```
+
+```bash
+$  mysql -u sail -p
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 347
@@ -11083,12 +11110,12 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql&gt; use laratter;
+mysql> use laratter;
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
 Database changed
-mysql&gt; show tables;
+mysql> show tables;
 +------------------------+
 | Tables_in_laratter     |
 +------------------------+
@@ -11102,7 +11129,7 @@ mysql&gt; show tables;
 +------------------------+
 7 rows in set (0.00 sec)
 
-mysql&gt; desc tweet_user;
+mysql> desc tweet_user;
 +------------+-----------------+------+-----+---------+----------------+
 | Field      | Type            | Null | Key | Default | Extra          |
 +------------+-----------------+------+-----+---------+----------------+
@@ -11114,8 +11141,8 @@ mysql&gt; desc tweet_user;
 +------------+-----------------+------+-----+---------+----------------+
 5 rows in set (0.01 sec)
 
-mysql&gt;
-</code></pre>
+mysql>
+``` -->
 <h2 id="モデルに多対多の連携を設定"><a class="header" href="#モデルに多対多の連携を設定">モデルに多対多の連携を設定</a></h2>
 <p>User モデルに <code>belongsToMany</code> を設定して，User モデルは Tweet モデルと多対多の連携をすることを示す．</p>
 <pre><code class="language-php">// app/Http/Models/User.php
@@ -11201,15 +11228,16 @@ use App\Http\Controllers\FavoriteController;
 
 // 省略
 
-// 🔽 追加
-Route::post('tweet/{tweet}/favorites', [FavoriteController::class, 'store'])-&gt;name('favorites');
+Route::group(['middleware' =&gt; 'auth'], function () {
+  // 🔽 追加
+  Route::post('tweet/{tweet}/favorites', [FavoriteController::class, 'store'])-&gt;name('favorites');
 
-// 🔽 追加
-Route::post('tweet/{tweet}/unfavorites', [FavoriteController::class, 'destroy'])-&gt;name('unfavorites');
+  // 🔽 追加
+  Route::post('tweet/{tweet}/unfavorites', [FavoriteController::class, 'destroy'])-&gt;name('unfavorites');
 
-Route::get('/tweet/mypage', [TweetController::class, 'mydata'])-&gt;name('tweet.mypage');
-
-Route::resource('tweet', TweetController::class);
+  Route::get('/tweet/mypage', [TweetController::class, 'mydata'])-&gt;name('tweet.mypage');
+  Route::resource('tweet', TweetController::class);
+});
 
 Route::get('/', function () {
   return view('welcome');
@@ -11243,14 +11271,14 @@ class FavoriteController extends Controller
 
   // 省略
 
-  // 🔽 編集
+  // 🔽 編集（`store()` の `()` 内も異なるので注意）
   public function store(Tweet $tweet)
   {
     $tweet-&gt;users()-&gt;attach(Auth::id());
     return redirect()-&gt;route('tweet.index');
   }
 
-  // 🔽 編集
+  // 🔽 編集（`destroy()` の `()` 内も異なるので注意）
   public function destroy(Tweet $tweet)
   {
     $tweet-&gt;users()-&gt;detach(Auth::id());
