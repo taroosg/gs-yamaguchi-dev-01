@@ -42,15 +42,16 @@ use App\Http\Controllers\FavoriteController;
 
 // 省略
 
-// 🔽 追加
-Route::post('tweet/{tweet}/favorites', [FavoriteController::class, 'store'])->name('favorites');
+Route::group(['middleware' => 'auth'], function () {
+  // 🔽 追加
+  Route::post('tweet/{tweet}/favorites', [FavoriteController::class, 'store'])->name('favorites');
 
-// 🔽 追加
-Route::post('tweet/{tweet}/unfavorites', [FavoriteController::class, 'destroy'])->name('unfavorites');
+  // 🔽 追加
+  Route::post('tweet/{tweet}/unfavorites', [FavoriteController::class, 'destroy'])->name('unfavorites');
 
-Route::get('/tweet/mypage', [TweetController::class, 'mydata'])->name('tweet.mypage');
-
-Route::resource('tweet', TweetController::class);
+  Route::get('/tweet/mypage', [TweetController::class, 'mydata'])->name('tweet.mypage');
+  Route::resource('tweet', TweetController::class);
+});
 
 Route::get('/', function () {
   return view('welcome');
@@ -90,14 +91,14 @@ class FavoriteController extends Controller
 
   // 省略
 
-  // 🔽 編集
+  // 🔽 編集（`store()` の `()` 内も異なるので注意）
   public function store(Tweet $tweet)
   {
     $tweet->users()->attach(Auth::id());
     return redirect()->route('tweet.index');
   }
 
-  // 🔽 編集
+  // 🔽 編集（`destroy()` の `()` 内も異なるので注意）
   public function destroy(Tweet $tweet)
   {
     $tweet->users()->detach(Auth::id());

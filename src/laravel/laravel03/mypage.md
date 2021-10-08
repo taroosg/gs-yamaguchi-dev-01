@@ -46,10 +46,11 @@ class User extends Authenticatable
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TweetController;
 
-// 🔽 追加
-Route::get('/tweet/mypage', [TweetController::class, 'mydata'])->name('tweet.mypage');;
-
-Route::resource('tweet', TweetController::class);
+Route::group(['middleware' => 'auth'], function () {
+  // 🔽 追加
+  Route::get('/tweet/mypage', [TweetController::class, 'mydata'])->name('tweet.mypage');
+  Route::resource('tweet', TweetController::class);
+});
 
 Route::get('/', function () {
   return view('welcome');
@@ -80,6 +81,7 @@ use Illuminate\Http\Request;
 use Validator;
 use App\Models\Tweet;
 use Auth;
+
 // 🔽 追加
 use App\Models\User;
 
@@ -252,7 +254,7 @@ class TweetController extends Controller
 
 ## tweet データの編集
 
-tweets テーブルのデータを確認し，レコード毎に`user_id`が異なるよう調整しておく．
+phpmyadmin で tweets テーブルのデータを確認し，レコード毎に`user_id`が異なるよう調整しておく．
 
 ## 動作確認（マイページ）
 
