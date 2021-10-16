@@ -3,14 +3,14 @@
 - [講義資料ノート](./note/README.md)
 
   - [初回課題の案内](./note/first-work.md)
-    <!-- - [受講時の注意](./note/about.md) -->
+  - [受講時の注意](./note/about.md)
     <!-- - [コードへの向き合い方](./note/with-code.md) -->
     <!-- - [課題にチャレンジするコツ](./note/for-work.md) -->
     <!-- - [課題提出](./note/work-post.md) -->
       <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->
       <!-- - [時間をコミットせよ](./note/commit-time.md) -->
 
-<!-- - [HTML & CSS](./html-css/README.md)
+- [HTML & CSS](./html-css/README.md)
 
   - [HTML と CSS の役割](./html-css/about-html-and-css.md)
   - [ファイルの準備と動作確認](./html-css/get-started.md)
@@ -18,7 +18,7 @@
   - [CSS / ページ設定，背景，文字の大きさ，色](./html-css/css.md)
   - [【tips】検証画面の活用](./html-css/inspect.md)
   - [CSS / レイアウト](./html-css/flex.md)
-  - [演習](./html-css/work.md) -->
+  - [演習](./html-css/work.md)
 
 <!-- - [JS\_おみくじ](./js/js01/README.md)
 
