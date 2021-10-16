@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CSS / レイアウト - G's-Yamaguchi-Dev01</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../note/index.html"><strong aria-hidden="true">1.</strong> 講義資料ノート</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../note/first-work.html"><strong aria-hidden="true">1.1.</strong> 初回課題の案内</a></li><li class="chapter-item expanded "><a href="../note/about.html"><strong aria-hidden="true">1.2.</strong> 受講時の注意</a></li></ol></li><li class="chapter-item expanded "><a href="../html-css/index.html"><strong aria-hidden="true">2.</strong> HTML &amp; CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../html-css/about-html-and-css.html"><strong aria-hidden="true">2.1.</strong> HTML と CSS の役割</a></li><li class="chapter-item expanded "><a href="../html-css/get-started.html"><strong aria-hidden="true">2.2.</strong> ファイルの準備と動作確認</a></li><li class="chapter-item expanded "><a href="../html-css/html.html"><strong aria-hidden="true">2.3.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../html-css/css.html"><strong aria-hidden="true">2.4.</strong> CSS / ページ設定，背景，文字の大きさ，色</a></li><li class="chapter-item expanded "><a href="../html-css/inspect.html"><strong aria-hidden="true">2.5.</strong> 【tips】検証画面の活用</a></li><li class="chapter-item expanded "><a href="../html-css/flex.html" class="active"><strong aria-hidden="true">2.6.</strong> CSS / レイアウト</a></li><li class="chapter-item expanded "><a href="../html-css/work.html"><strong aria-hidden="true">2.7.</strong> 演習</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">G's-Yamaguchi-Dev01</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="css--レイアウト"><a class="header" href="#css--レイアウト">CSS / レイアウト</a></h1>
+<h2 id="よくあるレイアウト"><a class="header" href="#よくあるレイアウト">よくあるレイアウト</a></h2>
+<table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>横並び</td><td>HTML は縦並びがデフォルト．</td></tr>
+<tr><td>左右中央</td><td>HTML は左揃えがデフォルト．</td></tr>
+<tr><td>上下中央</td><td>HTML は上揃えがデフォルト．</td></tr>
+</tbody></table>
+<h2 id="float"><a class="header" href="#float">float．．？</a></h2>
+<p>float を使うと要素を横並びにできる．．．が．．．</p>
+<p><img src="./img/html_css_float.png" alt="float例" /></p>
+<p><a href="https://gray-code.com/html_css/release-float-by-clearfix/">参考：https://gray-code.com/html_css/release-float-by-clearfix/</a></p>
+<p><strong>ものッ！すごくッ！！めんどくさいィィッッッ！！！！</strong></p>
+<h2 id="flexbox-が全てを解決するッ"><a class="header" href="#flexbox-が全てを解決するッ">FlexBox が全てを解決するッ！！</a></h2>
+<ul>
+<li>横並び</li>
+<li>左右中央揃え</li>
+<li>上下中央揃え</li>
+</ul>
+<h3 id="html-のイメージ"><a class="header" href="#html-のイメージ">HTML のイメージ</a></h3>
+<p>下記のような要素を想定する（主な部分のみ記述）．</p>
+<pre><code class="language-html">&lt;div class=&quot;l_box&quot;&gt;
+  &lt;div class=&quot;s_box sienna&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box firebrick&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box maroon&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box darkmagenta&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box indigo&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>↓ 画面上はこんな感じ</p>
+<p><img src="./img/html_css_flex_unset.png" alt="初期状態" /></p>
+<h3 id="横並び"><a class="header" href="#横並び">横並び</a></h3>
+<p><code>display: flex;</code> を記述！</p>
+<ul>
+<li>HTML は縦並びがデフォルト．</li>
+<li><code>display: flex;</code> を使用すると横並びにできる！</li>
+</ul>
+<blockquote>
+<p><strong>💡 Point</strong></p>
+<p><code>display: flex;</code> に関連する CSS は「レイアウトを制御したい要素の外側の要素」に記述する！</p>
+</blockquote>
+<pre><code class="language-css">.l_box {
+  display: flex;
+}
+</code></pre>
+<p><img src="./img/html_css_flex_flex.png" alt="横並び" /></p>
+<h3 id="左右中央揃え"><a class="header" href="#左右中央揃え">左右中央揃え</a></h3>
+<p><code>justify-content: center;</code> を記述！</p>
+<ul>
+<li>HTML は左揃えがデフォルト．</li>
+<li><code>justify-content: center;</code> を使用すると左右中央揃えにできる！</li>
+</ul>
+<blockquote>
+<p><strong>💡 Point</strong></p>
+<p><code>display: flex;</code> は常に記述する必要あり！</p>
+</blockquote>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: center;
+}
+</code></pre>
+<p><img src="./img/html_css_flex_justify_center.png" alt="左右中央" /></p>
+<h3 id="上下左右中央揃え"><a class="header" href="#上下左右中央揃え">上下左右中央揃え</a></h3>
+<p><code>align-items: center;</code> を記述！</p>
+<ul>
+<li>HTML は上揃えがデフォルト．</li>
+<li><code>align-items: center;</code> を使用すると上下中央揃えにできる！</li>
+</ul>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</code></pre>
+<p><img src="./img/html_css_flex_align_center.png" alt="上下左右中央" /></p>
+<h3 id="縦並びが良い場合"><a class="header" href="#縦並びが良い場合">縦並びが良い場合</a></h3>
+<p><code>flex-direction: column;</code> を記述！</p>
+<ul>
+<li>flex は横並びがデフォルト．</li>
+<li><code>flex-direction: column;</code> を使用すると縦横の並び方を制御できる！</li>
+</ul>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+</code></pre>
+<p><img src="./img/html_css_flex_column.png" alt="縦並び" /></p>
+<h3 id="参考いい感じに並べたいとき"><a class="header" href="#参考いい感じに並べたいとき">【参考】いい感じに並べたいとき</a></h3>
+<p>均等な感じにしたい場合にも設定できる．</p>
+<p>↓ 端に寄せつつ均等に並べる <code>space-between</code></p>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</code></pre>
+<p><img src="./img/html_css_flex_justify_between.png" alt="between" /></p>
+<p>↓ 均等に余白をつくって並べる <code>space-evenly</code></p>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+</code></pre>
+<p><img src="./img/html_css_flex_justify_evenly.png" alt="evenly" /></p>
+<h2 id="練習"><a class="header" href="#練習">練習</a></h2>
+<p><strong>FlexBox を駆使して横並び部分を実装しよう！</strong></p>
+<p>ヒント！！</p>
+<p>横並びの幅を均等にしたい！</p>
+<ul>
+<li>横に並んでいる div の width を「50%」にしよう！</li>
+</ul>
+<p>画像がはみ出す！</p>
+<ul>
+<li>画像の width を「100%」に設定すると箱の幅に合わせてくれる！</li>
+<li>高さが足りないときは height も「100%」！</li>
+<li>画像の比率がおかしいときは「object-fit」でググれ！</li>
+</ul>
+<p><img src="./img/html_css_work_flex.png" alt="flex実装後" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../html-css/inspect.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../html-css/work.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../html-css/inspect.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../html-css/work.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

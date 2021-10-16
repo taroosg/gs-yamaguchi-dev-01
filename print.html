@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="note/index.html"><strong aria-hidden="true">1.</strong> 講義資料ノート</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="note/first-work.html"><strong aria-hidden="true">1.1.</strong> 初回課題の案内</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="note/index.html"><strong aria-hidden="true">1.</strong> 講義資料ノート</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="note/first-work.html"><strong aria-hidden="true">1.1.</strong> 初回課題の案内</a></li><li class="chapter-item expanded "><a href="note/about.html"><strong aria-hidden="true">1.2.</strong> 受講時の注意</a></li></ol></li><li class="chapter-item expanded "><a href="html-css/index.html"><strong aria-hidden="true">2.</strong> HTML &amp; CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html-css/about-html-and-css.html"><strong aria-hidden="true">2.1.</strong> HTML と CSS の役割</a></li><li class="chapter-item expanded "><a href="html-css/get-started.html"><strong aria-hidden="true">2.2.</strong> ファイルの準備と動作確認</a></li><li class="chapter-item expanded "><a href="html-css/html.html"><strong aria-hidden="true">2.3.</strong> HTML</a></li><li class="chapter-item expanded "><a href="html-css/css.html"><strong aria-hidden="true">2.4.</strong> CSS / ページ設定，背景，文字の大きさ，色</a></li><li class="chapter-item expanded "><a href="html-css/inspect.html"><strong aria-hidden="true">2.5.</strong> 【tips】検証画面の活用</a></li><li class="chapter-item expanded "><a href="html-css/flex.html"><strong aria-hidden="true">2.6.</strong> CSS / レイアウト</a></li><li class="chapter-item expanded "><a href="html-css/work.html"><strong aria-hidden="true">2.7.</strong> 演習</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -231,6 +231,540 @@
 </ul>
 <p><strong>ジーズは「普通」では生き残れない！</strong></p>
 <p><strong>誰よりもヤバいものつくって目立て！！</strong></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="受講時の注意"><a class="header" href="#受講時の注意">受講時の注意</a></h1>
+<p>時間もお金も投資しているのだからむしり取れるだけむしり取れッ！</p>
+<h2 id="講義中に意識するポイント"><a class="header" href="#講義中に意識するポイント">講義中に意識するポイント</a></h2>
+<p>ただ受けているだけだと資料の内容しかものにできずもったいない！</p>
+<p>まず下記は絶対厳守！！！</p>
+<ul>
+<li>うまくいかないときに黙っている「サイレント詰み」は犯罪！</li>
+<li>まずはわからなくても「動くもの」をつくれ！</li>
+<li>食糧飲料燃料の補給は各自のペースで！（自分にとって最適な状況を用意！）</li>
+</ul>
+<h2 id="いつでもコードを書けるように"><a class="header" href="#いつでもコードを書けるように">いつでもコードを書けるように！</a></h2>
+<ul>
+<li>授業中は常にエディタを起動！</li>
+<li>資料も常に開いておこう！</li>
+</ul>
+<h2 id="講義中はまず動くものをつくれ"><a class="header" href="#講義中はまず動くものをつくれ">講義中はまず動くものをつくれ！</a></h2>
+<ul>
+<li>講義では一緒に 1 つのアプリケーションをつくる．</li>
+<li>わからなくてもとにかく「動かす」．</li>
+<li>課題に挑戦すると大抵うまくいかない．そのときに「講義でつくった動くもの」と「自分でつくった動かないもの」を比較して何がマズイのか探る！</li>
+</ul>
+<h2 id="聴くときは聴き書くときは書く"><a class="header" href="#聴くときは聴き書くときは書く">聴くときは聴き，書くときは書く！</a></h2>
+<ul>
+<li>初めて挑戦することなので，わからなくなって当然．．！</li>
+<li>まずはしっかり説明を聴こう！</li>
+<li>聴くときは聴くこと，手を動かすときは手を動かすことに集中！！</li>
+</ul>
+<h2 id="クラスのメンバーでお互いに刺激し合おう"><a class="header" href="#クラスのメンバーでお互いに刺激し合おう">クラスのメンバーでお互いに刺激し合おう！</a></h2>
+<ul>
+<li>考えたことや感じたことは slack の「ガヤチャンネル」でガンガン発信！</li>
+<li>くだらないことでも OK！！意見を言うやつは偉い！！</li>
+<li>誰かのコメントに乗っかろう！</li>
+</ul>
+<h2 id="疑問を共有しよう"><a class="header" href="#疑問を共有しよう">疑問を共有しよう！</a></h2>
+<ul>
+<li>質問はまず slack へ！</li>
+<li>慣れないうちは「詰んだ」の一言から．詰みを表明することが大切！</li>
+<li>慣れたら「エラーのスクショ」や「書いたコード」を貼ろう！</li>
+<li>他の人の質問にも目を通そう！（同じ質問があるかも）</li>
+</ul>
+<h2 id="進捗を共有しよう"><a class="header" href="#進捗を共有しよう">進捗を共有しよう！</a></h2>
+<ul>
+<li>演習時，できた人はスクショなど slack に貼ってアウトプット！</li>
+<li>できたら「できた」コメント or スタンプ！</li>
+<li>詰んだら「詰んだ」コメント or スタンプ！</li>
+<li>みなさんのコメントを見ながら講義を進めていきます！</li>
+</ul>
+<h2 id="詰みを脱する-tips"><a class="header" href="#詰みを脱する-tips">詰みを脱する Tips</a></h2>
+<ul>
+<li>まずは打ち間違いを疑おう！
+<ul>
+<li><code>()</code> <code>[]</code> <code>{}</code> <code>'</code> <code>&quot;</code> <code>;</code> など</li>
+</ul>
+</li>
+<li>書いたら保存しよう！（よく忘れる！）
+<ul>
+<li>Mac: <code>command + s</code></li>
+<li>Windows: <code>ctrl + s</code></li>
+</ul>
+</li>
+<li>他の人に見てもらおう！
+<ul>
+<li>自分の打ち間違いは 10 分探しても見つからないが，他人の打ち間違いは 2 秒で見つかる．</li>
+<li>「隣の人」「slack + スクショ」「zoom のブレイクアウト」を活用するのだッ！</li>
+</ul>
+</li>
+</ul>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="html--css"><a class="header" href="#html--css">HTML &amp; CSS</a></h1>
+<h2 id="サンプルコード"><a class="header" href="#サンプルコード">サンプルコード</a></h2>
+<p><a href="html-css/../samples/00_html_css.zip">download</a></p>
+<h2 id="本講義の内容とゴール"><a class="header" href="#本講義の内容とゴール">本講義の内容とゴール</a></h2>
+<h3 id="本講義の内容"><a class="header" href="#本講義の内容">本講義の内容</a></h3>
+<ul>
+<li>HTML を書いて動かす！</li>
+<li>CSS を書いて動かす！</li>
+<li>FlexBox を用いたレイアウトで練習用サイトを実装！</li>
+</ul>
+<h3 id="本講義のゴール"><a class="header" href="#本講義のゴール">本講義のゴール</a></h3>
+<ul>
+<li>HTML と CSS に慣れる！</li>
+<li>FlexBox をマスターする！</li>
+<li>チーズ完成のイメージを掴む！</li>
+</ul>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="html-と-css-の役割"><a class="header" href="#html-と-css-の役割">HTML と CSS の役割</a></h1>
+<h2 id="それぞれの役割"><a class="header" href="#それぞれの役割">それぞれの役割</a></h2>
+<p>役割分担が大事！</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>HTML</td><td>コンテンツの指定<br>タイトル，文章，画像などの記述</td></tr>
+<tr><td>CSS</td><td>コンテンツの装飾<br>色，大きさ，配置などの指定</td></tr>
+</tbody></table>
+<h3 id="例"><a class="header" href="#例">【例】</a></h3>
+<p><a href="https://gsacademy.jp/">https://gsacademy.jp/</a></p>
+<h3 id="参考"><a class="header" href="#参考">【参考】</a></h3>
+<p><a href="https://fastcoding.jp/blog/all/jquery/html-css-javascript/">https://fastcoding.jp/blog/all/jquery/html-css-javascript/</a></p>
+<h2 id="本日の成果物"><a class="header" href="#本日の成果物">本日の成果物</a></h2>
+<p>ジーズアカデミーの紹介サイトを作成！</p>
+<h3 id="html-1"><a class="header" href="#html-1">HTML</a></h3>
+<p>ジーズアカデミーの紹介文や写真を記述しよう！</p>
+<h3 id="css-1"><a class="header" href="#css-1">CSS</a></h3>
+<p>文字の大きさや色，配置をいい感じに設定しよう！</p>
+<h3 id="成果物イメージ"><a class="header" href="#成果物イメージ">成果物イメージ</a></h3>
+<p><img src="html-css/./img/html_css_work_done.png" alt="練習用Webサイト" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="ファイルの準備と動作確認"><a class="header" href="#ファイルの準備と動作確認">ファイルの準備と動作確認</a></h1>
+<h2 id="必要なファイルの準備"><a class="header" href="#必要なファイルの準備">必要なファイルの準備</a></h2>
+<ol>
+<li>新しいフォルダをデスクトップに作成</li>
+<li>vs code を開き「file」→「open」 -&gt; 上で作成したフォルダを選択</li>
+<li>左側の「New File」をクリック -&gt; 「index.html」と入力</li>
+<li>左側の「New File」をクリック -&gt; 「css」と入力</li>
+<li>css フォルダを選択して「New File」をクリック -&gt; 「main.css」</li>
+<li>サンプルの「img」フォルダを作成したフォルダの中に入れる</li>
+</ol>
+<p>↓ このような構成になっていれば OK！</p>
+<pre><code class="language-txt">.
+├── css
+│   └── main.css
+├── img
+│   ├── content_img.jpg
+│   └── main_bg.jpg
+└── index.html
+
+</code></pre>
+<h2 id="html-の準備"><a class="header" href="#html-の準備">HTML の準備</a></h2>
+<ol>
+<li>web ページのフォーマットを入力</li>
+<li>index.html を開く</li>
+<li>「!」を入力（必ず半角）</li>
+<li>「tab」を押す</li>
+<li>下のようになれば OK！</li>
+</ol>
+<p>HTML の構造</p>
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- 文書自体の情報（文書名・読み込むファイルなど） --&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- 実際の文章の内容（文章や画像など）．ここにコンテンツを記述する． --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="css-ファイルの読み込み"><a class="header" href="#css-ファイルの読み込み">CSS ファイルの読み込み</a></h2>
+<p>html ファイルと css ファイルの関連付け</p>
+<ol>
+<li>index.html を開く</li>
+<li>「<code>&lt;title&gt;</code>...」の 1 行下で「link」を入力して tab キー</li>
+<li>タグができるので，「<code>href=</code>」の後を「<code>css/main.css</code>」に変更</li>
+</ol>
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;!-- 🔽 下記 1 行を追加 🔽 --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot; /&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="html-の動作確認"><a class="header" href="#html-の動作確認">HTML の動作確認</a></h2>
+<p><code>&lt;body&gt;</code> タグ内にタグを作成して動作を確認する．</p>
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;ここがページのタイトルなので好きな名前に変えても良き&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- 🔽 下記 1 行を追加 🔽 --&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>ブラウザ画面で「Hello World!」が表示されれば OK！</p>
+<p><img src="html-css/./img/html_css_work_hello.png" alt="Hello World 確認" /></p>
+<blockquote>
+<p><strong>💡 【Point】開発の流れ</strong></p>
+<ol>
+<li>エディタでコードを書く</li>
+<li>保存する（<code>command + s</code>, <code>ctrl + s</code>）</li>
+<li>vs code でファイル名を右クリック →「<code>Copy Path</code>」</li>
+<li>ブラウザのアドレスバーに貼り付けて Enter</li>
+<li>意図したとおりになっているかどうか確認</li>
+<li>1-5 の繰り返し</li>
+</ol>
+</blockquote>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="html-2"><a class="header" href="#html-2">HTML</a></h1>
+<h2 id="タグ"><a class="header" href="#タグ">タグ</a></h2>
+<pre><code class="language-html">&lt;!-- htmlは「タグ」で挟む！ --&gt;
+&lt;h1&gt;セカイを変えるGEEKになろう&lt;/h1&gt;
+&lt;p&gt;最初は全くの初心者でOKです！！&lt;/p&gt;
+
+&lt;!-- 挟まないものもある（単一のタグで成立） --&gt;
+&lt;img src=&quot;hogehoge.png&quot; /&gt;
+</code></pre>
+<h2 id="タグの意味"><a class="header" href="#タグの意味">タグの意味</a></h2>
+<p>プログラムがコンテンツの構造を理解できる．</p>
+<ul>
+<li>HTML を読むのは「プログラム」！！</li>
+</ul>
+<p>なにがいいの？？</p>
+<ul>
+<li>構造がしっかりしている web サイトはいい web サイトと判断される．</li>
+<li>検索結果ではいい web サイトが上の方に表示される！</li>
+</ul>
+<h2 id="今回出てくるタグ"><a class="header" href="#今回出てくるタグ">今回出てくるタグ</a></h2>
+<pre><code class="language-html">&lt;div&gt;この中に文章や画像を入れる「箱」のようなもの&lt;/div&gt;
+
+&lt;h1&gt;見出し1（タイトル，文書中に1つしか存在してはならない）&lt;/h1&gt;
+
+&lt;p&gt;段落（通常の文章はこれ）&lt;/p&gt;
+
+&lt;h2&gt;見出し2&lt;/h2&gt;
+
+&lt;h3&gt;見出し3&lt;/h3&gt;
+
+&lt;img src=&quot;show-image.png&quot; /&gt;
+</code></pre>
+<blockquote>
+<p><strong>💡 構造をつくるコツ</strong></p>
+<p>全体をブロック（div 要素や section 要素）ごとに分ける！</p>
+<p>入れ子構造（ツリー構造）を意識！</p>
+<pre><code class="language-txt">body
+├── div
+│   ├── h1
+│   └── p
+├── div
+│   ├── h2
+│   ├── h3
+│   ├── p
+│   ├── h3
+│   └── p
+├── div
+│   ├── h2
+│   ├── p
+│   └── p
+└── div
+    ├── h2
+    ├── p
+    └── p
+
+</code></pre>
+<p>どのように分けるかでわかりやすさや実装しやすさが変わる．．！</p>
+</blockquote>
+<h2 id="今回の-web-サイトの構造"><a class="header" href="#今回の-web-サイトの構造">今回の Web サイトの構造</a></h2>
+<p><img src="html-css/./img/html_css_construct01.svg" alt="練習用Webサイト構造2" /></p>
+<p><img src="html-css/./img/html_css_construct02.svg" alt="練習用Webサイト構造2" /></p>
+<h2 id="練習"><a class="header" href="#練習">練習</a></h2>
+<p>イメージを参考に HTML を書こう！</p>
+<ul>
+<li>画像部分は <code>content_img.jpg</code> を使用！</li>
+</ul>
+<p>↓ こんな感じになれば OK！</p>
+<p><img src="html-css/./img/html_css_work_html.png" alt="HTML記述イメージ" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="css--ページ設定背景文字の大きさ色"><a class="header" href="#css--ページ設定背景文字の大きさ色">CSS / ページ設定，背景，文字の大きさ，色</a></h1>
+<h2 id="css-の基本的な記述方法"><a class="header" href="#css-の基本的な記述方法">CSS の基本的な記述方法</a></h2>
+<p>CSS は「css ファイル」に記述する．</p>
+<p>CSS の命令の適用箇所は HTML 要素（タグやクラス名）を指定する．HTML 要素にクラス名をつけることで，細かく適用箇所を制御することができる．</p>
+<pre><code class="language-css">body {
+  /* タグに対して指定 */
+  /* ここに文字の色やサイズなどを指定する命令を書く */
+}
+
+.hoge {
+  /* `.` でクラス名で指定 */
+}
+
+.hoge,
+.fuga {
+  /* 複数のクラスに適用 */
+}
+
+.hoge .fuga {
+  /* hoge クラス要素の下にある fuga クラスに適用 */
+}
+</code></pre>
+<p>↓ HTML 要素にクラス名をつける例</p>
+<pre><code class="language-html">&lt;div class=&quot;hoge&quot;&gt;
+  &lt;h1 class=&quot;title&quot;&gt;セカイを変えるGEEKになろう&lt;/h1&gt;
+  &lt;p class=&quot;fuga&quot;&gt;G's ACADEMY FUKUOKA&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="ページのサイズ指定"><a class="header" href="#ページのサイズ指定">ページのサイズ指定</a></h2>
+<p>サイズは幅と高さを指定する．</p>
+<pre><code class="language-css">/* 幅を指定 */
+.box {
+  width: 480px;
+}
+
+/* 幅と高さを指定 */
+.box {
+  width: 480px;
+  height: 360px;
+}
+</code></pre>
+<p>今回は<code>&lt;body&gt;</code>タグに対して指定し，ページ全体の幅を 960px に設定する．</p>
+<pre><code class="language-css">body {
+  /* body の幅を 960 px に設定する */
+  width: 960px;
+}
+</code></pre>
+<h2 id="背景の色写真の設定"><a class="header" href="#背景の色写真の設定">背景の色，写真の設定</a></h2>
+<p>色や画像を設定する．</p>
+<pre><code class="language-css">/* 背景を赤くする場合（#rrggbbの形式でも可） */
+.box {
+  background: red;
+}
+
+/* 背景に画像を設定する場合（画像ファイルの場所を指定する） */
+.box {
+  background: url(../img/main_bg.jpg);
+}
+</code></pre>
+<p>画像の場合は大きさや位置を設定するとかっこいい感じになる．</p>
+<pre><code class="language-css">/* 背景画像の大きさ */
+.box {
+  background-size: cover;
+}
+
+/* 背景画像の位置 */
+.box {
+  background-position: center;
+}
+</code></pre>
+<h2 id="文字の色大きさの設定"><a class="header" href="#文字の色大きさの設定">文字の色，大きさの設定</a></h2>
+<pre><code class="language-css">/* 文字の大きさ */
+.title {
+  font-size: 36px;
+}
+
+/* 文字の色（#rrggbbの形式でも可） */
+.title {
+  color: white;
+}
+</code></pre>
+<h2 id="練習-1"><a class="header" href="#練習-1">練習</a></h2>
+<p>練習用 Web サイトの以下の部分を実装しよう！</p>
+<ul>
+<li>ページのサイズ設定（全体の幅を 960px に）</li>
+<li>タイトルの背景部分に写真（<code>main_bg.jpg</code>）を設定</li>
+<li>タイトル文字の大きさと色を変更（見やすい感じになれば OK！）</li>
+</ul>
+<p>↓ ここまでのイメージ</p>
+<p><img src="html-css/./img/html_css_work_css.png" alt="css前半の完成イメージ" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="tips検証画面の活用"><a class="header" href="#tips検証画面の活用">【tips】検証画面の活用</a></h1>
+<p>検証画面を使おう！</p>
+<h2 id="検証画面とは"><a class="header" href="#検証画面とは">検証画面とは</a></h2>
+<p>検証画面とは，ブラウザに表示されているアプリケーションに対して構造の確認や JavaScript の様子の確認などができるツールである．</p>
+<p>検証ツールを使いこなすと，飛躍的に開発がしやすくなるッ．．！</p>
+<h2 id="主な機能"><a class="header" href="#主な機能">主な機能</a></h2>
+<ul>
+<li>HTML の構造の把握．</li>
+<li>適用されている CSS の確認，CSS を記述しての反映（保存はされない）．</li>
+<li>JavaScript の実行結果の確認．</li>
+<li>ブラウザに保存されているデータの確認．</li>
+<li>ブラウザ - サーバ間通信の確認（接続サーバ，転送データなど）</li>
+</ul>
+<h2 id="使い方"><a class="header" href="#使い方">使い方</a></h2>
+<p>まずは HTML 要素や適用されている CSS を確認してみよう！</p>
+<p><img src="html-css/./img/html_css_inspect.svg" alt="検証画面解説" /></p>
+<h2 id="注意点とコツ"><a class="header" href="#注意点とコツ">注意点とコツ</a></h2>
+<p><strong>検証画面上で CSS を追加・編集しても保存はされないので注意！</strong></p>
+<p>下記の流れがオススメ！</p>
+<ul>
+<li>適当に CSS を記述する．</li>
+<li>検証画面で CSS を確認し，良さそうな値に調整する．</li>
+<li>いい感じになったらエディタに戻ってコード追記 → 保存！</li>
+</ul>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="css--レイアウト"><a class="header" href="#css--レイアウト">CSS / レイアウト</a></h1>
+<h2 id="よくあるレイアウト"><a class="header" href="#よくあるレイアウト">よくあるレイアウト</a></h2>
+<table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>横並び</td><td>HTML は縦並びがデフォルト．</td></tr>
+<tr><td>左右中央</td><td>HTML は左揃えがデフォルト．</td></tr>
+<tr><td>上下中央</td><td>HTML は上揃えがデフォルト．</td></tr>
+</tbody></table>
+<h2 id="float"><a class="header" href="#float">float．．？</a></h2>
+<p>float を使うと要素を横並びにできる．．．が．．．</p>
+<p><img src="html-css/./img/html_css_float.png" alt="float例" /></p>
+<p><a href="https://gray-code.com/html_css/release-float-by-clearfix/">参考：https://gray-code.com/html_css/release-float-by-clearfix/</a></p>
+<p><strong>ものッ！すごくッ！！めんどくさいィィッッッ！！！！</strong></p>
+<h2 id="flexbox-が全てを解決するッ"><a class="header" href="#flexbox-が全てを解決するッ">FlexBox が全てを解決するッ！！</a></h2>
+<ul>
+<li>横並び</li>
+<li>左右中央揃え</li>
+<li>上下中央揃え</li>
+</ul>
+<h3 id="html-のイメージ"><a class="header" href="#html-のイメージ">HTML のイメージ</a></h3>
+<p>下記のような要素を想定する（主な部分のみ記述）．</p>
+<pre><code class="language-html">&lt;div class=&quot;l_box&quot;&gt;
+  &lt;div class=&quot;s_box sienna&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box firebrick&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box maroon&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box darkmagenta&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;s_box indigo&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>↓ 画面上はこんな感じ</p>
+<p><img src="html-css/./img/html_css_flex_unset.png" alt="初期状態" /></p>
+<h3 id="横並び"><a class="header" href="#横並び">横並び</a></h3>
+<p><code>display: flex;</code> を記述！</p>
+<ul>
+<li>HTML は縦並びがデフォルト．</li>
+<li><code>display: flex;</code> を使用すると横並びにできる！</li>
+</ul>
+<blockquote>
+<p><strong>💡 Point</strong></p>
+<p><code>display: flex;</code> に関連する CSS は「レイアウトを制御したい要素の外側の要素」に記述する！</p>
+</blockquote>
+<pre><code class="language-css">.l_box {
+  display: flex;
+}
+</code></pre>
+<p><img src="html-css/./img/html_css_flex_flex.png" alt="横並び" /></p>
+<h3 id="左右中央揃え"><a class="header" href="#左右中央揃え">左右中央揃え</a></h3>
+<p><code>justify-content: center;</code> を記述！</p>
+<ul>
+<li>HTML は左揃えがデフォルト．</li>
+<li><code>justify-content: center;</code> を使用すると左右中央揃えにできる！</li>
+</ul>
+<blockquote>
+<p><strong>💡 Point</strong></p>
+<p><code>display: flex;</code> は常に記述する必要あり！</p>
+</blockquote>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: center;
+}
+</code></pre>
+<p><img src="html-css/./img/html_css_flex_justify_center.png" alt="左右中央" /></p>
+<h3 id="上下左右中央揃え"><a class="header" href="#上下左右中央揃え">上下左右中央揃え</a></h3>
+<p><code>align-items: center;</code> を記述！</p>
+<ul>
+<li>HTML は上揃えがデフォルト．</li>
+<li><code>align-items: center;</code> を使用すると上下中央揃えにできる！</li>
+</ul>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</code></pre>
+<p><img src="html-css/./img/html_css_flex_align_center.png" alt="上下左右中央" /></p>
+<h3 id="縦並びが良い場合"><a class="header" href="#縦並びが良い場合">縦並びが良い場合</a></h3>
+<p><code>flex-direction: column;</code> を記述！</p>
+<ul>
+<li>flex は横並びがデフォルト．</li>
+<li><code>flex-direction: column;</code> を使用すると縦横の並び方を制御できる！</li>
+</ul>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+</code></pre>
+<p><img src="html-css/./img/html_css_flex_column.png" alt="縦並び" /></p>
+<h3 id="参考いい感じに並べたいとき"><a class="header" href="#参考いい感じに並べたいとき">【参考】いい感じに並べたいとき</a></h3>
+<p>均等な感じにしたい場合にも設定できる．</p>
+<p>↓ 端に寄せつつ均等に並べる <code>space-between</code></p>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</code></pre>
+<p><img src="html-css/./img/html_css_flex_justify_between.png" alt="between" /></p>
+<p>↓ 均等に余白をつくって並べる <code>space-evenly</code></p>
+<pre><code class="language-css">.l_box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+</code></pre>
+<p><img src="html-css/./img/html_css_flex_justify_evenly.png" alt="evenly" /></p>
+<h2 id="練習-2"><a class="header" href="#練習-2">練習</a></h2>
+<p><strong>FlexBox を駆使して横並び部分を実装しよう！</strong></p>
+<p>ヒント！！</p>
+<p>横並びの幅を均等にしたい！</p>
+<ul>
+<li>横に並んでいる div の width を「50%」にしよう！</li>
+</ul>
+<p>画像がはみ出す！</p>
+<ul>
+<li>画像の width を「100%」に設定すると箱の幅に合わせてくれる！</li>
+<li>高さが足りないときは height も「100%」！</li>
+<li>画像の比率がおかしいときは「object-fit」でググれ！</li>
+</ul>
+<p><img src="html-css/./img/html_css_work_flex.png" alt="flex実装後" /></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="演習"><a class="header" href="#演習">演習</a></h1>
+<h2 id="残りの部分を実装"><a class="header" href="#残りの部分を実装">残りの部分を実装！！</a></h2>
+<p>これまでに扱った内容を応用すれば全部できるッ！</p>
+<h2 id="ヒント"><a class="header" href="#ヒント">ヒント！！</a></h2>
+<p>タイトルを上下左右中央揃えにしよう！</p>
+<ul>
+<li>FlexBox を使え！！</li>
+</ul>
+<p>concept を左右中央揃えにしよう！</p>
+<ul>
+<li>FlexBox を使え！！</li>
+<li>必要なら<code>&lt;div&gt;</code>を追加！</li>
+<li>幅は「width」を「〇〇%」！</li>
+</ul>
+<p>ページ全体を中央に寄せよう！</p>
+<ul>
+<li><code>margin</code>をいい感じに使うとできる！</li>
+</ul>
+<h2 id="わからないとき"><a class="header" href="#わからないとき">わからないとき</a></h2>
+<ul>
+<li>「タグ名 やりたいこと」でググろう！</li>
+<li>「css やりたいこと」でググろう！</li>
+<li>とにかく「ググる」</li>
+</ul>
+<h2 id="完成するとこんな感じだッ"><a class="header" href="#完成するとこんな感じだッ">完成するとこんな感じだッ！</a></h2>
+<ul>
+<li>適当にアレンジを加えて OK！</li>
+<li>できた人は課題のできそうな部分を実装！</li>
+</ul>
+<p><img src="html-css/./img/html_css_work_done.png" alt="練習用Webサイト" /></p>
 
                     </main>
 
