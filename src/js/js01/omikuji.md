@@ -48,7 +48,9 @@
 
 ### 💡 Key Point
 
-> jQuery は JavaScript の DOM 操作を短縮して書けるライブラリ
+> - jQuery は JavaScript の DOM 操作を短縮して書けるライブラリ．
+> - 「JavaScript で行うたくさんの処理の中の DOM 操作だけをやる」と意識すると使いやすい．
+> - 計算などの処理を行うときは「乱数 javascript」，結果を表示するときは「jquery html テキスト 書き換え」などと検索するとヒットしやすい．
 
 ### 補足
 
