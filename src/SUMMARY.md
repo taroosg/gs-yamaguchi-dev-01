@@ -20,14 +20,14 @@
   - [CSS / レイアウト](./html-css/flex.md)
   - [演習](./html-css/work.md)
 
-<!-- - [JS\_おみくじ](./js/js01/README.md)
+- [JS\_おみくじ](./js/js01/README.md)
 
   - [JavaScript とは](./js/js01/about-js.md)
   - [変数と計算](./js/js01/variable.md)
   - [ランダムな数（乱数）をつくる](./js/js01/random.md)
   - [条件分岐](./js/js01/if.md)
   - [おみくじの Web アプリ実装](./js/js01/omikuji.md)
-  - [課題](./js/js01/work.md) -->
+  - [課題](./js/js01/work.md)
 
 <!-- - [Git](./git/README.md)
 
@@ -40,7 +40,8 @@
     - [GitHub への SSH 鍵登録](./git/github-setup/add-ssy-key-to-github.md)
     - [GitHub との接続設定](./git/github-setup/connect-to-github.md)
   - [GitHub にプロダクトを push](./git/github-init.md)
-  - [GitHub に最新版を push](./git/github-push.md) -->
+  - [GitHub に最新版を push](./git/github-push.md)
+  - [GitHub Pages を用いたデプロイ](./git/github-pages.md) -->
 
 <!-- - [JS\_メモパッド](./js/js02/README.md)
 
