@@ -7,7 +7,7 @@ $user_id = $_SESSION['id'];
 
 $pdo = connect_to_db();
 
-$sql = 'SELECT * FROM todo_table LEFT OUTER JOIN (SELECT todo_id, COUNT(id) AS cnt FROM like_table GROUP BY todo_id) AS result_table ON todo_table.id = result_table.todo_id';
+$sql = 'SELECT * FROM todo_table LEFT OUTER JOIN (SELECT todo_id, COUNT(id) AS like_count FROM like_table GROUP BY todo_id) AS result_table ON todo_table.id = result_table.todo_id';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
