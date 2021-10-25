@@ -29,10 +29,10 @@
   - [おみくじの Web アプリ実装](./js/js01/omikuji.md)
   - [課題](./js/js01/work.md)
 
-<!-- - [Git](./git/README.md)
+- [Git](./git/README.md)
 
   - [GUI と CLI](./git/cli.md)
-  - [Git](./git/git.md)
+  <!-- - [Git](./git/git.md)
   - [GitHub 概要](./git/github-about.md)
   - [GitHub 設定](./git/github-setup/README.md)
     - [SSH 鍵の発行](./git/github-setup/setup-ssh-key.md)
