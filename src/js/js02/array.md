@@ -39,7 +39,7 @@ console.log(list01);
 console.log(list01.length); // 7
 ```
 
-## 配列のいいぞ．．．
+## 配列はいいぞ．．．
 
 条件分岐なんていらんかったんや．．．
 

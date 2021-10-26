@@ -54,6 +54,6 @@ console.log(jojo[2].hero); // 空条承太郎
 
 - `list/object.html`
 
-上記が楽勝な人
+<!-- 上記が楽勝な人
 
-- `list/challenge.html`
+- `list/challenge.html` -->
