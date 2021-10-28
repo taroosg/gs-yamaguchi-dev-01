@@ -10,17 +10,19 @@ $pdo = connect_to_db();
 $sql = 'SELECT * FROM todo_table LEFT OUTER JOIN (SELECT todo_id, COUNT(id) AS like_count FROM like_table GROUP BY todo_id) AS result_table ON todo_table.id = result_table.todo_id';
 
 $stmt = $pdo->prepare($sql);
-$status = $stmt->execute();
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  echo json_encode(["error_msg" => "{$error[2]}"]);
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
   exit();
-} else {
-  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  $output = "";
-  foreach ($result as $record) {
-    $output .= "
+}
+
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$output = "";
+foreach ($result as $record) {
+  $output .= "
     <tr>
       <td>{$record["deadline"]}</td>
       <td>{$record["todo"]}</td>
@@ -30,8 +32,8 @@ if ($status == false) {
       <td><img src='{$record["image"]}' height='150px'></td>
     </tr>
   ";
-  }
 }
+
 ?>
 
 <!DOCTYPE html>

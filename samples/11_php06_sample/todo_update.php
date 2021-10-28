@@ -24,13 +24,13 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':todo', $todo, PDO::PARAM_STR);
 $stmt->bindValue(':deadline', $deadline, PDO::PARAM_STR);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-$status = $stmt->execute();
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  echo json_encode(["error_msg" => "{$error[2]}"]);
-  exit();
-} else {
-  header("Location:todo_read.php");
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
   exit();
 }
+
+header("Location:todo_read.php");
+exit();

@@ -17,11 +17,11 @@ $sql = 'SELECT COUNT(*) FROM users_table WHERE username=:username';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
-$status = $stmt->execute();
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  echo json_encode(["error_msg" => "{$error[2]}"]);
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
   exit();
 }
 
@@ -36,13 +36,13 @@ $sql = 'INSERT INTO users_table(id, username, password, is_admin, is_deleted, cr
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->bindValue(':password', $password, PDO::PARAM_STR);
-$status = $stmt->execute();
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  echo json_encode(["error_msg" => "{$error[2]}"]);
-  exit();
-} else {
-  header("Location:todo_login.php");
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
   exit();
 }
+
+header("Location:todo_login.php");
+exit();

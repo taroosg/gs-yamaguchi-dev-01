@@ -45,13 +45,17 @@ try {
 
 $sql = 'SELECT * FROM todo_table';
 $stmt = $pdo->prepare($sql);
-$status = $stmt->execute();
+
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
+  exit();
+}
 
 ```
 
 ### SQL 実行後の処理
-
-SQL の実行に失敗した場合はエラーを表示して処理を中止する．
 
 SQL が正常に実行された場合は以下の流れで処理が実行される．
 
@@ -62,20 +66,17 @@ SQL が正常に実行された場合は以下の流れで処理が実行され�
 ```php
 // todo_read.php
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  exit('sqlError:'.$error[2]);
-} else {
-  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  $output = "";
-  foreach ($result as $record) {
-    $output .= "
-      <tr>
-        <td>{$record["deadline"]}</td>
-        <td>{$record["todo"]}</td>
-      </tr>
-    ";
-  }
+// SQL実行の処理
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$output = "";
+foreach ($result as $record) {
+  $output .= "
+    <tr>
+      <td>{$record["deadline"]}</td>
+      <td>{$record["todo"]}</td>
+    </tr>
+  ";
 }
 
 ```

@@ -131,6 +131,7 @@ SQL（今回は INSERT 文）を実行する場合も手順が決まっている
 1. SQL 文の記述．
 2. バインド変数の設定．
 3. SQL 実行．
+4. （SQL 実行に失敗した場合はエラーメッセージを出力する）
 
 ```php
 // todo_create.php
@@ -144,8 +145,13 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':todo', $todo, PDO::PARAM_STR);
 $stmt->bindValue(':deadline', $deadline, PDO::PARAM_STR);
 
-// SQL実行（実行に失敗すると$statusにfalseが返ってくる）
-$status = $stmt->execute();
+// SQL実行（実行に失敗すると `sql error ...` が出力される）
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
+  exit();
+}
 
 ```
 
@@ -173,22 +179,15 @@ SELECT * FROM user;
 
 ### SQL 実行時の処理
 
-実行に失敗すると`$status`に`false`が返ってくるため，条件分岐して失敗を検出する．
-
-`$stmt->errorInfo()`と記述することでエラー内容（配列形式）を取得することができ，2 番めのデータにエラーメッセージが格納されている．
-
 SQL が正常に実行された場合は，データ入力画面に移動することとする．
 
 ```php
 // todo_create.php
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  exit('sqlError:'.$error[2]);
-} else {
-  header('Location:todo_input.php');
-  exit();
-}
+// SQL実行の処理
+
+header('Location:todo_input.php');
+exit();
 
 ```
 

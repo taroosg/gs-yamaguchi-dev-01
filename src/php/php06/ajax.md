@@ -130,16 +130,16 @@ JavaScript では`GET`メソッドでデータを送信しているため，PHP 
 $search_word = $_GET["searchword"];
 
 $sql = "SELECT * FROM todo_table  WHERE todo LIKE :search_word";
+
 // 省略
+
 $stmt->bindValue(':search_word', "%{$search_word}%", PDO::PARAM_STR);
+
 // 省略
-if ($status == false) {
-  // 省略（エラー処理）
-} else {
-  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo json_encode($result);
-  exit();
-}
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+echo json_encode($result);
+exit();
 
 ```
 

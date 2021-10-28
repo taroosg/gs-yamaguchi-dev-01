@@ -69,15 +69,15 @@ $pdo = connect_to_db();
 $sql = 'SELECT * FROM todo_table WHERE id=:id';
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-$status = $stmt->execute();
-
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  echo json_encode(["error_msg" => "{$error[2]}"]);
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
   exit();
-} else {
-  $record = $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+$record = $stmt->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 // 以下HTML部分

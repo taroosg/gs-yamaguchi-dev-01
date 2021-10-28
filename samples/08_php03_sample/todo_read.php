@@ -14,24 +14,25 @@ try {
 $sql = 'SELECT * FROM todo_table ORDER BY deadline ASC';
 
 $stmt = $pdo->prepare($sql);
-$status = $stmt->execute();
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  echo json_encode(["error_msg" => "{$error[2]}"]);
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
   exit();
-} else {
-  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  $output = "";
-  foreach ($result as $record) {
-    $output .= "
-      <tr>
-        <td>{$record["deadline"]}</td>
-        <td>{$record["todo"]}</td>
-      </tr>
-    ";
-  }
 }
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$output = "";
+foreach ($result as $record) {
+  $output .= "
+    <tr>
+      <td>{$record["deadline"]}</td>
+      <td>{$record["todo"]}</td>
+    </tr>
+  ";
+}
+
 ?>
 
 <!DOCTYPE html>

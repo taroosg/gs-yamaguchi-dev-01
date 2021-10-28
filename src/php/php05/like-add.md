@@ -116,16 +116,16 @@ $sql = 'INSERT INTO like_table (id, user_id, todo_id, created_at) VALUES (NULL, 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
 $stmt->bindValue(':todo_id', $todo_id, PDO::PARAM_STR);
-$status = $stmt->execute();
 
-if ($status == false) {
-  $error = $stmt->errorInfo();
-  echo json_encode(["error_msg" => "{$error[2]}"]);
-  exit();
-} else {
-  header("Location:todo_read.php");
+try {
+  $status = $stmt->execute();
+} catch (PDOException $e) {
+  echo json_encode(["sql error" => "{$e->getMessage()}"]);
   exit();
 }
+
+header("Location:todo_read.php");
+exit();
 
 ```
 
