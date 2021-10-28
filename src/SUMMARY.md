@@ -4,8 +4,10 @@
 
   - [初回課題の案内](./note/first-work.md)
   - [受講時の注意](./note/about.md)
-    <!-- - [コードへの向き合い方](./note/with-code.md) -->
-    <!-- - [課題にチャレンジするコツ](./note/for-work.md) -->
+  - [コードへの向き合い方](./note/with-code.md)
+  - [課題にチャレンジするコツ](./note/for-work.md)
+  - [雑談コーナー](./note/chat.md)
+
     <!-- - [課題提出](./note/work-post.md) -->
       <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->
       <!-- - [時間をコミットせよ](./note/commit-time.md) -->
