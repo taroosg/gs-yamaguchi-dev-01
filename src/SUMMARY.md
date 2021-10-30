@@ -7,8 +7,7 @@
   - [コードへの向き合い方](./note/with-code.md)
   - [課題にチャレンジするコツ](./note/for-work.md)
   - [雑談コーナー](./note/chat.md)
-
-    <!-- - [課題提出](./note/work-post.md) -->
+  - [課題提出](./note/work-post.md)
       <!-- - [プログラミングのおもしろさ](./note/why-programming-is-intersting.md) -->
       <!-- - [時間をコミットせよ](./note/commit-time.md) -->
 
@@ -34,16 +33,18 @@
 - [Git](./git/README.md)
 
   - [GUI と CLI](./git/cli.md)
-  <!-- - [Git](./git/git.md)
+  - [Git](./git/git.md)
   - [GitHub 概要](./git/github-about.md)
   - [GitHub 設定](./git/github-setup/README.md)
     - [SSH 鍵の発行](./git/github-setup/setup-ssh-key.md)
     - [設定ファイルの編集](./git/github-setup/config.md)
     - [GitHub への SSH 鍵登録](./git/github-setup/add-ssy-key-to-github.md)
     - [GitHub との接続設定](./git/github-setup/connect-to-github.md)
+  - [Git と GitHub を用いた開発の流れ](./git/develop-with-git-and-github.md)
   - [GitHub にプロダクトを push](./git/github-init.md)
   - [GitHub に最新版を push](./git/github-push.md)
-  - [GitHub Pages を用いたデプロイ](./git/github-pages.md) -->
+  - [GitHub Pages を用いたデプロイ](./git/github-pages.md)
+  - [課題](./git/work.md)
 
 <!-- - [JS\_メモパッド](./js/js02/README.md)
 
