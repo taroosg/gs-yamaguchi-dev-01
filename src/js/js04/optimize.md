@@ -112,7 +112,7 @@ $("#text").on("keydown", function (e) {
       text: $("#text").val(),
       time: serverTimestamp(),
     };
-    addDoc(data);
+    addDoc(collection(db, "chat"), data);
     $("#text").val("");
   }
 });
