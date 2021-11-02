@@ -40,15 +40,15 @@ name と text の入力欄を作成する．
 ```js
 // chatapp.html
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
 
-// 🔽 追加
+// 🔽 追加 / `9.2.0`の部分を↑のFirestoreから貼り付けたコードのバージョンに合わせる
 import {
   getFirestore,
   collection,
   addDoc,
   serverTimestamp,
-} from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
 
 const firebaseConfig = {
   // 省略
@@ -90,7 +90,7 @@ const data = {
   text: $("#text").val(),
   time: serverTimestamp(),
 };
-addDoc(data);
+addDoc(collection(db, "chat"), data);
 $("#text").val("");
 ```
 
