@@ -111,8 +111,8 @@ $("#output").html(tagArray);
 
 ### 💡 Key Point
 
-> - `onSnapsyot` が動くタイミングを把握せよ！
-> - Firestore から取ってきたデータを使用する処理を書く場合は全て `onSnapsyot` の `{}` 内に書く必要がある！
+> - `onSnapshot` が動くタイミングを把握せよ！
+> - Firestore から取ってきたデータを使用する処理を書く場合は全て `onSnapshot` の `{}` 内に書く必要がある！
 
 ## 練習
 
