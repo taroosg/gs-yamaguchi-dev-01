@@ -46,14 +46,14 @@
   - [GitHub Pages を用いたデプロイ](./git/github-pages.md)
   - [課題](./git/work.md)
 
-<!-- - [JS\_メモパッド](./js/js02/README.md)
+- [JS\_メモパッド](./js/js02/README.md)
 
   - [配列](./js/js02/array.md)
   - [繰り返し処理](./js/js02/for.md)
   - [オブジェクト](./js/js02/object.md)
   - [LocalStorage（メモ帳初級）](./js/js02/memopad01.md)
   - [JSON データ（メモ帳中級）](./js/js02/memopad02.md)
-  - [課題](./js/js02/work.md) -->
+  - [課題](./js/js02/work.md)
 
 <!-- - [JS\_配列と繰り返し](./js/js03/README.md)
 
