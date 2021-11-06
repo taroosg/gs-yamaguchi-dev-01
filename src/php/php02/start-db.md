@@ -8,8 +8,10 @@
 
 - [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)にアクセス
 - 「`Databases`」タブをクリック
-- 「`Database name`」に「`dec_todo`」を入力（DB 名）
-- 「`utf8mb4_unicode_ci`」を選択 →「作成」をクリック
+- 「`Database name`」に「`gsac拠点名1文字_クラス種別1文字期2桁_受講番号2桁`」を入力（DB 名）
+  - 例：山口週末 1 期受講番号 4 の場合 -> `gsacy_d01_04`
+  - 例：福岡平日 6 期期受講番号 10 の場合 -> `gsacf_l06_10`
+- 「`utf8mb4_bin`」を選択 →「作成」をクリック
 
 正常に作成されると，画面左側に作成した DB 名が表示される．
 
