@@ -55,12 +55,12 @@
   - [JSON データ（メモ帳中級）](./js/js02/memopad02.md)
   - [課題](./js/js02/work.md)
 
-<!-- - [JS\_配列と繰り返し](./js/js03/README.md)
+- [JS\_配列と繰り返し](./js/js03/README.md)
 
   - [配列と繰り返しの練習](./js/js03/array-for.md)
   - [クイズアプリ初級](./js/js03/quiz01.md)
   - [クイズアプリ中級](./js/js03/quiz02.md)
-  - [課題](./js/js03/work.md) -->
+  <!-- - [課題](./js/js03/work.md) -->
 
 <!-- - [JS_Firebase](./js/js04/README.md)
 
